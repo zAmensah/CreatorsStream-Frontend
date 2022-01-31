@@ -1,0 +1,13 @@
+<div *ngIf="messageService.message">
+  <ng-container *ngIf="messageService.messageType == 'danger'; else successMessage">
+    <div class="alert alert-danger alert-dismissible fade show">
+      {{messageService.message}}
+    </div>
+  </ng-container>
+  <ng-template #successMessage>
+    <div class="alert alert-success alert-dismissible fade show">
+      {{messageService.message}}
+    </div>
+  </ng-template>
+
+</div>
