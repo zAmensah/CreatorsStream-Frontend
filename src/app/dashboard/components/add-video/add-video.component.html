@@ -24,9 +24,10 @@
                     <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
                         <!-- start .author-area -->
                        <div class="author-area">
-                            <a href="#" class="author-area__seller-btn-alt" data-target="#myModal1" data-toggle="modal"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a>
-                            <a routerLink="/dashboard/add-video/" class="author-area__seller-btn inline"><i class="fa fa-upload" aria-hidden="true"></i> Upload Video</a>
-                            
+                        <a routerLink="/dashboard/channels/add-channel/"class="author-area__seller-btn-alt"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a>
+                            <!-- <a href="#" class="author-area__seller-btn-alt" data-target="#myModal1" data-toggle="modal"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a> -->
+                            <!-- <a routerLink="/dashboard/add-video/" class="author-area__seller-btn inline"><i class="fa fa-upload" aria-hidden="true"></i> Upload Video</a> -->
+
                             <div class="author__notification_area">
                                 <ul>
                                     <li class="has_dropdown">
@@ -37,8 +38,7 @@
 
                                         <div class="dropdowns notification--dropdown">
                                             <div class="dropdown_module_header">
-                                                <h6>New Notifications</h6>
-                                                <a href="#">View All</a>
+                                              <span>New Notifications<a href="#">View All</a></span>
                                             </div>
 
                                             <div class="notifications_module">
@@ -86,64 +86,63 @@
                                     </li>
 
                                     <li class="has_dropdown">
-                                        <div class="icon_wrap">
-                                            <span class="fa fa-envelope"></span>
-                                            <span class="notification_count msg">2</span>
-                                        </div>
+                                      <div class="icon_wrap">
+                                          <span class="fa fa-envelope"></span>
+                                          <span class="notification_count msg">2</span>
+                                      </div>
 
-                                        <div class="dropdowns messaging--dropdown">
-                                            <div class="dropdown_module_header">
-                                                <h6>New Messages</h6>
-                                                <a href="#">View All</a>
-                                            </div>
+                                      <div class="dropdowns messaging--dropdown">
+                                          <div class="dropdown_module_header">
+                                            <span>New Messages<a href="#">View All</a></span>
+                                          </div>
 
-                                            <div class="messages">
-                                                <a href="#" class="message recent">
-                                                    <div class="message__actions_avatar">
-                                                        <div class="avatar">
-                                                            <img src="assets/images/Channel-Avator-vplay.png">
-                                                        </div>
-                                                    </div>
-                                                    <!-- end /.actions -->
+                                          <div class="messages">
+                                              <a href="#" class="message recent">
+                                                  <div class="message__actions_avatar">
+                                                      <div class="avatar">
+                                                          <img src="assets/images/Channel-Avator-vplay.png">
+                                                      </div>
+                                                  </div>
+                                                  <!-- end /.actions -->
 
-                                                    <div class="message_data">
-                                                        <div class="name_time">
-                                                            <div class="name">
-                                                                <p>Nuke Johnson</p>
-                                                            </div>
-                                                            <p>Hello John Smith!...</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end /.message_data -->
-                                                </a>
-                                                <!-- end /.message -->
+                                                  <div class="message_data">
+                                                      <div class="name_time">
+                                                          <div class="name">
+                                                              <span>Nuke Johnson</span>
+                                                          </div>
+                                                          <p>Hello John Smith!...</p>
+                                                      </div>
+                                                  </div>
+                                                  <!-- end /.message_data -->
+                                              </a>
+                                              <!-- end /.message -->
 
-                                                <a href="#" class="message recent">
-                                                    <div class="message__actions_avatar">
-                                                        <div class="avatar">
-                                                            <img src="assets/images/Channel-Avator-vplay.png">
-                                                        </div>
-                                                    </div>
-                                                    <!-- end /.actions -->
+                                              <a href="#" class="message recent">
+                                                  <div class="message__actions_avatar">
+                                                      <div class="avatar">
+                                                          <img src="assets/images/Channel-Avator-vplay.png">
+                                                      </div>
+                                                  </div>
+                                                  <!-- end /.actions -->
 
-                                                    <div class="message_data">
-                                                        <div class="name_time">
-                                                            <div class="name">
-                                                                <p>Crazy Coder</p>
-                                                            </div>
-                                                            <p>Hello John Smith!...</p>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end /.message_data -->
-                                                </a>
-                                                <!-- end /.message -->
-                                            </div>
-                                        </div>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <!--start .author__notification_area -->
+                                                  <div class="message_data">
+                                                      <div class="name_time">
+                                                          <div class="name">
+                                                              <span>Crazy Coder</span>
+                                                          </div>
+                                                          <p>Hello John Smith!...</p>
+                                                      </div>
+                                                  </div>
+                                                  <!-- end /.message_data -->
+                                              </a>
+                                              <!-- end /.message -->
+                                          </div>
+                                      </div>
+                                  </li>
+
+                              </ul>
+                          </div>
+                          <!--start .author__notification_area -->
 
                             <!--start .author-author__info-->
                             <div class="author-author__info inline has_dropdown">
@@ -373,16 +372,25 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="password">Video Title
+                                                <label for="vid-title">Video Title
                                                     <sup>*</sup>
                                                 </label>
                                                 <input type="text" id="vid-title" class="text_field" placeholder="Enter Title" required>
                                             </div>
                                         </div>
-            
+
                                         <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label for="vid-desc">Description
+                                                  <sup>*</sup>
+                                              </label>
+                                              <input type="text" id="vid-desc" class="text_field" placeholder="Enter Description" required>
+                                          </div>
+                                      </div>
+
+                                        <div class="col-lg-12">
                                             <div class="form-group">
-                                              <label for="option1">Choose Channel
+                                              <label for="opt-channel">Choose Channel
                                                       <sup>*</sup>
                                                   </label>
                                                       <div class="select-wrap">
@@ -398,12 +406,9 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                                        
-                                      </div>
+                                           </div>
                                        <div class="row">
                                         <div class="col-md-6">
-                                        <!-- <div class="form-group">
-                                            <div class="upload_wrapper"> -->
                                                 <label for="thumbnail">Cover Image</label>
                                                     <sup>*</sup>
                                                 <div class="custom_upload">
@@ -411,11 +416,9 @@
                                                         <input type="file" id="thumbnail" class="files">
                                                         <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
                                                     </label>
-                                                </div></div>
-
-                                      <div class="col-md-6">
-                                        <!-- <div class="form-group">
-                                            <div class="upload_wrapper"> -->
+                                                </div>
+                                              </div><br>
+                                       <div class="col-md-6">
                                                 <label for="thumbnail">Select Video</label>
                                                     <sup>*</sup>
                                                 <div class="custom_upload">
@@ -423,28 +426,32 @@
                                                         <input type="file" id="thumbnail" class="files">
                                                         <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
                                                     </label>
-                                                </div></div>
-                                <div class="col-lg-12">
-                                <div class="submit_button">
+                                                </div>
+                                            </div><br>
+                                <div class="col-lg-12 submit_button">
+                                <div class="submit_button"><br><!--Break-->
                                     <button type="submit" class="btn btn--round btn--default">Upload Video</button>
                                 </div>
-                                </div>
+                              </div>
                             </div>
-                        </div>
+                         </div>
+                      </div>
                     </div>
-                    </div>
-                </div></div></div></div></section>
-                <!-- end .login--form -->
+                  </div>
+               </div>
+            </div>
+          </div>
+        </section>
+      <!-- / End -->
 
 
     <!--================================
         START FOOTER AREA
     =================================-->
-<!-- Main Footer Start -->
  <footer id="gen-footer">
     <div class="gen-footer-style-1">
        <div class="gen-footer-top main">
-           
+
        <div class="gen-copyright-footer">
           <div class="container">
              <div class="row">
@@ -512,7 +519,7 @@
                                 <div class="upload_wrapper"> -->
                                     <label for="thumbnail">Cover Image</label>
                                         <sup>*</sup>
-                                    
+
                                     <div class="custom_upload">
                                         <label for="thumbnail">
                                             <input type="file" id="thumbnail" class="files">
@@ -533,7 +540,7 @@
                     <!-- end /.form -->
                 <!-- end /.modal-body -->
 
- 
+
 <!-- Modal Upload Video -->
     <div class="modal fade rating_modal item_remove_modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -582,7 +589,7 @@
                                     </div>
                                 </div>
                             </div>
-                                            
+
                     <div class="col-lg-12">
                     <div class="submit_button">
                         <button type="submit" class="btn btn--round btn--default">Withdrawal</button>

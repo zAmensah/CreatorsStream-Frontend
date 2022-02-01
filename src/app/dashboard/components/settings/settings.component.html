@@ -24,9 +24,9 @@
                     <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
                         <!-- start .author-area -->
                        <div class="author-area">
-                            <a href="#" class="author-area__seller-btn-alt" data-target="#myModal1" data-toggle="modal"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a>
-                            <a routerLink="/dashboard/add-video/" class="author-area__seller-btn inline"><i class="fa fa-upload" aria-hidden="true"></i> Upload Video</a>
-                            
+                            <a routerLink="/dashboard/channels/add-channel/" class="author-area__seller-btn-alt"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a>
+                            <a routerLink="/dashboard/add-video/" class="author-area__seller-btn"><i class="fa fa-upload" aria-hidden="true"></i> Upload Video</a>
+
                             <div class="author__notification_area">
                                 <ul>
                                     <li class="has_dropdown">
@@ -37,8 +37,7 @@
 
                                         <div class="dropdowns notification--dropdown">
                                             <div class="dropdown_module_header">
-                                                <h6>New Notifications</h6>
-                                                <a href="#">View All</a>
+                                              <span>New Notifications<a href="#">View All</a></span>
                                             </div>
 
                                             <div class="notifications_module">
@@ -93,8 +92,7 @@
 
                                         <div class="dropdowns messaging--dropdown">
                                             <div class="dropdown_module_header">
-                                                <h6>New Messages</h6>
-                                                <a href="#">View All</a>
+                                              <span>New Messages<a href="#">View All</a></span>
                                             </div>
 
                                             <div class="messages">
@@ -109,7 +107,7 @@
                                                     <div class="message_data">
                                                         <div class="name_time">
                                                             <div class="name">
-                                                                <p>Nuke Johnson</p>
+                                                                <span>Nuke Johnson</span>
                                                             </div>
                                                             <p>Hello John Smith!...</p>
                                                         </div>
@@ -129,7 +127,7 @@
                                                     <div class="message_data">
                                                         <div class="name_time">
                                                             <div class="name">
-                                                                <p>Crazy Coder</p>
+                                                                <span>Crazy Coder</span>
                                                             </div>
                                                             <p>Hello John Smith!...</p>
                                                         </div>
@@ -140,7 +138,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <!--start .author__notification_area -->
@@ -409,7 +407,7 @@
                                                             <input type="text" id="first_name" class="text_field" placeholder="first name">
                                                         </div>
                                                     </div>
-        
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="last_name">last Name
@@ -420,14 +418,14 @@
                                                     </div>
                                                 </div>
                                                 <!-- end /.row -->
-        
+
                                                 <div class="form-group">
                                                     <label for="email1">Email Adress
                                                         <sup>*</sup>
                                                     </label>
                                                     <input type="text" id="email1" class="text_field" placeholder="Email address">
                                                 </div>
-        
+
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -523,7 +521,7 @@
                                                             <input type="text" id="address_1" class="text_field" placeholder=" Enter Address">
                                                         </div>
                                                     </div>
-        
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="last_name"> line 2:
@@ -534,7 +532,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- end /.row -->
-        
+
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -659,7 +657,7 @@
                                         </div>
                                     <!-- end /.tab-content -->
                                         </div>
-                                        <!-- end /.product-support -->  
+                                        <!-- end /.product-support -->
 
                                     <div class="tab-pane fade product-tab" id="tc7">
                                         <div class="support">
@@ -683,7 +681,7 @@
                                                             <input type="text" id="subj" class="text_field" placeholder="Card 3">
                                                         </div>
 
-                                              
+
                                                             <div class="form-group">
                                                                 <label for="country"> Select Your Bank
                                                                     <sup>*</sup>
@@ -698,7 +696,7 @@
                                                                         <option value="">UMB</option>
                                                                         <option value="">Others</option>
                                                                     </select>
-                                                                    <span class="fa fa-chevron-down"></span>
+                                                                    <span class="fa fa-chevron-down" style="margin-top: 4% !important;"></span>
                                                                 </div>
                                                             </div>
 
@@ -709,7 +707,7 @@
 
                                                     <div class="pt-20">
                                                         <button type="submit" id="btn-submit" class="btn btn--lg btn--round">Save Payment Info</button>
-                                                    </div>                                                    
+                                                    </div>
                                                 </form>
                                                 </div>
                                             </div>
@@ -737,23 +735,24 @@
                     <div class="shortcode_modules">
                         <div class="tab tab4">
                             <div class="support__title">
-                                <h3> Personal Info.
-                                </h3>
+                                <h3> Personal Info.</h3>
                             </div>
                             <br>
                            <p><label for="Emails">First Name:</label><p>
-                            
+
                            <p><label for="Emails">last Name:</label><p>
-                            
+
                             <p><label for="Emails">First Name:</label><p>
-                            
+
                             <p><label for="Emails">last Name:</label><p>
-                            
+
                             <p><label for="Emails">First Name:</label><p>
-                        
-                            <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                                    the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent
-                                    pharetra, justo ut scel erisque the mattie.
+
+                            <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra,
+                              justo ut scelerisque the mattis, leo quam aliquet congue placerat
+                              mi id nisi interdum mollis. Praesent pharetra, justo ut scel erisque
+                              the mattie Praesent pharetra, justo ut scel erisque the mattie Praesent
+                              pharetra, justo ut scel erisque the mattie Praesent pharetra, justo ut scel.
                             </p>
                     </div>
                    </div>
@@ -763,19 +762,14 @@
             <!-- end .container -->
         </div>
     <!-- </section> -->
-    <!--================================
-            END SIGNUP AREA
-    =================================-->
 
-
-     <!--================================
+  <!--================================
         START FOOTER AREA
     =================================-->
-<!-- Main Footer Start -->
 <footer id="gen-footer">
     <div class="gen-footer-style-1">
        <div class="gen-footer-top main">
-           
+
        <div class="gen-copyright-footer">
           <div class="container">
              <div class="row">
@@ -843,7 +837,7 @@
                                 <div class="upload_wrapper"> -->
                                     <label for="thumbnail">Cover Image</label>
                                         <sup>*</sup>
-                                    
+
                                     <div class="custom_upload">
                                         <label for="thumbnail">
                                             <input type="file" id="thumbnail" class="files">
@@ -864,7 +858,7 @@
                     <!-- end /.form -->
                 <!-- end /.modal-body -->
 
- 
+
 <!-- Modal Withdraw Cash -->
 <div class="modal fade rating_modal item_remove_modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -913,7 +907,7 @@
                                 </div>
                             </div>
                         </div>
-                                        
+
                 <div class="col-lg-12">
                 <div class="submit_button">
                     <button type="submit" class="btn btn--round btn--default">Withdrawal</button>
