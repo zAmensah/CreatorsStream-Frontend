@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
+import { environment } from 'src/environments/environment';
 
 import { HeaderInterceptor } from './services/header.interceptor';
 
@@ -22,6 +26,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     CoreModule,
     DashboardModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
   ],
   providers: [
     CookieService,
