@@ -1127,7 +1127,7 @@ Login, Register
 
 #pms_login {
   padding: 30px;
-  background: var(--dark-color);
+  background: #fff;
   position: relative;
   z-index: 9;
   width: 500px;
@@ -1175,10 +1175,10 @@ Login, Register
 #pms_login p label {
   margin: 0;
   font-family: var(--title-fonts);
-  color: var(--white-color);
+  color: #747b86;
   font-weight: 400;
   line-height: 26px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /*==========*/
