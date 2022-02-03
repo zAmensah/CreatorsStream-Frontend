@@ -369,73 +369,82 @@
               </div>
               <!-- end .login_header -->
 
-              <div class="login--form">
-                <div action="#">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="vid-title">Video Title
-                          <sup>*</sup>
-                        </label>
-                        <input type="text" id="vid-title" class="text_field" placeholder="Enter Title" required>
+              <app-messages></app-messages>
+
+              <form [formGroup]="videoForm" (ngSubmit)="onSubmit()">
+                <div class="login--form">
+                  <div action="#">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="vid-title">Video Title
+                            <sup>*</sup>
+                          </label>
+                          <input type="text" id="vid-title" class="text_field" placeholder="Enter Title"
+                            formControlName="title" required>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="opt-channel">Choose Channel
+                            <sup>*</sup>
+                          </label>
+                          <div class="select-wrap">
+                            <select name="channel_type" id="chan_type" class="select_field" formControlName="channel">
+                              <option>-- Select Channel --</option>
+                              <option *ngFor="let channel of channels" value="option-1">
+                                {{channel.name}}</option>
+                              <!-- <option value="option-2">Video Channel</option>
+                                          <option value="option-3">Support Channel</option>
+                                          <option value="option-4">Documentory</option>
+                                          <option value="option-5">Others</option> -->
+                            </select>
+                            <span class="lnr lnr-chevron-down"></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
-
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="opt-channel">Choose Channel
-                          <sup>*</sup>
-                        </label>
-                        <div class="select-wrap">
-                          <select name="channel_type" id="chan_type" class="select_field">
-                            <option>-- Select Channel --</option>
-                            <option value="option-1">Tutorial</option>
-                            <option value="option-2">Video Channel</option>
-                            <option value="option-3">Support Channel</option>
-                            <option value="option-4">Documentory</option>
-                            <option value="option-5">Others</option>
-                          </select>
-                          <span class="lnr lnr-chevron-down"></span>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label for="desc_field">Description</label>
+                          <textarea name="vid-desc" id="vid-desc" class="text_field"
+                            placeholder="Please enter video description" formControlName="description"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="thumbnail">Cover Image</label>
+                        <sup>*</sup>
+                        <div class="custom_upload">
+                          <label for="thumbnail">
+                            <input type="file" id="thumbnail" class="files" formControlName="cover">
+                            <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
+                          </label>
+                        </div>
+                      </div><br>
+                      <div class="col-md-6">
+                        <label for="thumbnail">Select Video</label>
+                        <sup>*</sup>
+                        <div class="custom_upload">
+                          <label for="thumbnail">
+                            <input type="file" id="thumbnail" class="files" formControlName="link">
+                            <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 submit_button">
+                        <div class="submit_button"><br>
+                          <!--Break-->
+                          <button type="submit" class="btn btn--round btn--default">Upload Video</button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label for="thumbnail">Cover Image</label>
-                      <sup>*</sup>
-                      <div class="custom_upload">
-                        <label for="thumbnail">
-                          <input type="file" id="thumbnail" class="files">
-                          <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                        </label>
-                      </div>
-                    </div><br>
-                    <div class="col-md-6">
-                      <label for="thumbnail">Select Video</label>
-                      <sup>*</sup>
-                      <div class="custom_upload">
-                        <label for="thumbnail">
-                          <input type="file" id="thumbnail" class="files">
-                          <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                        </label>
-                      </div>
-                    </div><br>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                      <label for="desc_field">Description</label>
-                      <textarea name="vid-desc" id="vid-desc" class="text_field" placeholder="Please enter video description"></textarea>
-                  </div>
-                  </div>
-                    <div class="col-lg-12 submit_button">
-                      <div class="submit_button"><br>
-                        <!--Break-->
-                        <button type="submit" class="btn btn--round btn--default">Upload Video</button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -477,8 +486,7 @@
     </div>
 
 
-    <!-- Modal Create Channel Starts -->
-    <div class="modal fade rating_modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="rating_modal">
+    <!-- <div class="modal fade rating_modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="rating_modal">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -487,7 +495,6 @@
             </button>
             <h3 class="modal-title" id="rating_modal">Create Channel</h3>
           </div>
-          <!-- end /.modal-header -->
 
           <div class="modal-body">
             <form action="#">
@@ -505,7 +512,7 @@
                 <div class="col-md-6">
                   <!-- <div class="form-group">
                                 <div class="upload_wrapper"> -->
-                  <label for="thumbnail">Upload Avatar</label>
+    <!-- <label for="thumbnail">Upload Avatar</label>
                   <sup>*</sup>
                   <div class="custom_upload">
                     <label for="thumbnail">
@@ -513,12 +520,12 @@
                       <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
                     </label>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="col-md-6">
-                  <!-- <div class="form-group">
+    <!-- <div class="col-md-6"> -->
+    <!-- <div class="form-group">
                                 <div class="upload_wrapper"> -->
-                  <label for="thumbnail">Cover Image</label>
+    <!-- <label for="thumbnail">Cover Image</label>
                   <sup>*</sup>
 
                   <div class="custom_upload">
@@ -539,11 +546,8 @@
                 </div>
               </div>
               <button type="submit" class="btn btn--round btn--default">Create Channel</button>
-              <!-- end /.form -->
-              <!-- end /.modal-body -->
 
 
-              <!-- Modal Upload Video -->
               <div class="modal fade rating_modal item_remove_modal" id="myModal3" tabindex="-1" role="dialog"
                 aria-labelledby="myModal3">
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -554,7 +558,6 @@
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <!-- end /.modal-header -->
 
                     <div class="modal-body">
                       <form action="#">
@@ -598,6 +601,4 @@
                               <button type="submit" class="btn btn--round btn--default">Withdrawal</button>
                             </div>
                           </div>
-                          <!-- end /.form -->
-                        </div>
-                        <!-- end /.modal-body -->
+                        </div> -->

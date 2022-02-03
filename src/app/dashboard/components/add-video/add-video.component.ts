@@ -7,6 +7,8 @@ import { last, concatMap, tap, finalize } from 'rxjs/operators';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { IVideos } from 'src/app/models/videos';
 import { DashboardService } from '../../services/dashboard.service';
+import { MessagesService } from 'src/app/shared/services/messages.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-video',
@@ -26,13 +28,17 @@ export class AddVideoComponent implements OnInit {
   videoForm!: FormGroup;
   user: any;
 
-  channels!: IChannels;
+  channels!: IChannels[];
+
+  loading: boolean = false;
 
   constructor(
     private fb: FormBuilder,
     private dashboardService: DashboardService,
     private authService: AuthService,
-    private storage: AngularFireStorage
+    private messageService: MessagesService,
+    private storage: AngularFireStorage,
+    private router: Router
   ) {
     this.videoForm = this.fb.group({
       title: ['', Validators.required],
@@ -46,7 +52,7 @@ export class AddVideoComponent implements OnInit {
   uploadCover(event: any) {
     this.coverLoading = true;
     const file = event.target.files[0];
-    const filePath = `cover-image/${file.name}`;
+    const filePath = `video/cover-image/${file.name}`;
 
     const task = this.storage.upload(filePath, file);
     this.percentageCover$ = task.percentageChanges();
@@ -86,8 +92,17 @@ export class AddVideoComponent implements OnInit {
 
   onSubmit() {
     const val = this.videoForm.value;
+    this.loading = true;
 
-    this.dashboardService.addVideo(val).subscribe();
+    this.dashboardService.addVideo(val).subscribe(
+      (res: any) => {
+        this.router.navigateByUrl(`/channels/${res.channel._id}`);
+      },
+      (err) => {
+        this.messageService.error(err.error.message);
+        this.loading = false;
+      }
+    );
   }
 
   // getChannels() {

@@ -7,5 +7,6 @@ export interface IChannels {
   slug: string;
   logo: string;
   cover: string;
+  about: string;
   videos: [IVideos];
 }

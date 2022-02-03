@@ -6,25 +6,25 @@ import {
   HttpInterceptor,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { TokenService } from './token.service';
 
 @Injectable()
 export class HeaderInterceptor implements HttpInterceptor {
-  constructor(private tokenService: TokenService) {}
+  constructor() {}
 
   intercept(
-    request: HttpRequest<any>,
+    req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    let token = this.tokenService.getToken();
+    let token = localStorage.getItem('_rft');
+    console.log(token);
 
     if (token) {
-      const cloned = request.clone({
-        headers: request.headers.set('Authorization', token),
+      const cloned = req.clone({
+        headers: req.headers.set('Authorization', token),
       });
       return next.handle(cloned);
     }
 
-    return next.handle(request);
+    return next.handle(req);
   }
 }

@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { IUser } from 'src/app/models/user';
-import { TokenService } from 'src/app/services/token.service';
 import { environment } from 'src/environments/environment';
 import { IAuthResponse } from '../interface/auth';
 import { map, shareReplay, tap } from 'rxjs/operators';
 
 const AUTH_DATA = 'auth_data';
+const TOKEN = '_rft';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +19,7 @@ export class AuthService {
   isLoggedIn$!: Observable<boolean>;
   isLoggedOut$!: Observable<boolean>;
 
-  constructor(private http: HttpClient, private tokenService: TokenService) {
+  constructor(private http: HttpClient) {
     this.isLoggedIn$ = this.user$.pipe(map((user) => !!user));
     this.isLoggedOut$ = this.isLoggedIn$.pipe(map((loggedIn) => !loggedIn));
 
@@ -35,7 +35,8 @@ export class AuthService {
       .pipe(
         tap((user: IAuthResponse) => {
           this.subject.next(user.user);
-          this.tokenService.setToken(user.token);
+          // this.tokenService.setToken(user.token);
+          localStorage.setItem(TOKEN, user.token);
           localStorage.setItem(AUTH_DATA, JSON.stringify(user.user));
         }),
         shareReplay()
@@ -48,7 +49,8 @@ export class AuthService {
       .pipe(
         tap((user) => {
           this.subject.next(user.user);
-          this.tokenService.setToken(user.token);
+          // this.tokenService.setToken(user.token);
+          localStorage.setItem(TOKEN, user.token);
           localStorage.setItem(AUTH_DATA, JSON.stringify(user.user));
         }),
         shareReplay()
@@ -71,7 +73,8 @@ export class AuthService {
 
   logout() {
     this.subject.next(null!);
-    this.tokenService.deleteToken();
+    // this.tokenService.deleteToken();
+    localStorage.removeItem(TOKEN);
     localStorage.removeItem(AUTH_DATA);
   }
 }
