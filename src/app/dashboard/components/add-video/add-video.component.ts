@@ -1,11 +1,8 @@
-import { IChannels } from './../../../models/channels';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
 import { last, concatMap, tap, finalize } from 'rxjs/operators';
-import { AuthService } from 'src/app/auth/services/auth.service';
-import { IVideos } from 'src/app/models/videos';
 import { DashboardService } from '../../services/dashboard.service';
 import { MessagesService } from 'src/app/shared/services/messages.service';
 import { Router } from '@angular/router';
@@ -28,14 +25,12 @@ export class AddVideoComponent implements OnInit {
   videoForm!: FormGroup;
   user: any;
 
-  channels!: IChannels[];
-
   loading: boolean = false;
+  videoUpload: boolean = false;
 
   constructor(
     private fb: FormBuilder,
-    private dashboardService: DashboardService,
-    private authService: AuthService,
+    public dashboardService: DashboardService,
     private messageService: MessagesService,
     private storage: AngularFireStorage,
     private router: Router
@@ -52,7 +47,7 @@ export class AddVideoComponent implements OnInit {
   uploadCover(event: any) {
     this.coverLoading = true;
     const file = event.target.files[0];
-    const filePath = `video/cover-image/${file.name}`;
+    const filePath = `/cover-image/${file.name}`;
 
     const task = this.storage.upload(filePath, file);
     this.percentageCover$ = task.percentageChanges();
@@ -65,6 +60,7 @@ export class AddVideoComponent implements OnInit {
         tap((url) => {
           this.cover = url;
           this.coverLoading = false;
+          console.log('Cover Link', this.cover);
         })
       )
       .subscribe();
@@ -72,8 +68,10 @@ export class AddVideoComponent implements OnInit {
 
   uploadVideo(event: any) {
     this.videoLoading = true;
+    this.videoUpload = true;
+
     const file: File = event.target.files[0];
-    const filePath = `video/${file.name}`;
+    const filePath = `/video/${file.name}`;
 
     const task = this.storage.upload(filePath, file);
     this.percentageLink$ = task.percentageChanges();
@@ -84,7 +82,9 @@ export class AddVideoComponent implements OnInit {
         last(),
         concatMap(() => this.storage.ref(filePath).getDownloadURL()),
         tap((url) => {
-          (this.link = url), (this.videoLoading = false);
+          this.link = url;
+          this.videoLoading = false;
+          console.log('Video Link', this.link);
         })
       )
       .subscribe();
@@ -94,15 +94,26 @@ export class AddVideoComponent implements OnInit {
     const val = this.videoForm.value;
     this.loading = true;
 
-    this.dashboardService.addVideo(val).subscribe(
-      (res: any) => {
-        this.router.navigateByUrl(`/channels/${res.channel._id}`);
-      },
-      (err) => {
-        this.messageService.error(err.error.message);
-        this.loading = false;
-      }
-    );
+    console.log('Cover Link', this.cover);
+    console.log('Video Link', this.link);
+
+    this.dashboardService
+      .addVideo({
+        title: val.title,
+        channel: val.channel,
+        description: val.description,
+        link: this.link,
+        cover: this.cover,
+      })
+      .subscribe(
+        (res: any) => {
+          this.router.navigateByUrl(`/channels/${res.channel._id}`);
+        },
+        (err) => {
+          this.messageService.error(err.error.message);
+          this.loading = false;
+        }
+      );
   }
 
   // getChannels() {

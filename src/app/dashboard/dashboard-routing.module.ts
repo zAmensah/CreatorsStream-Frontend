@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'add-video', component: AddVideoComponent },
   { path: 'channels', component: ChannelsComponent },
-  { path: 'channels/:id', component: ChannelsComponent },
+  { path: 'channels/single/:id', component: ChannelsComponent },
   { path: 'channel/add', component: CreateChannelComponent },
   { path: 'settings', component: SettingsComponent },
 ];

@@ -43,7 +43,7 @@ export class CreateChannelComponent implements OnInit {
   uploadCover(event: any) {
     this.coverLoading = true;
     const file = event.target.files[0];
-    const filePath = `channel/cover-image/${file.name}`;
+    const filePath = `/channel/cover-image/${file.name}`;
 
     const task = this.storage.upload(filePath, file);
     this.percentageCover$ = task.percentageChanges();
@@ -64,7 +64,7 @@ export class CreateChannelComponent implements OnInit {
   uploadLogo(event: any) {
     this.logoLoading = true;
     const file = event.target.files[0];
-    const filePath = `channel/logo/${file.name}`;
+    const filePath = `/channel/logo/${file.name}`;
 
     const task = this.storage.upload(filePath, file);
     this.percentageLogo$ = task.percentageChanges();
@@ -86,15 +86,22 @@ export class CreateChannelComponent implements OnInit {
     this.loading = true;
     const val = this.channelForm.value;
 
-    this.dashboardService.addChannel(val).subscribe(
-      () => {
-        this.router.navigateByUrl('/dashboard/channel/add');
-      },
-      (err) => {
-        this.messageService.error(err.error.message);
-        this.loading = false;
-      }
-    );
+    this.dashboardService
+      .addChannel({
+        name: val.name,
+        about: val.about,
+        logo: this.logo,
+        cover: this.cover,
+      })
+      .subscribe(
+        () => {
+          this.router.navigateByUrl('/dashboard/channel/add');
+        },
+        (err) => {
+          this.messageService.error(err.error.message);
+          this.loading = false;
+        }
+      );
   }
 
   ngOnInit(): void {}

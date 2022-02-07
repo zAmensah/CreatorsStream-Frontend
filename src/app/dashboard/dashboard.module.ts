@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { LandingComponent } from './components/landing/landing.component';
 import { ChannelsComponent } from './components/channels/channels.component';
@@ -19,6 +21,11 @@ import { SharedModule } from '../shared/modules/shared/shared.module';
     SingleChannelComponent,
     CreateChannelComponent,
   ],
-  imports: [CommonModule, DashboardRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    DashboardRoutingModule,
+    SharedModule,
+    MatProgressBarModule,
+  ],
 })
 export class DashboardModule {}

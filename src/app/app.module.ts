@@ -15,6 +15,7 @@ import { HeaderInterceptor } from './services/header.interceptor';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true },

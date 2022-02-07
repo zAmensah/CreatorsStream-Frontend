@@ -2,6 +2,7 @@ import { IUser } from './user';
 import { IVideos } from './videos';
 
 export interface IChannels {
+  _id: string;
   user: IUser;
   name: string;
   slug: string;
