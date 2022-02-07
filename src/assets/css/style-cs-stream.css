@@ -13505,11 +13505,12 @@ button#btn-alt {
 }
 
 .single_speaker .speaker__thumbnail {
-  height: 263px;
-  width: 263px;
+  height: 133px;
+  width: 143px;
   display: inline-block;
   vertical-align: middle;
   margin-right: -3px;
+  background-color: #fff;
 }
 
 .single_speaker .speaker__thumbnail img {
@@ -13521,8 +13522,8 @@ button#btn-alt {
   display: inline-block;
   vertical-align: middle;
   margin-right: -3px;
-  padding-left: 30px;
-  width: calc(100% - 268px);
+  padding-left: 20px;
+  /* width: calc(100% - 268px); */
 }
 
 .single_speaker .speaker__detail h4 {
@@ -13540,13 +13541,13 @@ button#btn-alt {
   color: #555;
   font-weight: 500;
   line-height: 30px;
-  margin-bottom: 27px;
+  margin-bottom: 10px;
   font-size: 18px;
   display: inline-block;
 }
 
 .single_speaker .speaker_social {
-  margin-top: 33px;
+  margin-top: 0px;
 }
 
 .single_speaker .speaker_social ul li {
@@ -13573,12 +13574,10 @@ button#btn-alt {
 
 .single_speaker:nth-child(2n+2) {
   padding-left: 15px;
-  /* background-color: #fff; */
 }
 
 .single_speaker:nth-child(2n+1) {
   padding-right: 15px;
-  /* background-color: #fff; */
 }
 
 .sign_up_area {
