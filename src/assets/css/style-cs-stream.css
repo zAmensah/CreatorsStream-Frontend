@@ -13510,7 +13510,6 @@ button#btn-alt {
   display: inline-block;
   vertical-align: middle;
   margin-right: -3px;
-  background-color: #fff;
 }
 
 .single_speaker .speaker__thumbnail img {
@@ -13523,7 +13522,7 @@ button#btn-alt {
   vertical-align: middle;
   margin-right: -3px;
   padding-left: 20px;
-  /* width: calc(100% - 268px); */
+  width: calc(100% - 225px);
 }
 
 .single_speaker .speaker__detail h4 {
