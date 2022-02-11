@@ -6,6 +6,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .gen-breadcrumb-container .breadcrumb li {
   font-size: 19px !important;
 }
-.single_speaker .speaker__thumbnail img {
-  width: 100% !important;
+/* .single_speaker .speaker__thumbnail img {
+  width: 120px !important
+} */
+.gen-likes-col {
+  margin-top: 5px !important;
 }
