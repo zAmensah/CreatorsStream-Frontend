@@ -4,815 +4,471 @@
   =================================-->
   <!-- start menu-area -->
   <div class="menu-area">
-    <!-- start .top-menu-area -->
-    <div class="top-menu-area">
-      <!-- start .container -->
-      <div class="container">
-        <!-- start .row -->
-        <div class="row">
-          <!-- start .col-md-3 -->
-          <div class="col-lg-3 col-md-3 col-6 v_middle">
-            <div class="logo">
-              <a routerLink="/auth/home/">
-                <img src="assets/images/logo-2.png" height="25" alt="logo image" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <!-- end /.col-md-3 -->
-
-          <!-- start .col-md-5 -->
-          <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
-            <!-- start .author-area -->
-            <div class="author-area">
-              <!-- <a href="#" class="author-area__seller-btn-alt" data-target="#myModal1" data-toggle="modal">
-                <i class="fa fa-video" aria-hidden="true"></i> Create Channel</a> -->
-              <a routerLink="/dashboard/add-video/" class="author-area__seller-btn inline"><i class="fa fa-upload"
-                  aria-hidden="true"></i> Upload Video</a>
-
-              <div class="author__notification_area">
-                <ul>
-                  <li class="has_dropdown">
-                    <div class="icon_wrap">
-                      <span class="fa fa-bell"></span>
-                      <span class="notification_count noti">3</span>
-                    </div>
-
-                    <div class="dropdowns notification--dropdown">
-                      <div class="dropdown_module_header">
-                        <span>New Notifications<a href="#">View All</a></span>
+      <!-- start .top-menu-area -->
+      <div class="top-menu-area">
+          <!-- start .container -->
+          <div class="container">
+              <!-- start .row -->
+              <div class="row">
+                  <!-- start .col-md-3 -->
+                  <div class="col-lg-3 col-md-3 col-6 v_middle">
+                      <div class="logo">
+                          <a routerLink="/auth/home/">
+                              <img src="assets/images/logo-2.png" height="25" alt="logo image" class="img-fluid">
+                          </a>
                       </div>
-
-                      <div class="notifications_module">
-                        <div class="notification">
-                          <div class="notification__info">
-                            <div class="info_avatar">
-                              <img src="assets/images/Channel-Avator-vplay.png" alt="">
-                            </div>
-                            <div class="info">
-                              <p>
-                                <span>Anderson</span> added to Favourite
-                                <a href="#">Mccarther Coffee Shop</a>
-                              </p>
-                              <p class="time">Just now</p>
-                            </div>
-                          </div>
-                          <!-- end /.notifications -->
-                        </div>
-                        <!-- end /.notifications -->
-
-                        <div class="notification">
-                          <div class="notification__info">
-                            <div class="info_avatar">
-                              <img src="assets/images/Channel-Avator-vplay.png" alt="">
-                            </div>
-                            <div class="info">
-                              <p>
-                                <span>Michael</span> comments on
-                                <a href="#">CS Extension</a>
-                              </p>
-                              <p class="time">Just now</p>
-                            </div>
-                          </div>
-                          <!-- end /.notifications -->
-
-                          <div class="notification__icons ">
-                            <span class="fa fa-bubble commented noti_icon"></span>
-                          </div>
-                          <!-- end /.notifications -->
-                        </div>
-                        <!-- end /.notifications -->
-                      </div>
-                      <!-- end /.dropdown -->
-                    </div>
-                  </li>
-
-                  <li class="has_dropdown">
-                    <div class="icon_wrap">
-                      <span class="fa fa-envelope"></span>
-                      <span class="notification_count msg">2</span>
-                    </div>
-
-                    <div class="dropdowns messaging--dropdown">
-                      <div class="dropdown_module_header">
-                        <span>New Messages<a href="#">View All</a></span>
-                      </div>
-
-                      <div class="messages">
-                        <a href="#" class="message recent">
-                          <div class="message__actions_avatar">
-                            <div class="avatar">
-                              <img src="assets/images/Channel-Avator-vplay.png">
-                            </div>
-                          </div>
-                          <!-- end /.actions -->
-
-                          <div class="message_data">
-                            <div class="name_time">
-                              <div class="name">
-                                <span>Nuke Johnson</span>
-                              </div>
-                              <p>Hello John Smith!...</p>
-                            </div>
-                          </div>
-                          <!-- end /.message_data -->
-                        </a>
-                        <!-- end /.message -->
-
-                        <a href="#" class="message recent">
-                          <div class="message__actions_avatar">
-                            <div class="avatar">
-                              <img src="assets/images/Channel-Avator-vplay.png">
-                            </div>
-                          </div>
-                          <!-- end /.actions -->
-
-                          <div class="message_data">
-                            <div class="name_time">
-                              <div class="name">
-                                <span>Crazy Coder</span>
-                              </div>
-                              <p>Hello John Smith!...</p>
-                            </div>
-                          </div>
-                          <!-- end /.message_data -->
-                        </a>
-                        <!-- end /.message -->
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
-              <!--start .author__notification_area -->
-
-              <!--start .author-author__info-->
-              <div class="author-author__info inline has_dropdown">
-                <div class="author__avatar">
-                  <img src="assets/images/Channel-Avator-vplay.png" width="45" alt="user avatar">
-
-                </div>
-                <div class="autor__info">
-                  <p class="name">
-                    Bismark Asare
-                  </p>
-                  <p class="ammount">$20.45</p>
-                </div>
-
-                <div class="dropdowns dropdown--author">
-                  <ul>
-                    <li>
-                      <a routerLink="/dashboard/settings/">
-                        <span class="fa fa-user"></span>Profile</a>
-                    </li>
-                    <li>
-                      <a routerLink="/dashboard/" data-target="#myModal3" data-toggle="modal">
-                        <span class="fa fa-credit-card"></span>Load Wallet</a>
-                    </li>
-                    <li>
-                      <a href="#" data-target="#myModal1" data-toggle="modal">
-                        <span class="fa fa-book"></span>Create Channel</a>
-                    </li>
-                    <li>
-                      <a href="#" data-target="#myModal3" data-toggle="modal">
-                        <span class="fa fa-briefcase"></span>Withdrawals</a>
-                    </li>
-                    <li>
-                      <a routerLink="/dashboard/settings/">
-                        <span class="fa fa-cog"></span> Setting</a>
-                    </li>
-                    <li>
-                      <a href="index.html">
-                        <span class="fa fa-sign-out-alt"></span>Logout</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!--end /.author-author__info-->
-            </div>
-            <!-- end .author-area -->
-
-            <!-- author area restructured for mobile -->
-            <div class="mobile_content ">
-              <span class="fa fa-user menu_icon"></span>
-
-              <!-- offcanvas menu -->
-              <div class="offcanvas-menu closed">
-                <span class="fa fa-cross close_menu"></span>
-                <div class="author-author__info">
-                  <div class="author__avatar v_middle">
-                    <img src="assets/images/Channel-Avator-vplay.png" width="45" alt="user avatar">
                   </div>
-                  <div class="autor__info v_middle">
-                    <p class="name">
-                      Bismark Asare
-                    </p>
-                    <p class="ammount">$20.45</p>
+                  <!-- end /.col-md-3 -->
+
+                  <!-- start .col-md-5 -->
+                  <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
+                      <!-- start .author-area -->
+                     <div class="author-area">
+                          <a routerLink="/dashboard/channel/add" class="author-area__seller-btn-alt"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a>
+                          <a routerLink="/dashboard/add-video/" class="author-area__seller-btn"><i class="fa fa-upload"></i> Upload Video</a>
+
+                          <div class="author__notification_area">
+                              <ul>
+                                  <li class="has_dropdown">
+                                      <div class="icon_wrap">
+                                          <span class="fa fa-bell"></span>
+                                          <span class="notification_count noti">3</span>
+                                      </div>
+
+                                      <div class="dropdowns notification--dropdown">
+                                          <div class="dropdown_module_header">
+                                            <span>New Notifications<a href="#">View All</a></span>
+                                          </div>
+
+                                          <div class="notifications_module">
+                                              <div class="notification">
+                                                  <div class="notification__info">
+                                                      <div class="info_avatar">
+                                                          <img src="assets/images/Channel-Avator-vplay.png" alt="">
+                                                      </div>
+                                                      <div class="info">
+                                                          <p>
+                                                              <span>Anderson</span> added to Favourite
+                                                              <a href="#">Mccarther Coffee Shop</a>
+                                                          </p>
+                                                          <p class="time">Just now</p>
+                                                      </div>
+                                                  </div>
+                                                  <!-- end /.notifications -->
+                                              </div>
+                                              <!-- end /.notifications -->
+
+                                              <div class="notification">
+                                                  <div class="notification__info">
+                                                      <div class="info_avatar">
+                                                          <img src="assets/images/Channel-Avator-vplay.png" alt="">
+                                                      </div>
+                                                      <div class="info">
+                                                          <p>
+                                                              <span>Michael</span> comments on
+                                                              <a href="#">CS Extension</a>
+                                                          </p>
+                                                          <p class="time">Just now</p>
+                                                      </div>
+                                                  </div>
+                                                  <!-- end /.notifications -->
+
+                                                  <div class="notification__icons ">
+                                                      <span class="fa fa-bubble commented noti_icon"></span>
+                                                  </div>
+                                                  <!-- end /.notifications -->
+                                              </div>
+                                              <!-- end /.notifications -->
+                                          </div>
+                                          <!-- end /.dropdown -->
+                                      </div>
+                                  </li>
+
+                                  <li class="has_dropdown">
+                                    <div class="icon_wrap">
+                                        <span class="fa fa-envelope"></span>
+                                        <span class="notification_count msg">2</span>
+                                    </div>
+
+                                    <div class="dropdowns messaging--dropdown">
+                                        <div class="dropdown_module_header">
+                                          <span>New Messages<a href="#">View All</a></span>
+                                        </div>
+
+                                        <div class="messages">
+                                            <a href="#" class="message recent">
+                                                <div class="message__actions_avatar">
+                                                    <div class="avatar">
+                                                        <img src="assets/images/Channel-Avator-vplay.png">
+                                                    </div>
+                                                </div>
+                                                <!-- end /.actions -->
+
+                                                <div class="message_data">
+                                                    <div class="name_time">
+                                                        <div class="name">
+                                                            <span>Nuke Johnson</span>
+                                                        </div>
+                                                        <p>Hello John Smith!...</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end /.message_data -->
+                                            </a>
+                                            <!-- end /.message -->
+
+                                            <a href="#" class="message recent">
+                                                <div class="message__actions_avatar">
+                                                    <div class="avatar">
+                                                        <img src="assets/images/Channel-Avator-vplay.png">
+                                                    </div>
+                                                </div>
+                                                <!-- end /.actions -->
+
+                                                <div class="message_data">
+                                                    <div class="name_time">
+                                                        <div class="name">
+                                                            <span>Crazy Coder</span>
+                                                        </div>
+                                                        <p>Hello John Smith!...</p>
+                                                    </div>
+                                                </div>
+                                                <!-- end /.message_data -->
+                                            </a>
+                                            <!-- end /.message -->
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--start .author__notification_area -->
+
+                          <!--start .author-author__info-->
+                          <div class="author-author__info inline has_dropdown">
+                              <div class="author__avatar">
+                                  <img src="assets/images/Channel-Avator-vplay.png" width="45" alt="user avatar">
+
+                              </div>
+                              <div class="autor__info">
+                                  <p class="name">
+                                     Bismark Asare
+                                  </p>
+                                  <p class="ammount">$20.45</p>
+                              </div>
+
+                              <div class="dropdowns dropdown--author">
+                                  <ul>
+                                      <li>
+                                          <a href="#" data-target="#myModal3" data-toggle="modal">
+                                              <span class="fa fa-credit-card"></span>Load Wallet</a>
+                                      </li>
+                                      <li>
+                                          <a routerLink="/dashboard/add-video/">
+                                              <span class="fa fa-upload"></span>Upload Video</a>
+                                      </li>
+                                      <li>
+                                          <a href="dashboard.html" data-target="#myModal1" data-toggle="modal">
+                                              <span class="fa fa-book"></span>Create Channel</a>
+                                      </li>
+                                      <li>
+                                          <a href="dashboard.html" data-target="#myModal3" data-toggle="modal">
+                                              <span class="fa fa-briefcase"></span>Withdrawals</a>
+                                      </li>
+                                      <li>
+                                          <a routerLink="/dashboard/settings/">
+                                              <span class="fa fa-cog"></span> Settings</a>
+                                      </li>
+                                      <li>
+                                          <a href="index.html">
+                                              <span class="fa fa-sign-out-alt"></span>Logout</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <!--end /.author-author__info-->
+                      </div>
+                      <!-- end .author-area -->
+
+                      <!-- author area restructured for mobile -->
+                      <div class="mobile_content ">
+                          <span class="fa fa-user menu_icon"></span>
+
+                          <!-- offcanvas menu -->
+                          <div class="offcanvas-menu closed">
+                              <span class="fa fa-cross close_menu"></span>
+                              <div class="author-author__info">
+                                  <div class="author__avatar v_middle">
+                                      <img src="assets/images/Channel-Avator-vplay.png" width="45" alt="user avatar">
+                                  </div>
+                                  <div class="autor__info v_middle">
+                                      <p class="name">
+                                          Bismark Asare
+                                      </p>
+                                      <p class="ammount">$20.45</p>
+                                  </div>
+                              </div>
+                              <!--end /.author-author__info-->
+
+                              <div class="author__notification_area">
+                                  <ul>
+                                      <li>
+                                          <a href="notification.html">
+                                              <div class="icon_wrap">
+                                                  <span class="fa fa-alarm"></span>
+                                                  <span class="notification_count noti">25</span>
+                                              </div>
+                                          </a>
+                                      </li>
+
+                                      <li>
+                                          <a href="message.html">
+                                              <div class="icon_wrap">
+                                                  <span class="fa fa-envelope"></span>
+                                                  <span class="notification_count msg">6</span>
+                                              </div>
+                                          </a>
+                                      </li>
+
+                                      <li>
+                                          <a href="cart.html">
+                                              <div class="icon_wrap">
+                                                  <span class="fa fa-cart"></span>
+                                                  <span class="notification_count purch">2</span>
+                                              </div>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <!--start .author__notification_area -->
+
+                              <div class="dropdowns dropdown--author">
+                                  <ul>
+                                      <li>
+                                          <a routerLink="/dashboard/settings/">
+                                              <span class="fa fa-user"></span>Profile</a>
+                                      </li>
+                                      <li>
+                                          <a routerLink="/dashboard/" data-target="#myModal3" data-toggle="modal">
+                                              <span class="fa fa-credit-card"></span>Load Wallet</a>
+                                      </li>
+                                      <li>
+                                          <a routerLink="/dashboard/add-video/">
+                                              <span class="fa fa-upload"></span>Upload Video</a>
+                                      </li>
+                                      <li>
+                                          <a href="#" data-target="#myModal1" data-toggle="modal">
+                                              <span class="fa fa-book"></span>Create Channel</a>
+                                      </li>
+                                      <li>
+                                          <a href="#" data-target="#myModal3" data-toggle="modal">
+                                              <span class="fa fa-briefcase"></span>Withdrawals</a>
+                                      </li>
+                                      <li>
+                                          <a routerLink="/dashboard/settings/">
+                                              <span class="fa fa-cog"></span> Setting</a>
+                                      </li>
+                                      <li>
+                                          <a href="index.html">
+                                              <span class="fa fa-sign-out"></span>Logout</a>
+                                      </li>
+                                  </ul>
+                              </div>
+
+                              <div class="text-center">
+                                  <a href="./upload-video.html" class="author-area__seller-btn inline">Upload Video</a>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end /.mobile_content -->
                   </div>
-                  <<<<<<< HEAD=======<div class="autor__info v_middle">
-                    <p class="name">
-                      Bismark Asare
-                    </p>
-                    <p class="ammount">$20.45</p>
-                </div>
-                >>>>>>> 31d00fae6a0c08db55141df48dd0e1ed634efd69
+                  <!-- end /.col-md-5 -->
               </div>
-            </div>
-            <!--end /.author-author__info-->
-
-            <div class="author__notification_area">
-              <ul>
-                <li>
-                  <a href="notification.html">
-                    <div class="icon_wrap">
-                      <span class="fa fa-alarm"></span>
-                      <span class="notification_count noti">25</span>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="message.html">
-                    <div class="icon_wrap">
-                      <span class="fa fa-envelope"></span>
-                      <span class="notification_count msg">6</span>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="cart.html">
-                    <div class="icon_wrap">
-                      <span class="fa fa-cart"></span>
-                      <span class="notification_count purch">2</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!--start .author__notification_area -->
-
-            <div class="dropdowns dropdown--author">
-              <ul>
-                <li>
-                  <a routerLink="/dashboard/settings/">
-                    <span class="fa fa-user"></span>Profile</a>
-                </li>
-                <li>
-                  <a href="#" data-target="#myModal3" data-toggle="modal">
-                    <span class="fa fa-credit-card"></span>Load Wallet</a>
-                </li>
-                <li>
-                  <a routerLink="/dashboard/add-video/" data-target="#myModal2" data-toggle="modal">
-                    <span class="fa fa-upload"></span>Upload Video</a>
-                </li>
-                <li>
-                  <a href="#" data-target="#myModal1" data-toggle="modal">
-                    <span class="fa fa-book"></span>Create Channel</a>
-                </li>
-                <li>
-                  <a href="#" data-target="#myModal3" data-toggle="modal">
-                    <span class="fa fa-briefcase"></span>Withdrawals</a>
-                </li>
-                <li>
-                  <a routerLink="/dashboard/settings/">
-                    <span class="fa fa-cog"></span> Setting</a>
-                </li>
-                <li>
-                  <a routerLink="/auth/home/">
-                    <span class="fa fa-sign-out-alt"></span>Logout</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="text-center">
-              <a routerLink="/dashboard/add-video/" class="author-area__seller-btn">Upload Video</a>
-            </div>
+              <!-- end /.row -->
           </div>
-        </div>
-        <!-- end /.mobile_content -->
+          <!-- end /.container -->
       </div>
-      <!-- end /.col-md-5 -->
-    </div>
-    <!-- end /.row -->
+      <!-- end  -->
   </div>
-  <!-- end /.container -->
-</div>
-<!-- end  -->
-</div>
-<!-- end /.menu-area -->
-<!--================================
+  <!-- end /.menu-area -->
+  <!--================================
       END MENU AREA
   =================================-->
 
 
-<!--================================
+  <!--================================
           START DASHBOARD AREA
   =================================-->
-<section class="dashboard-area">
-  <div class="dashboard_menu_area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="dashboard_menu">
-            <li class="active">
-              <a routerLink="/dashboard/">
-                <i class="fa fa-home"></i> Dashboard</a>
-            </li>
-            <li>
-              <a routerLink="/dashboard/channels/">
-                <span class="fa fa-video"></span> Channels</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fa fa-stop-circle"></span> Live Streams</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fas fa-bullhorn"></span> Adverts</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fas fa-bell"></span> Promotions</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fa fa-play-circle"></span> Videos</a>
-            </li>
-            <li>
-              <a href="#" data-target="#myModal3" data-toggle="modal">
-                <span class="fa fa-credit-card"></span> Wallet</a>
-            </li>
-            <li>
-              <a href="#" data-target="#myModal3" data-toggle="modal">
-                <span class="fa fa-briefcase"></span> Withdrawals</a>
-            </li>
-            <li>
-              <a routerLink="/dashboard/settings/">
-                <span class="fa fa-cog"></span> Settings</a>
-            </li>
-          </ul>
-          <!-- end /.dashboard_menu -->
-        </div>
-        <!-- end /.col-md-12 -->
+  <section class="dashboard-area">
+      <div class="dashboard_menu_area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <ul class="dashboard_menu">
+                          <li class="active">
+                              <a routerLink="/dashboard/">
+                                  <i class="fa fa-home"></i> Dashboard</a>
+                          </li>
+                          <li>
+                              <a routerLink="/dashboard/channels/">
+                                  <span class="fa fa-video"></span> Channels</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-stop-circle"></span> Live Streams</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fas fa-bullhorn"></span> Adverts</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fas fa-bell"></span> Promotions</a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <span class="fa fa-play-circle"></span> Videos</a>
+                          </li>
+                          <li>
+                              <a href="dashboard.html" data-target="#myModal3" data-toggle="modal">
+                                  <span class="fa fa-credit-card"></span> Wallet</a>
+                          </li>
+                          <li>
+                              <a href="#" data-target="#myModal3" data-toggle="modal">
+                                  <span class="fa fa-briefcase"></span> Withdrawals</a>
+                          </li>
+                          <li>
+                              <a routerLink="/dashboard/settings">
+                                  <span class="fa fa-cog"></span> Settings</a>
+                          </li>
+                      </ul>
+                      <!-- end /.dashboard_menu -->
+                  </div>
+                  <!-- end /.col-md-12 -->
+              </div>
+              <!-- end /.row -->
+          </div>
+          <!-- end /.container -->
       </div>
-      <!-- end /.col-md-12 -->
-    </div>
-    <!-- end /.row -->
-  </div>
+      <!-- end /.dashboard_menu_area -->
 
-  <!-- end /.dashboard_menu_area -->
-</section>
-<!-- end /.dashboard_menu_area -->
 
-<!--================================
+    <!--================================
           START LOGIN AREA
   =================================-->
-<section class="login_area section--padding2">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <div action="#">
-          <div class="cardify login">
-            <div class="login--header">
-              <h3 class="modal-title">Create New Channel</h3>
-              <p>Choose the video file you want to upload to Channel</p>
-            </div>
-            <!-- end .login_header -->
-
-            <div class="login--form">
-              <div action="#">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="vid-title">Video Title
-                        <sup>*</sup>
-                      </label>
-                      <input type="text" id="vid-title" class="text_field" placeholder="Enter Title" required>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="vid-desc">Description
-                        <sup>*</sup>
-                      </label>
-                      <input type="text" id="vid-desc" class="text_field" placeholder="Enter Description" required>
-                    </div>
-                  </div>
-
-                  <div class="login--form">
-                    <div action="#">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="vid-title">Video Title</label>
-                            <sup>*</sup>
-                            <div class="custom_upload">
-                              <label for="thumbnail">
-                                <input type="file" id="thumbnail" class="files">
-                                <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                              </label>
-                            </div>
-                            <!-- </div><br> -->
-                            <div class="col-lg-12 submit_button">
-                              <div class="submit_button"><br>
-                                <!--Break-->
-                                <button type="submit" class="btn btn--round btn--default">Upload Video</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </section> -->
-
-
-<!--================================
-      START FOOTER AREA
-  =================================-->
-<footer id="gen-footer">
-  <div class="gen-footer-style-1">
-    <div class="gen-footer-top main">
-
-      <div class="gen-copyright-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 align-self-left">
-              <img src="assets/images/logo-2.png" class="gen-footer-logo">
-            </div>
-            <div class="col-lg-4">
-              <p><span class="gen-copyright align-self-right" style="float:right;">
-                  Copyright @ 2021 CStream - All
-                  Rights
-                  Reserved.</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- <<<<<<< HEAD </div>
-  </div>
-  </div>
-  </section> -->
-<!-- / End -->
-
-
-<!--================================
-      START FOOTER AREA
-  =================================-->
-<footer id="gen-footer">
-  <div class="gen-footer-style-1">
-    <div class="gen-footer-top main">
-
-      <div class="gen-copyright-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 align-self-left">
-              <img src="assets/images/logo-2.png" class="gen-footer-logo">
-            </div>
-            <div class="col-lg-4">
-              <p><span class="gen-copyright align-self-right" style="float:right;">
-                  Copyright @ 2021
-                  CStream - All
-                  Rights
-                  Reserved.</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Main Footer End -->
-
-    <!-- Back-to-Top start -->
-    <div id="back-to-top">
-      <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
-    </div>
-    <!-- Back-to-Top end -->
-  </div>
-</footer>
-
-
-<!-- Modal Create Channel Starts -->
-<div class="modal fade rating_modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="rating_modal">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h3 class="modal-title" id="rating_modal">Create Channel</h3>
-      </div>
-      <!-- end /.modal-header -->
-
-      <div class="modal-body">
-        <form action="#">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label for="password">Channel Name
-                  <sup>*</sup>
-                </label>
-                <input type="text" id="cha-name" class="text_field" placeholder="Enter Channel Name" required>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <!-- <div class="form-group">
-                              <div class="upload_wrapper"> -->
-              <label for="thumbnail">Upload Avatar</label>
-              <sup>*</sup>
-              <div class="custom_upload">
-                <label for="thumbnail">
-                  <input type="file" id="thumbnail" class="files">
-                  <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <!-- <div class="form-group">
-                              <div class="upload_wrapper"> -->
-              <label for="thumbnail">Cover Image</label>
-              <sup>*</sup>
-
-              <div class="custom_upload">
-                <label for="thumbnail">
-                  <input type="file" id="thumbnail" class="files">
-                  <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="form-group">
-                <label for="rating_field">Description</label>
-                <textarea name="desc_chan" id="desc_chan" class="text_field"
-                  placeholder="Please enter your channel description"></textarea>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn--round btn--default">Create
-            Channel</button>
-          <!-- end /.form -->
-          <!-- end /.modal-body -->
-
-
-          <!-- Modal Upload Video -->
-          <div class="modal fade rating_modal item_remove_modal" id="myModal3" tabindex="-1" role="dialog"
-            aria-labelledby="myModal3">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title">Cash Withdrawal</h3>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <!-- end /.modal-header -->
-
-                <div class="modal-body">
-                  <form action="#">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="password">account balance
-                          </label>
-                          <input type="text" id="vid-title" class="text_field" placeholder="xxxxxx">
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="vid_URL">amount to Withdrawal
-                            <sup>*</sup>
-                          </label>
-                          <input type="text" id="vid_URL" class="text_field" placeholder="xxxxxx" required>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <label for="option1">Withdrawal to
-                            <sup>*</sup>
-                          </label>
-                          <div class="select-wrap">
-                            <select name="channel_type" id="chan_type" class="select_field">
-                              <option value="option-1">Mobile Money</option>
-                              <option value="C_Card">Credit/Debit Card</option>
-                              <option value="other">bank transfer</option>
-                            </select>
-                            <span class="lnr lnr-chevron-down"></span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-12">
-                        <div class="submit_button">
-                          <button type="submit" class="btn btn--round btn--default">Withdrawal</button>
-                        </div>
-                      </div>
-                      <!-- end /.form -->
-                    </div>
-                    <!-- end /.modal-body -->
-                    =======
-                    <footer id="gen-footer">
-                      <div class="gen-footer-style-1">
-                        <div class="gen-footer-top main">
-
-                          <div class="gen-copyright-footer">
-                            <div class="container">
-                              <div class="row">
-                                <div class="col-lg-8 align-self-left">
-                                  <img src="assets/images/logo-2.png" class="gen-footer-logo">
+                    <section class="login_area section--padding2">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-8 offset-lg-2">
+                            <div action="#">
+                              <div class="cardify login">
+                                <div class="login--header">
+                                  <h3 class="modal-title">Create New Channel</h3>
+                                  <!-- <p>Choose the video file you want to upload to Channel</p> -->
                                 </div>
-                                <div class="col-lg-4">
-                                  <p><span class="gen-copyright align-self-right" style="float:right;"> Copyright
-                                      @ 2021 CStream - All
-                                      Rights
-                                      Reserved.</span></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Main Footer End -->
+                                <!-- end .login_header -->
 
-                        <!-- Back-to-Top start -->
-                        <div id="back-to-top">
-                          <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i>
-                          </a>
-                        </div>
-                        <!-- Back-to-Top end -->
-                      </div>
-
-
-                      <!-- Modal Create Channel Starts -->
-                      <div class="modal fade rating_modal" id="myModal1" tabindex="-1" role="dialog"
-                        aria-labelledby="rating_modal">
-                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                              <h3 class="modal-title" id="rating_modal">Create
-                                Channel</h3>
-                            </div>
-                            <!-- end /.modal-header -->
-
-                            <div class="modal-body">
-                              <form action="#">
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="form-group">
-                                      <label for="password">Channel Name
-                                        <sup>*</sup>
-                                      </label>
-                                      <input type="text" id="cha-name" class="text_field"
-                                        placeholder="Enter Channel Name" required>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-md-6">
-                                    <!-- <div class="form-group">
-                              <div class="upload_wrapper"> -->
-                                    <label for="thumbnail">Upload Avatar</label>
-                                    <sup>*</sup>
-                                    <div class="custom_upload">
-                                      <label for="thumbnail">
-                                        <input type="file" id="thumbnail" class="files">
-                                        <span class="btn btn--bordered btn-sm btn-dark">Choose
-                                          File</span>
-                                      </label>
-                                    </div>
-                                  </div>
-
-                                  <div class="col-md-6">
-                                    <!-- <div class="form-group">
-                              <div class="upload_wrapper"> -->
-                                    <label for="thumbnail">Cover Image</label>
-                                    <sup>*</sup>
-
-                                    <div class="custom_upload">
-                                      <label for="thumbnail">
-                                        <input type="file" id="thumbnail" class="files">
-                                        <span class="btn btn--bordered btn-sm btn-dark">Choose
-                                          File</span>
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-lg-12">
-                                    <div class="form-group">
-                                      <label for="rating_field">Description</label>
-                                      <textarea name="desc_chan" id="desc_chan" class="text_field"
-                                        placeholder="Please enter your channel description"></textarea>
-                                    </div>
-                                  </div>
-                                </div>
-                                <button type="submit" class="btn btn--round btn--default">Create
-                                  Channel</button>
-                                <!-- end /.form -->
-                                <!-- end /.modal-body -->
-
-
-                                <!-- Modal Upload Video -->
-                                <div class="modal fade rating_modal item_remove_modal" id="myModal3" tabindex="-1"
-                                  role="dialog" aria-labelledby="myModal3">
-                                  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                      <div class="modal-header">
-                                        <h3 class="modal-title">Cash Withdrawal</h3>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                        </button>
+                                <div class="login--form">
+                                  <div action="#">
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="form-group">
+                                          <label for="chan-name">CHANNEL NAME
+                                            <sup>*</sup>
+                                          </label>
+                                          <input type="text" id="chan-name" class="text_field" placeholder="Enter Channel Name" required>
+                                        </div>
                                       </div>
-                                      <!-- end /.modal-header -->
 
-                                      <div class="modal-body">
-                                        <form action="#">
-                                          <div class="row">
-                                            <div class="col-md-6">
-                                              <div class="form-group">
-                                                <label for="password">account
-                                                  balance
-                                                </label>
-                                                <input type="text" id="vid-title" class="text_field"
-                                                  placeholder="xxxxxx">
-                                              </div>
-                                            </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="chan-title">TITLE
+                          <sup>*</sup>
+                        </label>
+                        <input type="text" id="chan-title" class="text_field" placeholder="Enter Title" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="thumbnail">UPLOAD AVATAR</label>
+                      <sup>*</sup>
+                      <div class="custom_upload">
+                        <label for="thumbnail">
+                          <input type="file" id="thumbnail" class="files">
+                          <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
+                        </label>
+                      </div>
+                    </div><br>
+                    <div class="col-md-6">
+                      <label for="thumbnail">COVER IMAGE</label>
+                      <sup>*</sup>
+                      <div class="custom_upload">
+                        <label for="thumbnail">
+                          <input type="file" id="thumbnail" class="files">
+                          <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
+                        </label>
+                      </div>
+                    </div><br>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="rating_field">Description</label>
+                        <textarea name="desc_chan" id="desc_chan" class="text_field"
+                          placeholder="Please enter your channel description"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 submit_button">
+                      <div class="submit_button"><br>
+                        <!--Break-->
+                        <button type="submit" class="btn btn--round btn--default">Create Channel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- </section> -->
+    <!-- / End -->
+    </div>
+    </div>
+    </section>
+  <!-- / End -->
 
-                                            <div class="col-md-6">
-                                              <div class="form-group">
-                                                <label for="vid_URL">amount to
-                                                  Withdrawal
-                                                  <sup>*</sup>
-                                                </label>
-                                                <input type="text" id="vid_URL" class="text_field" placeholder="xxxxxx"
-                                                  required>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="row">
-                                            <div class="col-lg-12">
-                                              <div class="form-group">
-                                                <label for="option1">Withdrawal to
-                                                  <sup>*</sup>
-                                                </label>
-                                                <div class="select-wrap">
-                                                  <select name="channel_type" id="chan_type" class="select_field">
-                                                    <option value="option-1">Mobile
-                                                      Money</option>
-                                                    <option value="C_Card">
-                                                      Credit/Debit Card
-                                                    </option>
-                                                    <option value="other">bank
-                                                      transfer</option>
-                                                  </select>
-                                                  <span class="lnr lnr-chevron-down"></span>
-                                                </div>
-                                              </div>
-                                            </div>
 
-                                            <div class="col-lg-12">
-                                              <div class="submit_button">
-                                                <button type="submit"
-                                                  class="btn btn--round btn--default">Withdrawal</button>
-                                              </div>
-                                            </div>
-                                            <!-- end /.form -->
-                                          </div>
-                                          <!-- end /.modal-body -->
-                                          <!-- Main Footer End -->
+ <!--================================
+        START FOOTER AREA
+    =================================-->
+    <footer id="gen-footer">
+      <div class="gen-footer-style-1">
+        <div class="gen-footer-top main">
 
-                                          <!-- Back-to-Top start -->
-                                          <div id="back-to-top">
-                                            <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i>
-                                            </a>
-                                          </div>
-                                          <!-- Back-to-Top end -->
+          <div class="gen-copyright-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 align-self-left">
+                  <img src="assets/images/logo-2.png" class="gen-footer-logo">
+                </div>
+                <div class="col-lg-4">
+                  <p><span class="gen-copyright align-self-right" style="float:right;"> Copyright @ 2021 CStream - All
+                      Rights
+                      Reserved.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Main Footer End -->
+
+        <!-- Back-to-Top start -->
+        <div id="back-to-top">
+          <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+        </div>
+        <!-- Back-to-Top end -->
+      </div>
+
+
+
+
