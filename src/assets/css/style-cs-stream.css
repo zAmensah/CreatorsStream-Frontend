@@ -13499,16 +13499,17 @@ button#btn-alt {
 }
 
 .single_speaker {
-  width: 50%;
+  width: 47%;
   float: left;
-  margin-bottom: 60px;
+  background: #fff;
+  margin: 10px;
+  padding: 25px;
 }
 
 .single_speaker .speaker__thumbnail {
-  height: 133px;
-  width: 143px;
+  width: 135px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   margin-right: -3px;
 }
 
@@ -13521,8 +13522,8 @@ button#btn-alt {
   display: inline-block;
   vertical-align: middle;
   margin-right: -3px;
-  padding-left: 20px;
-  width: calc(100% - 225px);
+  /* padding-left: 20px; */
+  width: calc(100% - 135px);
 }
 
 .single_speaker .speaker__detail h4 {
