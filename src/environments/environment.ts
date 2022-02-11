@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  basedUrl: 'http://localhost:6500/api',
+  basedUrl: 'https://creators-stream.herokuapp.com/api',
+  // basedUrl: 'http://localhost:6500/api',
   firebaseConfig: {
     apiKey: 'AIzaSyBJFAVvWxgc8gjx1qWyVmLji-esqpWvzrg',
     authDomain: 'creators-stream.firebaseapp.com',
