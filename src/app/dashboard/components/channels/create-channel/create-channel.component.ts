@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { last, concatMap, tap } from 'rxjs/operators';
 import { DashboardService } from 'src/app/dashboard/services/dashboard.service';
+import { ErrorHandlerService } from 'src/app/services/error-handler.service';
 import { MessagesService } from 'src/app/shared/services/messages.service';
 
 @Component({
@@ -30,6 +31,7 @@ export class CreateChannelComponent implements OnInit {
     private dashboardService: DashboardService,
     private storage: AngularFireStorage,
     private messageService: MessagesService,
+    private errorService: ErrorHandlerService,
     private router: Router
   ) {
     this.channelForm = this.fb.group({
@@ -98,7 +100,8 @@ export class CreateChannelComponent implements OnInit {
           this.router.navigateByUrl('/dashboard/channel/add');
         },
         (err) => {
-          this.messageService.error(err.error.message);
+          this.errorService.errorHandler(err);
+          // this.messageService.error(err.error.message);
           this.loading = false;
         }
       );
