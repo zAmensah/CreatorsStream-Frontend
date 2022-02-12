@@ -28,6 +28,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - DashboardPage = /dashboard = [src/app/dasboard/components/landing]
 - AddVideoPage = /dashboard/add-video = [src/app/dasboard/components/add-video]
 - ChannelPage = /dashboard/channels = [src/app/dasboard/components/channels]
-- SingleChannelPage = /dashboard/channels/1 = [src/app/dasboard/components/channels/single-channel]
+- SingleChannelPage = /dashboard/channels/single/1 = [src/app/dasboard/components/channels/single-channel]
 - AddChannelPage = /dashboard/channels/add-channel = [src/app/dasboard/components/channels/add-channel]
 - SettingsPage = /dashboard/settings = [src/app/dasboard/components/settings]

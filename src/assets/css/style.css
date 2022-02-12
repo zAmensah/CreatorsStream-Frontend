@@ -527,7 +527,7 @@ section.gen-section-padding-3.main-vid {
 }
 section,
 .gen-section-padding {
-  padding: 130px 0px 130px 0px;
+  padding: 50px 0px 130px 0px;
 }
 h4.gen-heading-title {
   font-family: montserrat;
@@ -1522,9 +1522,9 @@ Blog Sidebar
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.gen-btn-container {
+/* .gen-btn-container {
   margin-top: 20px !important;
-}
+} */
 .widget:last-child {
   margin-bottom: 0;
 }
@@ -2300,7 +2300,7 @@ Breadcrum
   padding: 90px 0;
   text-align: center;
   position: relative;
-  background-attachment: fixed !important;
+  /* background-attachment: fixed !important; */
   background-size: cover !important;
 }
 

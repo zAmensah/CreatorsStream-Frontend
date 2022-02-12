@@ -13516,6 +13516,7 @@ button#btn-alt {
 .single_channel .channel__thumbnail img {
   -webkit-border-radius: 50%;
           border-radius: 50%;
+          width: 100px;
 }
 
 .single_channel .channel__detail {
