@@ -385,7 +385,7 @@
           <div class="col-xl-9 col-md-12">
             <div class="single_channel" *ngFor="let channel of (dashboardService.channels$ | async)">
               <div class="channel__thumbnail">
-                <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/support.svg"
+                <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
                     alt="Channel-avator"></a>
                 <div class="gen-likes-col">
                   <ul>
@@ -395,11 +395,12 @@
               </div>
 
               <div class="channel__detail">
-                <h4><a routerLink="/dashboard/channels/single/1">TutorZine TV</a></h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
+                <h4><a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a></h4>
+                <p>{{channel.about}}</p>
               </div>
+              <!-- <button (click)="getChannel(channel)">Hello</button> -->
             </div>
+
             <!-- end single_channel-->
 
             <!-- <div class="single_channel">
@@ -471,7 +472,7 @@
             </div> -->
             <!-- end single_channel-->
 
-            <div class="single_channel">
+            <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/author_level_3.svg"
                     alt="Channel-avator"></a>
@@ -486,7 +487,7 @@
                 <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
                   condimentum.</p>
               </div>
-            </div>
+            </div> -->
             <!-- end single_channel-->
             <!-- <div class="col-lg-12 submit_button">
                 <button type="submit" class="btn btn--round btn--default"><span class="fa fa-cog"></span> Load more</button>

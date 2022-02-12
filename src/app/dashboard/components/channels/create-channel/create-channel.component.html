@@ -369,67 +369,113 @@
                 </div>
                 <!-- end .login_header -->
 
-                <div class="login--form">
-                  <div action="#">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="chan-name">CHANNEL NAME
-                            <sup>*</sup>
-                          </label>
-                          <input type="text" id="chan-name" class="text_field" placeholder="Enter Channel Name"
-                            required>
+                <form [formGroup]="channelForm" (ngSubmit)="onSumbit()" novalidate>
+                  <div class="login--form">
+                    <div action="#">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="chan-name">CHANNEL NAME
+                              <sup>*</sup>
+                            </label>
+                            <input type="text" id="chan-name" class="text_field" placeholder="Enter Channel Name"
+                              required formControlName="name">
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="chan-title">TITLE
-                            <sup>*</sup>
-                          </label>
-                          <input type="text" id="chan-title" class="text_field" placeholder="Enter Title" required>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="chan-title">TITLE
+                              <sup>*</sup>
+                            </label>
+                            <input type="text" id="chan-title" class="text_field" placeholder="Enter Title" required>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label for="thumbnail">UPLOAD AVATAR</label>
-                        <sup>*</sup>
-                        <div class="custom_upload">
-                          <label for="thumbnail">
-                            <input type="file" id="thumbnail" class="files">
-                            <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                          </label>
-                        </div>
-                      </div><br>
-                      <div class="col-md-6">
-                        <label for="thumbnail">COVER IMAGE</label>
-                        <sup>*</sup>
-                        <div class="custom_upload">
-                          <label for="thumbnail">
-                            <input type="file" id="thumbnail" class="files">
-                            <span class="btn btn--bordered btn-sm btn-dark">Choose File</span>
-                          </label>
-                        </div>
-                      </div><br>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <label for="rating_field">Description</label>
-                          <textarea name="desc_chan" id="desc_chan" class="text_field"
-                            placeholder="Please enter your channel description"></textarea>
-                        </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="thumbnail">UPLOAD LOGO</label>
+                          <sup>*</sup>
+                          <div class="custom_upload">
+                            <label for="logo-upload">
+                              <input type="file" id="logo-upload" #pickerlogo class="files" formControlName="logo"
+                                (change)="uploadLogo($event)">
+                              <span class="btn btn--bordered btn-sm btn-dark">
+                                <ng-container *ngIf="logo; else noLogo">
+                                  Change Logo
+                                </ng-container>
+                                <ng-template #noLogo>
+                                  Choose File
+                                </ng-template>
+
+                              </span>
+                            </label>
+                          </div>
+                          <div *ngIf="logoLoading">
+                            <div class="progress-indicator" *ngIf="(percentageLogo$ | async) as percentage">
+                              <mat-progress-bar class="progress-indicator mt-3" mode="determinate" [value]="percentage">
+                              </mat-progress-bar>
+                              <span *ngIf="percentage < 100;else complete">{{percentage / 100 | percent}}</span>
+                              <ng-template #complete><span *ngIf="percentage">Upload Complete</span></ng-template>
+                            </div>
+                          </div>
+                          <img *ngIf="logo" [src]="logo" class="mt-3 mb-3 cover-image">
+                        </div><br>
+                        <div class="col-md-6">
+                          <label for="thumbnail">COVER IMAGE</label>
+                          <sup>*</sup>
+                          <div class="custom_upload">
+                            <label for="cover">
+                              <input type="file" id="cover" class="files" #pickerCover formControlName="cover"
+                                (change)="uploadCover($event)">
+                              <span class="btn btn--bordered btn-sm btn-dark">
+                                <ng-container *ngIf="cover; else noCover">
+                                  Change Image
+                                </ng-container>
+                                <ng-template #noCover>
+                                  Choose File
+                                </ng-template>
+
+                              </span>
+                            </label>
+                          </div>
+                          <div *ngIf="coverLoading">
+                            <div class="progress-indicator" *ngIf="(percentageCover$ | async) as percentage">
+                              <mat-progress-bar class="progress-indicator mt-3" mode="determinate" [value]="percentage">
+                              </mat-progress-bar>
+                              <span *ngIf="percentage < 100;else complete">{{percentage / 100 | percent}}</span>
+                              <ng-template #complete><span *ngIf="percentage">Upload Complete</span></ng-template>
+                            </div>
+                          </div>
+                          <img *ngIf="cover" [src]="cover" class="mt-3 mb-3 cover-image">
+                        </div><br>
                       </div>
-                      <div class="col-lg-12 submit_button">
-                        <div class="submit_button"><br>
-                          <!--Break-->
-                          <button type="submit" class="btn btn--round btn--default">Create Channel</button>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <label for="rating_field">Description</label>
+                            <textarea name="desc_chan" id="desc_chan" class="text_field"
+                              placeholder="Please enter your channel description" formControlName="about"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 submit_button">
+                          <div class="submit_button"><br>
+                            <!--Break-->
+                            <button type="submit" class="btn btn--round btn--default"
+                              [disabled]="coverLoading || logoLoading || loading">
+                              <ng-container *ngIf="loading; else noChange">
+                                Saving Channel...
+                              </ng-container>
+                              <ng-template #noChange>
+                                Create Channel
+                              </ng-template>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

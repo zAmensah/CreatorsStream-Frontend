@@ -10,7 +10,7 @@ import { DashboardService } from 'src/app/dashboard/services/dashboard.service';
 })
 export class SingleChannelComponent implements OnInit {
   channelId: any;
-  channelVideos!: IChannels;
+  channelVideos!: any;
 
   constructor(
     private dashboardService: DashboardService,
@@ -22,7 +22,10 @@ export class SingleChannelComponent implements OnInit {
   singleChannel() {
     this.dashboardService
       .singleChannel(this.channelId)
-      .subscribe((res: any) => (this.channelVideos = res['channel']));
+      .subscribe((res: any) => {
+        this.channelVideos = res['channel'];
+        console.log(this.channelVideos);
+      });
   }
 
   ngOnInit(): void {

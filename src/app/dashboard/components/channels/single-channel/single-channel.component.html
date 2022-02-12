@@ -24,10 +24,11 @@
           <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
             <!-- start .author-area -->
             <div class="author-area">
-              <a routerLink="/dashboard/channel/add/" class="author-area__seller-btn-alt"><i
-                  class="fa fa-video" aria-hidden="true"></i> Create Channel</a>
+              <a routerLink="/dashboard/channel/add/" class="author-area__seller-btn-alt"><i class="fa fa-video"
+                  aria-hidden="true"></i> Create Channel</a>
               <!-- <a href="#" class="author-area__seller-btn-alt" data-target="#myModal1" data-toggle="modal"><i class="fa fa-video" aria-hidden="true"></i> Create Channel</a> -->
-              <a routerLink="/dashboard/add-video/" class="author-area__seller-btn inline"><i class="fa fa-upload" aria-hidden="true"></i> Upload Video</a>
+              <a routerLink="/dashboard/add-video/" class="author-area__seller-btn inline"><i class="fa fa-upload"
+                  aria-hidden="true"></i> Upload Video</a>
 
               <div class="author__notification_area">
                 <ul>
@@ -300,6 +301,7 @@
   <!--================================
             START DASHBOARD AREA
     =================================-->
+
   <section class="dashboard-area">
     <div class="dashboard_menu_area">
       <div class="container">
@@ -311,7 +313,7 @@
                   <i class="fa fa-home"></i> Dashboard</a>
               </li>
               <li>
-                <a routerLink="/dashboard/channels/">
+                <a routerLink="/dashboard/channels">
                   <span class="fa fa-video"></span> Channels</a>
               </li>
               <li>
@@ -354,823 +356,832 @@
   </section>
   <!-- end /.dashboard_menu_area -->
 
+  <ng-container *ngIf="channelVideos; else spinner">
     <!-- breadcrumb -->
-    <div class="gen-breadcrumb" style="background-image: url('/assets/images/video-thumbnail-29.jpeg');">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav aria-label="breadcrumb">
-                        <div class="gen-breadcrumb-title">
-                            <h1>
-                              Dreams Tv
-                            </h1>
-                        </div>
-                        <div class="gen-breadcrumb-container">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a routerLink="/dashboard/">
-                                <i class="fas fa-cog mr-2"></i>Dashboard</a></li>
-                                <li class="breadcrumb-item"><a routerLink="/dashboard/channels/">Channel</a></li>
-                                <li class="breadcrumb-item active">Dreams Tv</li>
-                            </ol>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+    <div class="gen-breadcrumb" [ngStyle]="{'background-image': 'url(' + channelVideos.cover +')'}">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <nav aria-label="breadcrumb">
+              <div class="gen-breadcrumb-title">
+                <h1>
+                  {{channelVideos.name}}
+                </h1>
+              </div>
+              <div class="gen-breadcrumb-container">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/dashboard/">
+                      <i class="fas fa-cog mr-2"></i>Dashboard</a></li>
+                  <li class="breadcrumb-item"><a routerLink="/dashboard/channels/">Channel</a></li>
+                  <li class="breadcrumb-item active">{{channelVideos.name}}</li>
+                </ol>
+              </div>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- breadcrumb -->
 
     <!-- Action Movies -->
-      <section class="gen-section-padding-3">
-        <div class="container">
+    <section class="gen-section-padding-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-2.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">sefozie world</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
+              <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let video of channelVideos.videos">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img [src]="video.cover" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-3.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">War Hands</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-4.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">MGX-Fighter</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-5.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Voho The Skull Land</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-6.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Bigfoot Silva</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-7.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Robot War</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-18.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Nature World</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-11.png" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">AI:world</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-20.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Horse Ride</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-21.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Big Machine</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-22.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">make idea</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-23.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Moto3 2014 Biggest crashes</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-24.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">dom’s match</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-25.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">Angry Moments in Cricket</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-26.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">xk vs kx</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="gen-carousel-movies-style-3 movie-grid style-3">
-                                <div class="gen-movie-contain">
-                                    <div class="gen-movie-img">
-                                        <img src="/assets/images/video-thumbnail-27.jpeg" alt="single-video-image">
-                                        <div class="gen-movie-add">
-                                            <div class="wpulike wpulike-heart">
-                                                <div class="wp_ulike_general_class">
-                                                    <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                            <ul class="menu bottomRight">
-                                                <li class="share top">
-                                                    <i class="fa fa-share-alt"></i>
-                                                    <ul class="submenu">
-                                                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gen-movie-action">
-                                            <a href="video-playback.html" class="gen-button">
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="gen-info-contain">
-                                        <div class="gen-movie-info">
-                                            <h3><a href="video-playback.html">kazy whale</a></h3>
-                                        </div>
-                                        <div class="gen-movie-meta-holder">
-                                            <ul>
-                                               <li>
-                                                   <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
-                                               </li>
-                                               <li><i class="fa fa-eye"></i><span>158k Views</span></li>
-                                           </ul>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a routerLink="/watch/u/{{video._id}}" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="gen-pagination">
-                                <nav aria-label="Page navigation">
-                                    <ul class="page-numbers">
-                                        <li><span aria-current="page" class="page-numbers current">1</span></li>
-                                        <li><a class="page-numbers" href="#">2</a></li>
-                                        <li><a class="page-numbers" href="#">3</a></li>
-                                        <li><a class="next page-numbers" href="#">Next page</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a routerLink="/watch/u/{{video._id}}">{{video.title}}</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a routerLink="/dashboard/channels"><span><i
+                                  class="fa fa-tv channel-icon"></i>{{video.channel.name}}</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>{{video.views}} Views</span></li>
+                        </ul>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <!-- <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-3.png" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">War Hands</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-4.png" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">MGX-Fighter</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-5.png" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Voho The Skull Land</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-6.png" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Bigfoot Silva</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-7.png" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Robot War</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-18.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Nature World</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-11.png" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">AI:world</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-20.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Horse Ride</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-21.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Big Machine</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-22.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">make idea</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-23.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Moto3 2014 Biggest crashes</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-24.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">dom’s match</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-25.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">Angry Moments in Cricket</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-26.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">xk vs kx</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="gen-carousel-movies-style-3 movie-grid style-3">
+                  <div class="gen-movie-contain">
+                    <div class="gen-movie-img">
+                      <img src="/assets/images/video-thumbnail-27.jpeg" alt="single-video-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
+                          <div class="wp_ulike_general_class">
+                            <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
+                          </div>
+                        </div>
+                        <ul class="menu bottomRight">
+                          <li class="share top">
+                            <i class="fa fa-share-alt"></i>
+                            <ul class="submenu">
+                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
+                              </li>
+                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a href="video-playback.html" class="gen-button">
+                          <i class="fa fa-play"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gen-info-contain">
+                      <div class="gen-movie-info">
+                        <h3><a href="video-playback.html">kazy whale</a></h3>
+                      </div>
+                      <div class="gen-movie-meta-holder">
+                        <ul>
+                          <li>
+                            <a href="channel.html"><span><i class="fa fa-tv channel-icon"></i> Action TV</span></a>
+                          </li>
+                          <li><i class="fa fa-eye"></i><span>158k Views</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
             </div>
+            <!-- <div class="row">
+              <div class="col-lg-12">
+                <div class="gen-pagination">
+                  <nav aria-label="Page navigation">
+                    <ul class="page-numbers">
+                      <li><span aria-current="page" class="page-numbers current">1</span></li>
+                      <li><a class="page-numbers" href="#">2</a></li>
+                      <li><a class="page-numbers" href="#">3</a></li>
+                      <li><a class="next page-numbers" href="#">Next page</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div> -->
+          </div>
         </div>
+      </div>
     </section>
     <!-- Action Movies -->
+  </ng-container>
+  <ng-template #spinner>
+    <div class="spinner-container">
+      <span class="loader"></span>
+    </div>
+  </ng-template>
+
 
   <!--================================
         START FOOTER AREA
     =================================-->
-    <footer id="gen-footer">
-      <div class="gen-footer-style-1">
-        <div class="gen-footer-top main">
+  <footer id="gen-footer">
+    <div class="gen-footer-style-1">
+      <div class="gen-footer-top main">
 
-          <div class="gen-copyright-footer">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 align-self-left">
-                  <img src="assets/images/logo-2.png" class="gen-footer-logo">
-                </div>
-                <div class="col-lg-4">
-                  <p><span class="gen-copyright align-self-right" style="float:right;"> Copyright @ 2021 CStream - All
-                      Rights
-                      Reserved.</span></p>
-                </div>
+        <div class="gen-copyright-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 align-self-left">
+                <img src="assets/images/logo-2.png" class="gen-footer-logo">
+              </div>
+              <div class="col-lg-4">
+                <p><span class="gen-copyright align-self-right" style="float:right;"> Copyright @ 2021 CStream - All
+                    Rights
+                    Reserved.</span></p>
               </div>
             </div>
           </div>
         </div>
-        <!-- Main Footer End -->
-
-        <!-- Back-to-Top start -->
-        <div id="back-to-top">
-          <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
-        </div>
-        <!-- Back-to-Top end -->
       </div>
-    </footer>
+      <!-- Main Footer End -->
+
+      <!-- Back-to-Top start -->
+      <div id="back-to-top">
+        <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+      </div>
+      <!-- Back-to-Top end -->
+    </div>
+  </footer>

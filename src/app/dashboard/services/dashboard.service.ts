@@ -11,8 +11,8 @@ import { LoadingService } from 'src/app/shared/services/loading.service';
   providedIn: 'root',
 })
 export class DashboardService {
-  private channelSubject = new BehaviorSubject<IChannels[]>([]);
-  channels$: Observable<IChannels[]> = this.channelSubject.asObservable();
+  private channelsSubject = new BehaviorSubject<IChannels[]>([]);
+  channels$: Observable<IChannels[]> = this.channelsSubject.asObservable();
 
   constructor(
     private http: HttpClient,
@@ -27,13 +27,13 @@ export class DashboardService {
       .pipe(shareReplay());
   }
 
-  private getChannels() {
+  getChannels() {
     const channel$ = this.http
       .get<IChannels[]>(`${environment.basedUrl}` + '/channel/user')
       .pipe(
         map((res: any) => res['userChannel']),
-        tap((channels) => this.channelSubject.next(channels)),
-        shareReplay()
+        tap((channels) => this.channelsSubject.next(channels))
+        // shareReplay()
       );
 
     this.loadingService.showLoaderUntilComplete(channel$).subscribe();

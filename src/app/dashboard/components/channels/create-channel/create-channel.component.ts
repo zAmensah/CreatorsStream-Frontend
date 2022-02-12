@@ -30,7 +30,6 @@ export class CreateChannelComponent implements OnInit {
     private fb: FormBuilder,
     private dashboardService: DashboardService,
     private storage: AngularFireStorage,
-    private messageService: MessagesService,
     private errorService: ErrorHandlerService,
     private router: Router
   ) {
@@ -97,7 +96,8 @@ export class CreateChannelComponent implements OnInit {
       })
       .subscribe(
         () => {
-          this.router.navigateByUrl('/dashboard/channel/add');
+          this.dashboardService.getChannels();
+          this.router.navigateByUrl('/dashboard/add-video');
         },
         (err) => {
           this.errorService.errorHandler(err);

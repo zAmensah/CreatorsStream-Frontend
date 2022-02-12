@@ -13,4 +13,8 @@ export class ChannelsComponent implements OnInit {
   constructor(public dashboardService: DashboardService) {}
 
   ngOnInit(): void {}
+
+  getChannel(id: any) {
+    console.log(id);
+  }
 }
