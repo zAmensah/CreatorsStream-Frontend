@@ -12,3 +12,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .gen-likes-col {
   margin-top: 5px !important;
 }
+.gen-breadcrumb-title {
+  margin-top: 55px !important;
+}

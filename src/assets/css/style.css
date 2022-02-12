@@ -2352,7 +2352,9 @@ Breadcrum
 .gen-breadcrumb-container .breadcrumb li a:hover {
   color: var(--primary-color);
 }
-
+.gen-breadcrumb-container .breadcrumb li {
+  color: #20ba83 !important;
+}
 .gen-breadcrumb-container
   .breadcrumb
   .breadcrumb-item
