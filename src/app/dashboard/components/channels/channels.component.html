@@ -383,25 +383,24 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 col-md-12">
-            <div class="single_channel">
+            <div class="single_channel" *ngFor="let channel of (dashboardService.channels$ | async)">
               <div class="channel__thumbnail">
-                <img src="/assets/images/comavatar2.jpg" alt="">
+                <img [src]="channel.logo" alt="">
                 <div class="gen-likes-col">
                   <ul>
-                    <li><a href="#" class="ocuup"> <i class="fa fa-thumbs-up"></i> 435k Likes</a></li>
+                    <li><a class="ocuup"> <i class="fa fa-thumbs-up"></i> {{channel.totalLikes}} Likes</a></li>
                   </ul>
                 </div>
               </div>
 
               <div class="channel__detail">
-                <h4>TutorZine TV</h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
+                <h4>{{channel.name}}</h4>
+                <p>{{channel.about}}</p>
               </div>
             </div>
             <!-- end single_channel-->
 
-            <div class="single_channel">
+            <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <img src="/assets/images/comavatar2.jpg" alt="">
                 <div class="gen-likes-col">
@@ -416,10 +415,10 @@
                 <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
                   condimentum.</p>
               </div>
-            </div>
+            </div> -->
             <!-- end single_channel-->
 
-            <div class="single_channel">
+            <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <img src="/assets/images/comavatar2.jpg" alt="">
 
@@ -433,10 +432,10 @@
                 <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
                   condimentum.</p>
               </div>
-            </div>
+            </div> -->
             <!-- end single_channel-->
 
-            <div class="single_channel">
+            <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <img src="/assets/images/comavatar2.jpg" alt="">
 
@@ -449,12 +448,11 @@
                 <h4>WildLife TV</h4>
                 <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
                   condimentum.</p>
-                <!-- end single_channel-->
               </div>
-            </div>
+            </div> -->
+            <!-- end single_channel-->
 
-
-            <div class="single_channel">
+            <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <img src="/assets/images/comavatar2.jpg" alt="">
 
@@ -468,7 +466,7 @@
                 <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
                   condimentum.</p>
               </div>
-            </div>
+            </div> -->
             <!-- end single_channel-->
           </div>
           <!-- End Channel Content -->

@@ -10,4 +10,6 @@ export interface IChannels {
   cover: string;
   about: string;
   videos: [IVideos];
+  totalLikes: number;
+  totalViews: number;
 }

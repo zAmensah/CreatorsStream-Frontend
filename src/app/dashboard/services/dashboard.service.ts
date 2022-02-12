@@ -32,8 +32,10 @@ export class DashboardService {
       .get<IChannels[]>(`${environment.basedUrl}` + '/channel/user')
       .pipe(
         map((res: any) => res['userChannel']),
-        tap((channels) => this.channelSubject.next(channels))
+        tap((channels) => this.channelSubject.next(channels)),
+        shareReplay()
       );
+
     this.loadingService.showLoaderUntilComplete(channel$).subscribe();
   }
 
