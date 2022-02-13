@@ -168,6 +168,7 @@ textarea.text_field {
   line-height: 25px;
   padding-top: 15px;
   min-height: 135px;
+  color: #a1a1a1 !important;
 }
 
 button {
@@ -13516,7 +13517,8 @@ button#btn-alt {
 .single_channel .channel__thumbnail img {
   -webkit-border-radius: 50%;
           border-radius: 50%;
-          width: 100px;
+          width: 115px !important;
+    height: 115px !important;
 }
 
 .single_channel .channel__detail {
