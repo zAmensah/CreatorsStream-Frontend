@@ -11818,7 +11818,7 @@ button#btn-alt {
 }
 
 .login, .signup_form, .recover_pass {
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .login .login--header, .signup_form .login--header, .recover_pass .login--header {
@@ -15201,7 +15201,7 @@ button#btn-alt {
   }
   /* LOGIN AREA */
   .login, .signup_form, .recover_pass {
-    padding: 40px 20px;
+    padding: 20px 20px;
   }
   .login .login--form, .signup_form .login--form, .recover_pass .login--form {
     padding: 0px !important;
