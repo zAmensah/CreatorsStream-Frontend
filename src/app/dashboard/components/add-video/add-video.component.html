@@ -362,9 +362,14 @@
         <div class="col-lg-8 offset-lg-2">
           <div action="#">
             <div class="cardify login">
+              <!--Head-Title-icon-->
+              <div class="ad-icon-holder" style="text-align: center; margin-top: 15px;">
+                <i id="head-title-icon" class="fa fa-upload"></i>
+                <p class="gen-subtitle">Choose the video file you want to upload to Channel</p>
+              </div>
+               <!-- /Head-Title-icon-->
               <div class="login--header">
                 <h3 class="modal-title">Upload Video</h3>
-                <p>Choose the video file you want to upload to Channel</p>
               </div>
               <!-- end .login_header -->
 
@@ -392,16 +397,12 @@
                           <div class="select-wrap">
                             <select name="channel_type" id="chan_type" class="select_field" formControlName="channel"
                               placeholder="hello">
-                              <!-- <option>-- Select Channel --</option> -->
+                              <option>-- Select Channel --</option>
                               <option *ngFor="let channel of (dashboardService.channels$ | async)"
                                 [value]="channel._id">
                                 {{channel.name}}
                               </option>
                               <option routerLink="/dashboard/channel/add">-- Add New Channel --</option>
-                              <!-- <option value="option-2">Video Channel</option>
-                                          <option value="option-3">Support Channel</option>
-                                          <option value="option-4">Documentory</option>
-                                          <option value="option-5">Others</option> -->
                             </select>
                             <span class="lnr lnr-chevron-down"></span>
                           </div>

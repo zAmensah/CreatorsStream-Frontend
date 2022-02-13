@@ -488,15 +488,16 @@ a.like-thumb:hover {
 .gen-episode-info a {
   color: #d9d7d7;
 }
-.fa.fa-bullhorn {
-  background: #20ba83;
-  width: 78px;
-  height: 78px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 45px;
-  padding-top: 15px;
+#head-title-icon {
+    background: #20ba83;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 50px;
+    padding: 15px;
 }
+
 #fa-bullhorn .fa.fa-bullhorn {
   background: #20ba83;
   border-radius: 50%;

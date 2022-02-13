@@ -18,3 +18,7 @@ button, input, optgroup, select, textarea {
 img.mt-3.mb-3.cover-image {
   width: 50%;
 }
+.gen-subtitle {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}

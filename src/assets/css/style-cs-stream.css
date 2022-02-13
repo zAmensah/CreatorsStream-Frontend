@@ -11818,7 +11818,7 @@ button#btn-alt {
 }
 
 .login, .signup_form, .recover_pass {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .login .login--header, .signup_form .login--header, .recover_pass .login--header {
