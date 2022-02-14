@@ -1,0 +1,13 @@
+.logged__user {
+  height: 500px;
+}
+
+.user__details h3 {
+  color: #20ba83;
+}
+
+.user__details p {
+  color: #20ba83;
+  margin-top: 20px;
+  font-size: 30px;
+}

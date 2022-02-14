@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MessagesComponent } from '../../components/messages/messages.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
 
 @NgModule({
-  declarations: [MessagesComponent, LoadingComponent],
+  declarations: [MessagesComponent, LoadingComponent, SpinnerComponent],
   imports: [CommonModule],
-  exports: [MessagesComponent, ReactiveFormsModule, LoadingComponent],
+  exports: [
+    MessagesComponent,
+    ReactiveFormsModule,
+    LoadingComponent,
+    MaterialModule,
+    SpinnerComponent,
+  ],
 })
 export class SharedModule {}

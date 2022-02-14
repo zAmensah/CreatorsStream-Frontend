@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, shareReplay, tap } from 'rxjs/operators';
+import { IUser } from 'src/app/models/user';
 import { IVideos } from 'src/app/models/videos';
 import { LoadingService } from 'src/app/shared/services/loading.service';
 import { MessagesService } from 'src/app/shared/services/messages.service';
@@ -35,6 +36,14 @@ export class CoreService {
   singleVideo(id: string): Observable<IVideos> {
     return this.http
       .get<IVideos>(`${environment.basedUrl}` + '/videos/single/' + `${id}`)
+      .pipe(shareReplay());
+  }
+
+  channelSub(id: string): Observable<IUser> {
+    return this.http
+      .get<IUser>(
+        `${environment.basedUrl}` + '/channel/subscription/' + `${id}`
+      )
       .pipe(shareReplay());
   }
 }

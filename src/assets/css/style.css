@@ -460,7 +460,7 @@ li.channel-name-vplay {
   padding-left: 30px !important;
 }
 .channel-subscribe-btn {
-  background: #fd4b49;
+  /* background: #fd4b49; */
   padding: 10px !important;
   padding-top: 12px !important;
   padding-bottom: 12px !important;
@@ -489,13 +489,13 @@ a.like-thumb:hover {
   color: #d9d7d7;
 }
 #head-title-icon {
-    background: #20ba83;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 50px;
-    padding: 15px;
+  background: #20ba83;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 50px;
+  padding: 15px;
 }
 
 #fa-bullhorn .fa.fa-bullhorn {
