@@ -1,57 +1,6 @@
 <div class="preload dashboard-page has_chart">
 
-  <section class="dashboard-area">
-    <div class="dashboard_menu_area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="dashboard_menu">
-              <li class="active">
-                <a routerLink="/dashboard/">
-                  <i class="fa fa-home"></i> Dashboard</a>
-              </li>
-              <li>
-                <a routerLink="/dashboard/channels">
-                  <span class="fa fa-video"></span> Channels</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-stop-circle"></span> Live Streams</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fas fa-bullhorn"></span> Adverts</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fas fa-bell"></span> Promotions</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-play-circle"></span> Videos</a>
-              </li>
-              <li>
-                <a href="#" data-target="#myModal3" data-toggle="modal">
-                  <span class="fa fa-credit-card"></span> Wallet</a>
-              </li>
-              <li>
-                <a href="#" data-target="#myModal3" data-toggle="modal">
-                  <span class="fa fa-briefcase"></span> Withdrawals</a>
-              </li>
-              <li>
-                <a routerLink="/dashboard/settings/">
-                  <span class="fa fa-cog"></span> Settings</a>
-              </li>
-            </ul>
-            <!-- end /.dashboard_menu -->
-          </div>
-          <!-- end /.col-md-12 -->
-        </div>
-        <!-- end /.row -->
-      </div>
-      <!-- end /.container -->
-    </div>
-  </section>
+
   <!-- end /.dashboard_menu_area -->
 
   <ng-container *ngIf="channelVideos; else spinner">
