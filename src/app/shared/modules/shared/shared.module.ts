@@ -5,6 +5,7 @@ import { MessagesComponent } from '../../components/messages/messages.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
   declarations: [MessagesComponent, LoadingComponent, SpinnerComponent],
@@ -15,6 +16,7 @@ import { SpinnerComponent } from '../../components/spinner/spinner.component';
     LoadingComponent,
     MaterialModule,
     SpinnerComponent,
+    AvatarModule,
   ],
 })
 export class SharedModule {}

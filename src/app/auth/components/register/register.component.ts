@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(val).subscribe(
       () => {
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/dashboard');
       },
       (err) => {
         this.messageService.error(err.error.message);

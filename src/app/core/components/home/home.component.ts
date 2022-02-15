@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { IVideos } from 'src/app/models/videos';
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
     private coreService: CoreService,
     public authService: AuthService,
     private messageService: MessagesService,
+    private router: Router,
     private fb: FormBuilder
   ) {
     this.loginForm = this.fb.group({
@@ -35,6 +37,7 @@ export class HomeComponent implements OnInit {
 
     this.authService.login(val).subscribe(
       () => {
+        this.router.navigateByUrl('/dashboard');
         this.loading = false;
       },
       (err) => {
