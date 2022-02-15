@@ -544,11 +544,19 @@ h4.gen-heading-title {
   padding: 90px 0px 90px 0px;
 }
 
+@media (max-width: 768px) {
+  .logged__user.d-flex.align-items-center.justify-content-center {
+    display: none !important;
+}
+}
 @media (max-width: 767px) {
   section,
   .gen-section-padding {
     padding: 60px 0px 60px 0px;
   }
+  .row.col-lg-12 {
+    margin-top: 0px !important;
+}
 }
 
 @media (max-width: 767px) {
