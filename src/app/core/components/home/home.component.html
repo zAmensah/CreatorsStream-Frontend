@@ -13,7 +13,7 @@
               <div class="container h-100">
                 <div class="row align-items-center h-100">
                   <div class="row col-lg-12" style="background:#fff;">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" id="vanish-login-user">
                       <ng-container *ngIf="(authService.user$ | async) as user; else noUser">
                         <div class="logged__user d-flex align-items-center justify-content-center">
                           <div class="user__details text-center">
