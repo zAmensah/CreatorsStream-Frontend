@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/auth/services/auth.service';
-import { IChannels } from 'src/app/models/channels';
 import { IVideos } from 'src/app/models/videos';
 import { CoreService } from '../../services/core.service';
 
