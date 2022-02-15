@@ -11,6 +11,9 @@ import { AddVideoComponent } from './components/add-video/add-video.component';
 import { SingleChannelComponent } from './components/channels/single-channel/single-channel.component';
 import { CreateChannelComponent } from './components/channels/create-channel/create-channel.component';
 import { SharedModule } from '../shared/modules/shared/shared.module';
+import { DsNavbarComponent } from './layouts/ds-navbar/ds-navbar.component';
+import { DsFooterComponent } from './layouts/ds-footer/ds-footer.component';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { SharedModule } from '../shared/modules/shared/shared.module';
     AddVideoComponent,
     SingleChannelComponent,
     CreateChannelComponent,
+    DsNavbarComponent,
+    DsFooterComponent,
+    DashboardComponent,
   ],
   imports: [
     CommonModule,

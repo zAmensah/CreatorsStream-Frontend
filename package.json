@@ -23,6 +23,7 @@
     "@angular/router": "~12.2.0",
     "firebase": "^8.2.6",
     "firebase-tools": "^6.11.0",
+    "ngx-avatar": "^4.1.0",
     "ngx-owl-carousel-o": "^7.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
