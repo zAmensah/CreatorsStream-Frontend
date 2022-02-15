@@ -15267,7 +15267,7 @@ button#btn-alt {
   }
   /* EVENT DETAILS CSS */
   .single_channel {
-    width: 100%;
+    width:95%;
     padding-right: 0;
   }
   .single_channel:nth-child(2n+1), .single_channel:nth-child(2n+2) {
