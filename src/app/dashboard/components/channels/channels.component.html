@@ -1,55 +1,55 @@
-<!-- <div class="preload dashboard-page has_chart"> -->
+<div class="preload dashboard-page has_chart">
 
-<!-- breadcrumb -->
-<div class="gen-breadcrumb" style="background-image: url('assets/images/background/asset-1.jpeg');">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-12">
-        <nav aria-label="breadcrumb">
-          <div class="gen-breadcrumb-title">
-            <!-- <h1>YOUR CHANNELS </h1> -->
-          </div>
-          <div class="gen-breadcrumb-container">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a routerLink="/dashboard/">
-                  <i class="fas fa-cog mr-2"></i>Dashboard</a></li>
-              <li class="breadcrumb-item active">Your Channels</li>
-            </ol>
-          </div>
-        </nav>
+  <!-- breadcrumb -->
+  <div class="gen-breadcrumb" style="background-image: url('assets/images/background/asset-1.jpeg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <nav aria-label="breadcrumb">
+            <div class="gen-breadcrumb-title">
+              <!-- <h1>YOUR CHANNELS </h1> -->
+            </div>
+            <div class="gen-breadcrumb-container">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard/">
+                    <i class="fas fa-cog mr-2"></i>Dashboard</a></li>
+                <li class="breadcrumb-item active">Your Channels</li>
+              </ol>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- breadcrumb -->
+  <!-- breadcrumb -->
 
 
-<!-- Start Channel Content -->
-<section class="gen-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9 col-lg-12 col-md-6">
-        <div class="single_channel" *ngFor="let channel of (dashboardService.channels$ | async)">
-          <div class="channel__thumbnail">
-            <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
-                alt="Channel-avator"></a>
-            <div class="gen-likes-col">
-              <ul>
-                <li><a class="ocuup"> <i class="fa fa-thumbs-up"></i> {{channel.totalLikes}} Likes</a></li>
-              </ul>
+  <!-- Start Channel Content -->
+  <section class="gen-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 col-lg-12 col-md-6">
+          <div class="single_channel" *ngFor="let channel of (dashboardService.channels$ | async)">
+            <div class="channel__thumbnail">
+              <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
+                  alt="Channel-avator"></a>
+              <div class="gen-likes-col">
+                <ul>
+                  <li><a class="ocuup"> <i class="fa fa-thumbs-up"></i> {{channel.totalLikes}} Likes</a></li>
+                </ul>
+              </div>
             </div>
+
+            <div class="channel__detail">
+              <h4><a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a></h4>
+              <p>{{channel.about}}</p>
+            </div>
+            <!-- <button (click)="getChannel(channel)">Hello</button> -->
           </div>
 
-          <div class="channel__detail">
-            <h4><a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a></h4>
-            <p>{{channel.about}}</p>
-          </div>
-          <!-- <button (click)="getChannel(channel)">Hello</button> -->
-        </div>
+          <!-- end single_channel-->
 
-        <!-- end single_channel-->
-
-        <!-- <div class="single_channel">
+          <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/featured_item.svg" alt="Channel-avator"></a>
                 <div class="gen-likes-col">
@@ -65,9 +65,9 @@
                   condimentum.</p>
               </div>
             </div> -->
-        <!-- end single_channel-->
+          <!-- end single_channel-->
 
-        <!-- <div class="single_channel">
+          <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/featured_author.svg" alt="Channel-avator"></a>
 
@@ -82,9 +82,9 @@
                   condimentum.</p>
               </div>
             </div> -->
-        <!-- end single_channel-->
+          <!-- end single_channel-->
 
-        <!-- <div class="single_channel">
+          <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/contest_winner.svg" alt="Channel-avator"></a>
 
@@ -99,9 +99,9 @@
                   condimentum.</p>
               </div>
             </div> -->
-        <!-- end single_channel-->
+          <!-- end single_channel-->
 
-        <!-- <div class="single_channel">
+          <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/affiliate_level_1.svg" alt="Channel-avator"></a>
 
@@ -116,9 +116,9 @@
                   condimentum.</p>
               </div>
             </div> -->
-        <!-- end single_channel-->
+          <!-- end single_channel-->
 
-        <!-- <div class="single_channel">
+          <!-- <div class="single_channel">
               <div class="channel__thumbnail">
                 <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/author_level_3.svg"
                     alt="Channel-avator"></a>
@@ -134,50 +134,50 @@
                   condimentum.</p>
               </div>
             </div> -->
-        <!-- end single_channel-->
-        <!-- <div class="col-lg-12 submit_button">
+          <!-- end single_channel-->
+          <!-- <div class="col-lg-12 submit_button">
                 <button type="submit" class="btn btn--round btn--default"><span class="fa fa-cog"></span> Load more</button>
             </div> -->
-      </div>
-      <!-- End Channel Content -->
-
-      <!-- RIGHT SIDEBAR -->
-      <div class="col-xl-3 col-md-12 mt-4 mt-xl-0">
-        <div class="widget widget_most-views">
-          <h2 class="widget-title"><i class="fa fa-video"></i> Top Most Viewed</h2>
-          <ul id="top-viewd-channels">
-            <li><i class="fa fa-arrow-right"></i><a href="#">Love In 21st...</a>
-              <span class="pull-right active-likes">129k</span>
-            </li>
-            <li><i class="fa fa-arrow-right"></i><a href="#">My Generation...</a>
-              <span class="pull-right active-likes">5M</span>
-            </li>
-            <li><i class="fa fa-arrow-right"></i><a href="#">the giant ship...</a>
-              <span class="pull-right active-likes">92k</span>
-            </li>
-            <li><i class="fa fa-arrow-right"></i><a href="#">Gnome Alone...</a>
-              <span class="pull-right active-likes">84k</span>
-            </li>
-            <li><i class="fa fa-arrow-right"></i><a href="#">Kimozy Dragon...</a>
-              <span class="pull-right active-likes">17M</span>
-            </li>
-          </ul>
         </div>
-        <div class="widget widget_top-channels">
-          <h2 class="widget-title"><i class="fa fa-play-circle"></i> Top 5 Channels</h2>
-          <ul id="top-five-channels">
-            <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">WildLife TV</a>
-            </li>
-            <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">PowerLine TV</a>
-            </li>
-            <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">Dreams TV</a></li>
-            <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">YouNEye TV</a></li>
-            <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">TutorialZine TV</a>
-            </li>
-          </ul>
+        <!-- End Channel Content -->
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="col-xl-3 col-md-12 mt-4 mt-xl-0">
+          <div class="widget widget_most-views">
+            <h2 class="widget-title"><i class="fa fa-video"></i> Top Most Viewed</h2>
+            <ul id="top-viewd-channels">
+              <li><i class="fa fa-arrow-right"></i><a href="#">Love In 21st...</a>
+                <span class="pull-right active-likes">129k</span>
+              </li>
+              <li><i class="fa fa-arrow-right"></i><a href="#">My Generation...</a>
+                <span class="pull-right active-likes">5M</span>
+              </li>
+              <li><i class="fa fa-arrow-right"></i><a href="#">the giant ship...</a>
+                <span class="pull-right active-likes">92k</span>
+              </li>
+              <li><i class="fa fa-arrow-right"></i><a href="#">Gnome Alone...</a>
+                <span class="pull-right active-likes">84k</span>
+              </li>
+              <li><i class="fa fa-arrow-right"></i><a href="#">Kimozy Dragon...</a>
+                <span class="pull-right active-likes">17M</span>
+              </li>
+            </ul>
+          </div>
+          <div class="widget widget_top-channels">
+            <h2 class="widget-title"><i class="fa fa-play-circle"></i> Top 5 Channels</h2>
+            <ul id="top-five-channels">
+              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">WildLife TV</a>
+              </li>
+              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">PowerLine TV</a>
+              </li>
+              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">Dreams TV</a></li>
+              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">YouNEye TV</a></li>
+              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">TutorialZine TV</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- left-Sidebar -->
+  </section>
+  <!-- left-Sidebar -->

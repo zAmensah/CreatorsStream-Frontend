@@ -24,7 +24,6 @@ export class SingleChannelComponent implements OnInit {
       .singleChannel(this.channelId)
       .subscribe((res: any) => {
         this.channelVideos = res['channel'];
-        console.log(this.channelVideos);
       });
   }
 

@@ -60,7 +60,6 @@ export class AddVideoComponent implements OnInit {
         tap((url) => {
           this.cover = url;
           this.coverLoading = false;
-          console.log('Cover Link', this.cover);
         })
       )
       .subscribe();
@@ -84,7 +83,6 @@ export class AddVideoComponent implements OnInit {
         tap((url) => {
           this.link = url;
           this.videoLoading = false;
-          console.log('Video Link', this.link);
         })
       )
       .subscribe();
@@ -93,9 +91,6 @@ export class AddVideoComponent implements OnInit {
   onSubmit() {
     const val = this.videoForm.value;
     this.loading = true;
-
-    console.log('Cover Link', this.cover);
-    console.log('Video Link', this.link);
 
     this.dashboardService
       .addVideo({

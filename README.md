@@ -24,6 +24,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 - HomePage = / = [src/app/core/components/home]
 - WatchPage = /watch/u/1 = [src/app/core/components/view-page]
+- SubscriptionPage = /subscriptions = [src/app/core/components/subscriptions]
+- ChannelPage = /channel/1 = [src/app/core/components/channel]
 
 - DashboardPage = /dashboard = [src/app/dasboard/components/landing]
 - AddVideoPage = /dashboard/add-video = [src/app/dasboard/components/add-video]

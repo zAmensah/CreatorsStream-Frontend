@@ -14,7 +14,7 @@ export class ChannelsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getChannel(id: any) {
-    console.log(id);
-  }
+  // getChannel(id: any) {
+  //   console.log(id);
+  // }
 }

@@ -16,7 +16,6 @@ export class HeaderInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     let token = localStorage.getItem('_rft');
-    console.log(token);
 
     if (token) {
       const cloned = req.clone({
