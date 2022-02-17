@@ -2309,7 +2309,7 @@ Breadcrum
   padding: 90px 0;
   text-align: center;
   position: relative;
-  background-attachment: fixed !important;
+  background-position: center !important;
   background-size: cover !important;
 }
 

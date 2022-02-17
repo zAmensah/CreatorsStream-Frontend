@@ -7177,8 +7177,13 @@ ul.nav-tabs.nav--tabs2 li a::before {
 
 .author__notification_area ul li .icon_wrap {
   position: relative;
+  background: #e2e4e6;
+  border-radius: 50%;
+  color: #20ba83;
+  padding: 1px;
+  padding-right: 9px;
+  padding-left: 9px;
 }
-
 .author__notification_area ul li .notification_count {
   height: 22px;
   -webkit-border-radius: 50%;
@@ -7211,7 +7216,7 @@ ul.nav-tabs.nav--tabs2 li a::before {
 }
 
 .author-author__info {
-  padding: 24px 0;
+  padding: 30px 0;
   float: right;
 }
 
