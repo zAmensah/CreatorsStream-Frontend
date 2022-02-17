@@ -1,7 +1,8 @@
 <div class="preload dashboard-page has_chart">
 
   <!-- breadcrumb -->
-  <div class="gen-breadcrumb" style="background-image: url('assets/images/background/asset-1.jpeg');">
+  <div class="gen-breadcrumb">
+    <!-- <div class="gen-breadcrumb" style="background-image: url('assets/images/background/asset-1.jpeg');"> -->
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-12">
@@ -33,111 +34,19 @@
             <div class="channel__thumbnail">
               <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
                   alt="Channel-avator"></a>
-              <div class="gen-likes-col">
-                <ul>
-                  <li><a class="ocuup"> <i class="fa fa-thumbs-up"></i> {{channel.totalLikes}} Likes</a></li>
-                </ul>
-              </div>
             </div>
 
             <div class="channel__detail">
               <h4><a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a></h4>
               <p>{{channel.about}}</p>
+            <div class="gen-likes-col">
+               <span><a class="ocuup"> <i class="fa fa-thumbs-up"></i> {{channel.totalLikes}} Likes</a>
+                <a class="ocuup"> <i class="fa fa-bell"></i> {{channel.totalLikes}} Subscription</a></span>
+              </div>
             </div>
             <!-- <button (click)="getChannel(channel)">Hello</button> -->
           </div>
-
           <!-- end single_channel-->
-
-          <!-- <div class="single_channel">
-              <div class="channel__thumbnail">
-                <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/featured_item.svg" alt="Channel-avator"></a>
-                <div class="gen-likes-col">
-                  <ul>
-                    <li><a href="#" class="ocuup"> <i class="fa fa-thumbs-up"></i> 435k Likes</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="channel__detail">
-                <h4><a routerLink="/dashboard/channels/single/1">Dreams TV</a></h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
-              </div>
-            </div> -->
-          <!-- end single_channel-->
-
-          <!-- <div class="single_channel">
-              <div class="channel__thumbnail">
-                <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/featured_author.svg" alt="Channel-avator"></a>
-
-                <div class="gen-likes-col">
-                  <a href="#" class="ocuup"> <i class="fa fa-thumbs-up"></i> 435k Likes</a>
-                </div>
-              </div>
-
-              <div class="channel__detail">
-                <h4><a routerLink="/dashboard/channels/single/1">PowerLine TV</a></h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
-              </div>
-            </div> -->
-          <!-- end single_channel-->
-
-          <!-- <div class="single_channel">
-              <div class="channel__thumbnail">
-                <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/contest_winner.svg" alt="Channel-avator"></a>
-
-                <div class="gen-likes-col">
-                  <a href="#" class="ocuup"> <i class="fa fa-thumbs-up"></i> 435k Likes</a>
-                </div>
-              </div>
-
-              <div class="channel__detail">
-                <h4><a routerLink="/dashboard/channels/single/1"> WildLife TV</a></h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
-              </div>
-            </div> -->
-          <!-- end single_channel-->
-
-          <!-- <div class="single_channel">
-              <div class="channel__thumbnail">
-                <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/affiliate_level_1.svg" alt="Channel-avator"></a>
-
-                <div class="gen-likes-col">
-                  <a href="#" class="ocuup"> <i class="fa fa-thumbs-up"></i> 435k Likes</a>
-                </div>
-              </div>
-
-              <div class="channel__detail">
-                <h4><a routerLink="/dashboard/channels/single/1"> PowerLine TV</a></h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
-              </div>
-            </div> -->
-          <!-- end single_channel-->
-
-          <!-- <div class="single_channel">
-              <div class="channel__thumbnail">
-                <a routerLink="/dashboard/channels/single/1"><img src="/assets/images/author_level_3.svg"
-                    alt="Channel-avator"></a>
-
-                <div class="gen-likes-col">
-                  <a href="#" class="ocuup"><i class="fa fa-thumbs-up"></i> 435k Likes</a>
-                </div>
-              </div>
-
-              <div class="channel__detail">
-                <h4><a routerLink="/dashboard/channels/single/1">YouNEye TV</a></h4>
-                <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis,
-                  condimentum.</p>
-              </div>
-            </div> -->
-          <!-- end single_channel-->
-          <!-- <div class="col-lg-12 submit_button">
-                <button type="submit" class="btn btn--round btn--default"><span class="fa fa-cog"></span> Load more</button>
-            </div> -->
         </div>
         <!-- End Channel Content -->
 

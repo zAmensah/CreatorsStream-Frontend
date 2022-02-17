@@ -13537,15 +13537,15 @@ button#btn-alt {
 }
 
 .single_channel .channel__detail p {
-  line-height: 30px;
+  line-height: normal;
 }
 
 .single_channel .channel__detail .ocuup {
-  color: #555;
-  font-weight: 500;
+  color: #20ba83;
+  /* font-weight: 500; */
   line-height: 30px;
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-left: 12px;
+  font-size: 15px;
   display: inline-block;
 }
 
