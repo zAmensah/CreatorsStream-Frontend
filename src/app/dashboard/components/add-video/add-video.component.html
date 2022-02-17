@@ -43,7 +43,7 @@
                           </label>
                           <div class="select-wrap">
                             <select name="channel_type" id="chan_type" class="select_field" formControlName="channel"
-                              placeholder="hello">
+                              placeholder="-- Select Channel --">
                               <option>-- Select Channel --</option>
                               <option *ngFor="let channel of (dashboardService.channels$ | async)"
                                 [value]="channel._id">
@@ -61,7 +61,7 @@
                         <div class="form-group">
                           <label for="desc_field">Description</label>
                           <textarea name="vid-desc" id="vid-desc" class="text_field"
-                            placeholder="Please enter video description" formControlName="description"></textarea>
+                            placeholder="Enter video description" formControlName="description"></textarea>
                         </div>
                       </div>
                     </div>
