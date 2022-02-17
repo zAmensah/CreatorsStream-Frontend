@@ -403,7 +403,8 @@ div#ad-col-3-right {
   margin-bottom: 25px;
 }
 header.gen-header-style-1.gen-has-sticky.video-playbck {
-  background: var(--black-color) !important;
+  /* background: var(--black-color) !important; */
+  background: transparent !important;
 }
 img.circular--square {
   border-radius: 50%;
