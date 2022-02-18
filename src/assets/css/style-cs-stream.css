@@ -7082,7 +7082,7 @@ ul.nav-tabs.nav--tabs2 li a::before {
   -webkit-border-radius: 21px;
           border-radius: 21px;
   font-weight: 500;
-  margin-right: 0px;
+  margin-right: 10px;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -7108,7 +7108,7 @@ ul.nav-tabs.nav--tabs2 li a::before {
           border-radius: 21px;
   font-weight: 500;
   margin-left: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -7177,9 +7177,9 @@ ul.nav-tabs.nav--tabs2 li a::before {
 
 .author__notification_area ul li .icon_wrap {
   position: relative;
-  background: #e2e4e6;
+  background: #303848;
   border-radius: 50%;
-  color: #20ba83;
+  color: #fff;
   padding: 1px;
   padding-right: 9px;
   padding-left: 9px;
