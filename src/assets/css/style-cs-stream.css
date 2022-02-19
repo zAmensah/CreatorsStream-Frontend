@@ -8517,7 +8517,7 @@ button.btn.btn--round.join {
 }
 button#btn-alt {
   position: absolute;
-  right: 25px;
+  right: 0px;
   border-top-left-radius: 0px;
   background: #182031;
 }

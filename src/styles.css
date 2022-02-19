@@ -22,6 +22,9 @@ img.mt-3.mb-3.cover-image {
   padding-top: 10px;
   margin-bottom: 10px;
 }
+.row.col-lg-12.text-center {
+  margin-top: 5px !important;
+}
 i#channel-avator {
   background: #dde0e5;
   border-radius: 50%;
@@ -31,4 +34,7 @@ i#channel-avator {
 }
 #reg-btn-cta {
   margin-top: 87px;
+}
+span.text-light.username {
+  color: inherit !important;
 }
