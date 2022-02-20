@@ -5321,7 +5321,7 @@ Carousel Movies
   background: linear-gradient(to bottom, #0b101766, #0b1017cc);
 }
 .gen-carousel-movies-style-3 .gen-movie-contain .gen-movie-img img {
-  min-height: 220px !important;
+  min-height: 200px !important;
   height: 184px !important;
   width: 100%;
   border-radius: 10px !important;
