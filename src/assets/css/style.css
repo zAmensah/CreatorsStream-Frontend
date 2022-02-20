@@ -587,7 +587,7 @@ Container
   video#video-player {
     min-width: 850px !important;
     height: auto !important;
-    max-height: 470px;
+    /* max-height: 470px; */
   }
   .container {
     max-width: 95%;
@@ -2602,7 +2602,7 @@ header#gen-header .gen-bottom-header .navbar .navbar-nav li:last-child {
 }
 
 header#gen-header .gen-bottom-header .navbar .navbar-nav li a {
-  color: var(--white-color);
+  /* color: var(--white-color); */
   font-family: var(--title-fonts);
 }
 
