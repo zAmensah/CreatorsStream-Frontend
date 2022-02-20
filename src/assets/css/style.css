@@ -585,9 +585,9 @@ Container
 
 @media (max-width: 1699px) {
   video#video-player {
-    min-width: 850px !important;
+    min-width: 830px !important;
     height: auto !important;
-    /* max-height: 470px; */
+    max-height: 470px;
   }
   .container {
     max-width: 95%;
