@@ -38,3 +38,9 @@ i#channel-avator {
 span.text-light.username {
   color: inherit !important;
 }
+
+@media (max-width: 768px) {
+  div#banner-home-login {
+    background: #fff !important;
+}
+}

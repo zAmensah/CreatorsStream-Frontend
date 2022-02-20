@@ -15206,13 +15206,13 @@ button#btn-alt {
   }
   /* LOGIN AREA */
   .login, .signup_form, .recover_pass {
-    padding: 20px 20px;
+    padding: 0px;
   }
   .login .login--form, .signup_form .login--form, .recover_pass .login--form {
     padding: 0px !important;
   }
   .login .login--header, .signup_form .login--header, .recover_pass .login--header {
-    padding: 0 35px 25px;
+    padding: 25px 35px 25px;
   }
   .login .login_assist .recover, .signup_form .login_assist .recover, .recover_pass .login_assist .recover, .login .login_assist .signup, .signup_form .login_assist .signup, .recover_pass .login_assist .signup {
     float: none;

@@ -442,6 +442,11 @@ button#channel-like:hover {
 .container.h-100 {
   max-width: 1120px !important;
 }
+.container.h-100-spec {
+  width: 100% !important;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
 label#spec_lbl {
   margin-top: 10px !important;
   margin-bottom: 5px !important;
@@ -5316,7 +5321,7 @@ Carousel Movies
   background: linear-gradient(to bottom, #0b101766, #0b1017cc);
 }
 .gen-carousel-movies-style-3 .gen-movie-contain .gen-movie-img img {
-  max-height: 184px !important;
+  min-height: 220px !important;
   height: 184px !important;
   width: 100%;
   border-radius: 10px !important;
@@ -5952,7 +5957,7 @@ Banner
 .gen-banner-movies .item {
   position: relative;
   width: 100%;
-  height: 780px;
+  max-height: 780px;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -6204,7 +6209,7 @@ Banner
 
 /*================*/
 .home-singal-silder .gen-banner-movies .item {
-  height: 70vh;
+  /* min-height: 70px; */
   border-left: 3px solid var(--primary-color);
 }
 
@@ -6349,7 +6354,7 @@ Banner 2
   font-size: 62px;
   line-height: 70px;
   text-transform: uppercase;
-  letter-spacing: -3px;
+  /* letter-spacing: -3px; */
 }
 
 .gen-movie-contain-style-2 .gen-movie-meta-holder ul.gen-meta-after-title {
@@ -6482,7 +6487,8 @@ Banner 2
 }
 
 .gen-movie-contain-style-2 .gen-movie-meta-holder .gen-meta-info ul li strong {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: #141b29;
 }
 
 .gen-movie-contain-style-2 .gen-movie-meta-holder .gen-meta-info ul li a {
@@ -6899,7 +6905,10 @@ Banner 3
     line-height: 38px;
   }
 }
-
+.item-banner-login  {
+  padding-top: 90px !important;
+  padding-bottom: 100px !important;
+}
 /*================================================
 Play Button
 ================================================*/
@@ -7044,14 +7053,17 @@ Play Button
   .gen-front-image {
     margin-bottom: 45px;
   }
-
   .gen-banner-movies.banner-style-2 .item {
     height: auto;
-    /* padding: 60px 0; */
+    padding: 60px 0;
+    background-color: #fff !important;
+  }
+  .gen-banner-movies.banner-style-2 .item-banner-login {
+    height: auto;
+    padding: 60px 0;
     background-image: none !important;
     background-color: #fff !important;
   }
-
   .gen-front-image.no-image {
     margin: 0 0 45px;
     text-align: left;
@@ -7074,7 +7086,19 @@ Play Button
     font-size: 40px;
     line-height: 48px;
   }
-
+  .item-banner-login {
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+}
+  .gen-movie-contain-style-2 .gen-movie-info h3 {
+    font-size: 26px !important;
+}
+  #reg-btn-cta {
+    margin-top: 0px !important;
+}
+.h-100-alt {
+  padding: 10px !important;
+}
   .gen-movie-contain-style-2 .gen-tag-line {
     font-size: 16px;
     line-height: 24px;
