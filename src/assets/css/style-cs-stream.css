@@ -11827,7 +11827,8 @@ button#btn-alt {
 }
 
 .login .login--header, .signup_form .login--header, .recover_pass .login--header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: dashed;
+  border-bottom-color: #ececec;
   text-align: center;
   padding: 0 50px 26px;
 }
@@ -13507,7 +13508,7 @@ button#btn-alt {
 .single_channel {
   width: 47%;
   float: left;
-  background: #fff;
+  background: #182031;
   margin: 10px;
   padding: 25px;
 }

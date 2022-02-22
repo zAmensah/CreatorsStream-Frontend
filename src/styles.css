@@ -38,7 +38,13 @@ i#channel-avator {
 span.text-light.username {
   color: inherit !important;
 }
-
+#vanish-login-user {
+  border-right: dashed;
+  border-right-color: #ececec;
+}
+#footer-info {
+  margin-bottom: 7px !important;
+}
 @media (max-width: 768px) {
   div#banner-home-login {
     background: #fff !important;
