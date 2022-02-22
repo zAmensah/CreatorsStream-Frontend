@@ -48,6 +48,9 @@ span.text-light.username {
 .gen-single-tv-show-info {
   margin-top: -100px;
 }
+.fa.fa-search {
+  color: #747474;
+}
 @media (max-width: 768px) {
   div#banner-home-login {
     background: #fff !important;

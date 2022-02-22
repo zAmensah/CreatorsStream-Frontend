@@ -1212,7 +1212,7 @@ h6 {
 }
 
 .product--sidebar .sidebar-card .card-title, .support--sidebar .sidebar-card .card-title, .faq--sidebar .sidebar-card .card-title, .affliate_rule_module .sidebar-card .card-title, .sidebar--blog .sidebar-card .card-title, .product--sidebar .item-preview .card-title, .support--sidebar .item-preview .card-title, .faq--sidebar .item-preview .card-title, .affliate_rule_module .item-preview .card-title, .sidebar--blog .item-preview .card-title {
-  padding: 30px 30px 28px;
+  padding: 15px 30px 15px;
   display: block;
   margin-bottom: 0;
 }
@@ -2185,10 +2185,10 @@ h6 {
 }
 
 .product-desc .product_title h4 {
-  font-size: 14px;
+  font-size: 20px;
   line-height: 20px;
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: normal;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -2469,11 +2469,11 @@ h6 {
 }
 
 .product--list-small .product__details .product-meta {
-  width: 180px;
+  width: 300px;
 }
 
 .product--list-small .product__details .product-meta .love-comments p + p {
-  margin-left: 0;
+  margin-left: 30px;
 }
 
 .product--list-small .product__details .product-purchase {
@@ -2507,7 +2507,9 @@ h6 {
 }
 
 .product-meta .author p a {
-  color: #000;
+  color: #555;
+  padding-left: 7px;
+  font-size: 18px;
 }
 
 .product-meta .love-comments p {
