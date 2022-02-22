@@ -45,9 +45,15 @@ span.text-light.username {
 #footer-info {
   margin-bottom: 7px !important;
 }
+.gen-single-tv-show-info {
+  margin-top: -100px;
+}
 @media (max-width: 768px) {
   div#banner-home-login {
     background: #fff !important;
+}
+#vanish-login-user {
+  border-right: none !important;
 }
 .gen-login-page-background, .gen-register-page-background, .recover-password-page-background{
   background-image: none !important;

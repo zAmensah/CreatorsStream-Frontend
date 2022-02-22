@@ -2602,7 +2602,8 @@ header#gen-header .gen-bottom-header .navbar .navbar-nav li:last-child {
 }
 
 header#gen-header .gen-bottom-header .navbar .navbar-nav li a {
-  color: var(--white-color);
+  /* color: var(--white-color); */
+  text-transform: uppercase;
   font-family: var(--title-fonts);
 }
 
