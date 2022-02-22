@@ -2387,8 +2387,10 @@ h6 {
 
 .product--list .product__thumbnail img {
   width: 100%;
-  -webkit-border-radius: 4px 0 0 4px;
-          border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
 }
 
 .product--list .product__thumbnail .prod_btn .prod_btn__wrap + .prod_btn__wrap {
@@ -2396,7 +2398,8 @@ h6 {
 }
 
 .product--list .product__thumbnail .prod_btn .btn--sm {
-  min-width: 140px;
+  /* min-width: 140px; */
+  margin-right: 30px;
 }
 
 .product--list .product__details {
@@ -2443,7 +2446,7 @@ h6 {
 }
 
 .product--list-small .product__thumbnail {
-  width: 230px;
+  width: 180px;
 }
 
 .product--list-small .prod_btn a {
