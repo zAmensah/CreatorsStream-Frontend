@@ -52,6 +52,9 @@ span.text-light.username {
   div#banner-home-login {
     background: #fff !important;
 }
+.row.col-lg-12 {
+  padding: 0px !important;
+}
 #vanish-login-user {
   border-right: none !important;
 }
