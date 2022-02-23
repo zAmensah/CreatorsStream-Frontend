@@ -45,9 +45,9 @@ span.text-light.username {
 #footer-info {
   margin-bottom: 7px !important;
 }
-.gen-single-tv-show-info {
+/* .gen-single-tv-show-info {
   margin-top: -100px;
-}
+} */
 .fa.fa-search {
   color: #20ba83;
 }
@@ -55,6 +55,7 @@ span.text-light.username {
   div#banner-home-login {
     background: #fff !important;
 }
+
 .channel--list .channel__thumbnail img {
   width: 100%;
   -webkit-border-radius: inherit !important;

@@ -653,7 +653,7 @@ Loading
 @media (max-width: 479px) {
   video#video-player {
     min-width: auto !important;
-    max-width: 310px !important;
+    max-width: 330px !important;
   }
   .tab4 .tab-content {
     width: 100% !important;
