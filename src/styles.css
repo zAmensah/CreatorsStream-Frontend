@@ -55,10 +55,10 @@ span.text-light.username {
   div#banner-home-login {
     background: #fff !important;
 }
-.product--list .product__thumbnail img {
+.channel--list .channel__thumbnail img {
   width: 100%;
-  -webkit-border-radius: 50%;
-  border-radius: inherit;
+  -webkit-border-radius: inherit !important;
+  border-radius: inherit !important;
   width: auto !important;
   height: auto !important;
 }
