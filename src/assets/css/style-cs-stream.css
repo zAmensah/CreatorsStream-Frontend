@@ -2430,7 +2430,7 @@ h6 {
 }
 
 .channel--list .channel-purchase .price_love span {
-  margin: 0;
+  margin: 5px;
 }
 
 .channel--list .channel-purchase .sell {
