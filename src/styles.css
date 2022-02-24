@@ -60,6 +60,9 @@ span.text-light.username {
   div#banner-home-login {
     background: #fff !important;
 }
+.channel--list-small .prod_btn a {
+  margin-left: 20px !important;
+}
 .channels {
   padding-top: 0px !important;
 }
