@@ -2026,7 +2026,6 @@ h6 {
   background: #fff;
   min-height: 170px;
   margin-bottom: 30px;
-  padding-top: 35px !important;
   padding: 20px;
 }
 
@@ -2441,7 +2440,7 @@ h6 {
 }
 
 .channel--list-small {
-  height: 209px;
+  height: 165px;
 }
 
 .channel--list-small .channel__thumbnail {
@@ -2758,9 +2757,9 @@ h6 {
   text-transform: capitalize;
 }
 
-.breadcrumb-area .breadcrumb {
+/* .breadcrumb-area .breadcrumb {
   padding-bottom: 17px;
-}
+} */
 
 .breadcrumb-area .breadcrumb ul {
   width: 100%;
@@ -7686,6 +7685,7 @@ ul.nav-tabs.nav--tabs2 li a::before {
 
 .channels {
   background: #f9f9f9;
+  padding-top: 150px !important;
 }
 
 .home2 .channel__title a {
@@ -8655,7 +8655,7 @@ button#btn-alt {
 ****************************************/
 .search-area2, .breadcrumb-area {
   position: relative;
-  padding-top: 64px;
+  padding-top: 100px !important;
 }
 
 .search-area2:before, .breadcrumb-area:before {

@@ -55,7 +55,9 @@ span.text-light.username {
   div#banner-home-login {
     background: #fff !important;
 }
-
+.channels {
+  padding-top: 0px !important;
+}
 .channel--list .channel__thumbnail img {
   width: 100%;
   -webkit-border-radius: inherit !important;
