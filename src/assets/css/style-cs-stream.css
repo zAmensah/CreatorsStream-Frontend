@@ -2090,18 +2090,18 @@ h6 {
 .channel .prod_btn a {
   display: inline-block;
   color: #fff;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   font-weight: 500;
   padding: 0 30px;
 }
 
-.channel .prod_btn a:hover {
+/* .channel .prod_btn a:hover {
   color: #20ba83;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   background: #fff;
-}
+} */
 
 .channel .prod_btn a + a {
   margin-left: 6px;
