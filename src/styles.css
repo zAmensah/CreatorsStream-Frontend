@@ -35,9 +35,7 @@ i#channel-avator {
 #reg-btn-cta {
   margin-top: 87px;
 }
-span.text-light.username {
-  color: inherit !important;
-}
+
 #vanish-login-user {
   border-right: dashed;
   border-right-color: #ececec;
@@ -59,6 +57,12 @@ span.text-light.username {
 @media (max-width: 768px) {
   div#banner-home-login {
     background: #fff !important;
+}
+span.text-light.username {
+  color: inherit !important;
+}
+header#gen-header .gen-bottom-header .navbar .navbar-nav li a {
+  font-size: 12px !important;
 }
 .channel--list-small .prod_btn a {
   margin-left: 20px !important;
