@@ -17,8 +17,8 @@
                       <ng-container *ngIf="(authService.user$ | async) as user; else noUser">
                         <div class="logged__user d-flex align-items-center justify-content-center">
                           <div class="user__details text-center">
-                            <h3>WELCOME TO CREATORS STREAM</h3>
-                            <!-- <p>{{user.name}}</p> -->
+                            <h2>WELCOME TO CREATORS STREAM</h2>
+                            <p>{{user.name}}</p>
                           </div>
                         </div>
                       </ng-container>
