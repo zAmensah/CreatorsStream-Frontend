@@ -11822,8 +11822,8 @@ button#btn-alt {
 }
 
 .login .login--header, .signup_form .login--header, .recover_pass .login--header {
-  border-bottom: dashed;
-  border-bottom-color: #ececec;
+  /* border-bottom: dashed;
+  border-bottom-color: #ececec; */
   text-align: center;
   padding: 0 50px 26px;
 }
