@@ -2431,6 +2431,7 @@ h6 {
 
 .channel--list-small {
   height: 165px;
+  padding: 20px;
 }
 
 .channel--list-small .channel__thumbnail {
