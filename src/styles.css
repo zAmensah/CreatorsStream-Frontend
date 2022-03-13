@@ -18,6 +18,28 @@ button, input, optgroup, select, textarea {
 img.mt-3.mb-3.cover-image {
   width: 50%;
 }
+.channel-profile-img {
+  width: 70px !important;
+}
+.social-ff {
+  font-weight: 500;
+  margin-left: 70px;
+}
+.social-iconz i, .social-iconz a{
+  color: #fff !important;
+}
+.channel-desc {
+  background: #fff;
+  padding: 15px;
+}
+.social a {
+  background: #000 none repeat scroll 0 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
 .gen-subtitle {
   padding-top: 10px;
   margin-bottom: 10px;
@@ -46,9 +68,9 @@ i#channel-avator {
 /* .gen-single-tv-show-info {
   margin-top: -100px;
 } */
-.fa.fa-search {
+/* .fa.fa-search {
   color: #20ba83;
-}
+} */
 #chan-eye {
   color: #fff;
   font-size: 30px;
@@ -58,11 +80,39 @@ i#channel-avator {
   div#banner-home-login {
     background: #fff !important;
 }
+.mainmenu__search {
+  padding: 0px;
+}
+header#gen-header {
+  background: var(--white-color);
+}
+.channels {
+  background: #ffffff;
+}
+.channel {
+  margin-bottom: 0px;
+}
+.dashboard-area {
+  background: #fff;
+}
+.dashboard_contents {
+  padding: 15px 0 70px 0;
+}
+.pagination-area .pagination {
+  margin: 20px 0 45px 0;
+}
+.dashboard_menu_area .dashboard_menu li {
+  margin: 0px;
+}
+.search-area2, .breadcrumb-area {
+  padding-top: 50px !important;
+  padding-bottom: 30px !important;
+}
 span.text-light.username {
   color: inherit !important;
 }
 header#gen-header .gen-bottom-header .navbar .navbar-nav li a {
-  font-size: 12px !important;
+  font-size: 13px !important;
 }
 .channel--list-small .prod_btn a {
   margin-left: 20px !important;

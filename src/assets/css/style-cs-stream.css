@@ -2017,13 +2017,12 @@ h6 {
   background: #fff;
   min-height: 170px;
   margin-bottom: 30px;
-  padding: 20px;
 }
 
 .channel .channel__thumbnail {
   position: relative;
 }
-
+.channel--card .channel-desc
 .channel .channel__thumbnail img {
   -webkit-border-radius: 4px 4px 0 0;
           border-radius: 4px 4px 0 0;
@@ -2252,9 +2251,9 @@ h6 {
   margin-right: 7px;
 }
 
-/*-------- PRODUCT MODIFIERS --------------*/
+/*-------- CHANNEL MODIFIERS --------------*/
 .channel--card .channel-desc {
-  height: 222px;
+  height: auto;
   overflow: hidden;
   padding-bottom: 0;
 }
@@ -2744,7 +2743,7 @@ h6 {
 .breadcrumb-area .page-title {
   color: #fff;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: capitalize;
 }
 
@@ -7286,22 +7285,20 @@ ul.nav-tabs.nav--tabs2 li a::before {
   line-height: 45px;
   height: 45px;
   border: 1px solid #d9dfe5;
-  width: 500px;
-  /* -webkit-border-radius: 23px;
-          border-radius: 23px; */
-  padding: 0 25px;
+  width: 250px;
+  -webkit-border-radius: 23px;
+          border-radius: 23px;
 }
 
 .searc-wrap .search-wrap__btn {
   position: absolute;
-  line-height: 45px;
+  line-height: 25px;
   right: 0;
   top: 0px;
   border: 0;
-  width: 100px;
   text-align: center;
-  background: #20ba83;
-  color: #fff;
+  background: transparent;
+  color: #cfcfcf !important
 }
 
 /* mobile menu offcanvas */
@@ -7675,8 +7672,8 @@ ul.nav-tabs.nav--tabs2 li a::before {
 }
 
 .channels {
-  background: #f9f9f9;
-  padding-top: 150px !important;
+  background: #eff1f5;
+  padding-top: 70px !important;
 }
 
 .home2 .channel__title a {
@@ -8646,7 +8643,11 @@ button#btn-alt {
 ****************************************/
 .search-area2, .breadcrumb-area {
   position: relative;
-  padding-top: 100px !important;
+  padding-top: 120px !important;
+  padding-bottom: 100px !important;
+  background-image: url("./../../assets/images/background/maxhome-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .search-area2:before, .breadcrumb-area:before {
@@ -8654,10 +8655,10 @@ button#btn-alt {
   height: 100%;
   width: 100%;
   position: absolute;
-  background: -webkit-gradient(linear, right top, left top, from(#7347c1), to(#20ba83));
+  /* background: -webkit-gradient(linear, right top, left top, from(#7347c1), to(#20ba83));
   background: -webkit-linear-gradient(right, #7347c1, #20ba83);
   background: -o-linear-gradient(right, #7347c1, #20ba83);
-  background: linear-gradient(to left, #7347c1, #20ba83);
+  background: linear-gradient(to left, #7347c1, #20ba83); */
   opacity: 0.91;
   top: 0;
   left: 0;
@@ -9618,8 +9619,8 @@ button#btn-alt {
 }
 
 .dashboard_menu_area {
-  -webkit-box-shadow: 0 3px 10px rgba(121, 135, 150, 0.1);
-          box-shadow: 0 3px 10px rgba(121, 135, 150, 0.1);
+  /* -webkit-box-shadow: 0 3px 10px rgba(121, 135, 150, 0.1);
+          box-shadow: 0 3px 10px rgba(121, 135, 150, 0.1); */
   background: #fff;
 }
 
@@ -9668,7 +9669,7 @@ button#btn-alt {
 }
 
 .dashboard_contents {
-  padding: 70px 0 0;
+  padding: 70px 0 70px 0;
 }
 
 /*DEFAULT DASHBOARD PAGE OR AREA*/
@@ -14032,7 +14033,7 @@ button#btn-alt {
     font-size: 14px;
   }
   .mainmenu__search .searc-wrap input {
-    width: 244px;
+    width: 130px;
   }
   .dropdowns.notification--dropdown {
     right: -15px;
