@@ -80,6 +80,9 @@ i#channel-avator {
   div#banner-home-login {
     background: #fff !important;
 }
+.channel--list-small {
+  padding: 0px;
+}
 .mainmenu__search {
   padding: 0px;
 }
