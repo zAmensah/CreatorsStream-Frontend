@@ -9,9 +9,12 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { SubscriptionsComponent } from './components/subscriptions/subscriptions.component';
 import { ChannelComponent } from './components/channel/channel.component';
+import { AboutComponent } from './components/about/about.component';
+import { WorksComponent } from './components/works/works.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
-  declarations: [HomeComponent, ViewPageComponent, NavbarComponent, FooterComponent, SubscriptionsComponent, ChannelComponent],
+  declarations: [HomeComponent, ViewPageComponent, NavbarComponent, FooterComponent, SubscriptionsComponent, ChannelComponent, AboutComponent, WorksComponent, ContactComponent],
   imports: [CommonModule, CoreRoutingModule, SharedModule],
 })
 export class CoreModule {}

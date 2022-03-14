@@ -148,8 +148,8 @@
               <div class="gen-movie-contain">
                 <div class="gen-movie-img">
                   <a routerLink="/watch/u/{{videos._id}}">
-                  <img [src]="videos.cover" alt="CreatorsStream-image">
-                 </a>
+                    <img [src]="videos.cover" alt="CreatorsStream-image">
+                  </a>
                   <div class="gen-movie-add">
                     <div class="wpulike wpulike-heart">
                       <div class="wp_ulike_general_class wp_ulike_is_not_liked">
@@ -181,7 +181,8 @@
                   </div>
                   <div class="gen-movie-meta-holder">
                     <ul>
-                      <li><a routerLink="/dashboard/channels/"><span><i id="channel-avator" class="fa fa-solid fa-tv"></i>
+                      <li><a routerLink="/channel/{{videos.channel._id}}"><span><i id="channel-avator"
+                              class="fa fa-solid fa-tv"></i>
                             {{videos.channel.name}}</span></a>
                       </li>
                       <li><i class="fa fa-eye"></i><span> {{videos.views}} Views</span></li>
@@ -950,9 +951,10 @@
                     </div>
                     <div class="gen-movie-meta-holder">
                       <ul>
-                        <li><a routerLink="/dashboard/channels/"><span><i id="channel-avator" class="fa fa-solid fa-tv"></i>
-                          WestLabs Tutorials</span></a>
-                     </li>
+                        <li><a routerLink="/dashboard/channels/"><span><i id="channel-avator"
+                                class="fa fa-solid fa-tv"></i>
+                              WestLabs Tutorials</span></a>
+                        </li>
                         <li><i class="fa fa-eye"></i><span>158k Views</span></li>
                       </ul>
                     </div>
@@ -996,9 +998,10 @@
                     </div>
                     <div class="gen-movie-meta-holder">
                       <ul>
-                        <li><a routerLink="/dashboard/channels/"><span><i id="channel-avator" class="fa fa-solid fa-tv"></i>
-                        Alive Cooks</span></a>
-                   </li>
+                        <li><a routerLink="/dashboard/channels/"><span><i id="channel-avator"
+                                class="fa fa-solid fa-tv"></i>
+                              Alive Cooks</span></a>
+                        </li>
                         <li><i class="fa fa-eye"></i><span>158k Views</span></li>
                       </ul>
                     </div>
@@ -1043,9 +1046,10 @@
                     <div class="gen-movie-meta-holder">
                       <ul>
                         <li>
-                          <a routerLink="/dashboard/channels/"><span><i id="channel-avator" class="fa fa-solid fa-tv"></i>
-                        Dreams Tv</span></a>
-                   </li>
+                          <a routerLink="/dashboard/channels/"><span><i id="channel-avator"
+                                class="fa fa-solid fa-tv"></i>
+                              Dreams Tv</span></a>
+                        </li>
                         <li><i class="fa fa-eye"></i><span>158k Views</span></li>
                       </ul>
                     </div>

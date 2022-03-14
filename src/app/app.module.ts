@@ -8,9 +8,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
-import { environment } from 'src/environments/environment';
-
 import { HeaderInterceptor } from './services/header.interceptor';
+
+import { environment } from 'src/environments/environment';
 
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
