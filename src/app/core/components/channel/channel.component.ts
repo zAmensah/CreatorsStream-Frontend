@@ -4,6 +4,8 @@ import { IChannels } from 'src/app/models/channels';
 import { IVideos } from 'src/app/models/videos';
 import { CoreService } from '../../services/core.service';
 
+import * as moment from 'moment';
+
 @Component({
   selector: 'app-channel',
   templateUrl: './channel.component.html',
@@ -22,9 +24,20 @@ export class ChannelComponent implements OnInit {
   }
 
   getChannelVideos() {
-    this.coreService.singleChannel(this.channelID).subscribe((res: any) => {
+    this.coreService.channelVideos(this.channelID).subscribe((res: any) => {
       this.channelVideos = res.channel;
-      console.log(this.channelVideos);
+      // console.log(this.channelVideos);
     });
   }
+
+  Time(time: Date) {
+    return moment(new Date(time)).fromNow(true);
+  }
+
+  // getChannelVideos() {
+  //   this.coreService.singleChannel(this.channelID).subscribe((res: any) => {
+  //     this.channelVideos = res.channel;
+  //     console.log(this.channelVideos);
+  //   });
+  // }
 }

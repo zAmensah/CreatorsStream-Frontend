@@ -12,4 +12,6 @@ export interface IVideos {
   cover: string;
   likes: number;
   views: number;
+  updatedAt: Date;
+  createdAt: Date;
 }

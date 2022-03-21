@@ -59,4 +59,10 @@ export class CoreService {
       .get<IChannels>(`${environment.basedUrl}` + '/user/subscription')
       .pipe(shareReplay());
   }
+
+  channelVideos(id: string): Observable<IChannels> {
+    return this.http
+      .get<IChannels>(`${environment.basedUrl}` + '/channel/videos/' + `${id}`)
+      .pipe(shareReplay());
+  }
 }
