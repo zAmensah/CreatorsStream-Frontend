@@ -1,375 +1,1778 @@
-<div class="preload dashboard-page has_chart">
-  <!--================================
-            START DASHBOARD AREA
-    =================================-->
-  <section class="dashboard-area">
-    <div class="dashboard_contents">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3">
-            <div class="statement_info_card">
-              <div class="info_wrap">
-                <span class="fa fa-credit-card icon mcolorbg1"></span>
-                <div class="info">
-                  <p>$4,563</p>
-                  <span>Account Balance</span>
-                </div>
-              </div>
-              <!-- end /.info_wrap -->
-            </div>
-          </div>
-          <!-- end /.col-md-3 -->
+<div class="d-flex flex-column flex-root">
+  <!--begin::Page-->
+  <div class="d-flex flex-row flex-column-fluid page">
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
 
-          <div class="col-lg-3 col-md-3">
-            <div class="statement_info_card">
-              <div class="info_wrap">
-                <span class="fa fa-video icon mcolorbg2"></span>
-                <div class="info">
-                  <p>128</p>
-                  <span>Total Channels</span>
-                </div>
-              </div>
-              <!-- end /.info_wrap -->
-            </div>
-            <!-- end /.statement_info_card -->
-          </div>
-          <!-- end /.col-md-3 -->
+          <!--begin::Content-->
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 
-          <div class="col-lg-3 col-md-3">
-            <div class="statement_info_card">
-              <div class="info_wrap">
-                <span class="fa fa-users icon mcolorbg3"></span>
-                <div class="info">
-                  <p>249k</p>
-                  <span>Subscriptions</span>
-                </div>
-              </div>
-              <!-- end /.info_wrap -->
-            </div>
-            <!-- end /.statement_info_card -->
-          </div>
-          <!-- end /.col-md-3 -->
-
-          <div class="col-lg-3 col-md-3">
-            <div class="statement_info_card">
-              <div class="info_wrap">
-                <span class="fa fa-heart icon mcolorbg4"></span>
-                <div class="info">
-                  <p>758k</p>
-                  <span>Total Subscribers</span>
-                </div>
-              </div>
-              <!-- end /.info_wrap -->
-            </div>
-            <!-- end /.statement_info_card -->
-          </div>
-          <!-- end /.col-md-3 -->
-        </div>
-        <!-- end /.row -->
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="container dash-content">
-              <h5>ACCOUNT DETAILS</h5>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="dashboard_module recent_buyers">
-              <div class="dashboard__content">
-                <ul>
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <h4>Deposited Funds: <span class="amount text-right">xxx</span></h4>
-                          <h4>Earnings (Cashin)</h4>
-                          <h4>Subscriptions: xxx</h4>
-                          <h4>Advertising: xxx</h4>
-                          <h4>Total Earnings: <span class="amount text-right">xxx</span></h4>
-                          <h4>Total Funds: <span class="amount text-right">xxx</span></h4>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <h4>Outflow (Cashout)</h4>
-                          <h4>Withdrawals: xxx</h4>
-                          <h4>Adverts: xxx</h4>
-                          <h4>Promos: xxx</h4>
-                          <h4>Total Outflow: <span class="amount text-right">xxx</span></h4>
-                          <h4>Net Acc. Balance: <span class="amount text-right">xxx</span></h4>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <h4>Total Cash: <span class="amount text-right">xxx.xx</span></h4>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <div class="row">
-                    <span><a href="#" class="author-area__seller-btn-alt" data-target="#myModal1"
-                        data-toggle="modal">Add
-                        Funds</a>
-                      <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
-                      <a href="#" data-target="#myModal3" data-toggle="modal" class="author-area__seller-btn">
-                        Withdraw</a>
-                    </span>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="dashboard_module single_item_visitor">
-              <div class="dashboard__title">
-                <h4>Monthly Channel Visits</h4>
-                <div class="pull-right">
-                  <div class="select-wrap">
-                    <select name="months" class="period_selector">
-                      <option value="jan">Jan</option>
-                      <option value="feb">Feb</option>
-                      <option value="mar">Mar</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="dashboard__content">
-                <canvas id="single_item_visit"></canvas>
-
-                <div class="item_info">
-                  <div class="info">
-                    <h4 class="indicate">+60%</h4><span>Compared to Last Month</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="dashboard_module recent_buyers">
-              <div class="dashboard__content">
-                <ul>
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <h4>TOP CHANNELS</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <img src="assets/images/Channel-Avator-vplay.png" width="45"><span class="top-channel"><a
-                              href="#">Tech Hub</a></span>
-                        </div>
-                      </div>
-
-                      <div class="chan-likes">
-                        <span>268k</span>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <img src="assets/images/Channel-Avator-vplay.png" width="45"><span class="top-channel"><a
-                              href="#">Dreams Tv</a></span>
-                        </div>
-                      </div>
-
-                      <div class="chan-likes">
-                        <span>19k</span>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <img src="assets/images/Channel-Avator-vplay.png" width="45"><span class="top-channel"><a
-                              href="#">Wildlife Tv</a></span>
-                        </div>
-                      </div>
-
-                      <div class="chan-likes">
-                        <span>702k</span>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <img src="assets/images/Channel-Avator-vplay.png" width="45"><span class="top-channel"><a
-                              href="#">Wildlife Tv</a></span>
-                        </div>
-                      </div>
-
-                      <div class="chan-likes">
-                        <span>108k</span>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="single_buyer">
-                      <div class="buyer__thumb_title">
-                        <div class="title">
-                          <img src="assets/images/Channel-Avator-vplay.png" width="45"><span class="top-channel"><a
-                              href="#">Wildlife Tv</a></span>
-                        </div>
-                      </div>
-
-                      <div class="chan-likes">
-                        <span>108k</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- end /.row -->
-
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="dashboard_module statistics_module">
-              <div class="dashboard__title">
-                <h4>Analytics</h4>
-
-                <div class="pull-right">
-                  <div id="stat_legend" class="legend"></div>
-                  <div class="select-wrap">
-                    <select name="mon" class="period_selector">
-                      <option value="jan">Jan</option>
-                      <option value="feb">Feb</option>
-                      <option value="mar">Mar</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="dashboard__content">
-                <canvas id="myChart"></canvas>
-                <br>
-              </div>
-            </div>
-          </div>
-          <!-- end /.col-md-12 -->
-
-          <div class="col-lg-6">
-            <div class="dashboard_module visit_data">
-              <div class="dashboard__content">
-                <div class="chart_top">
-                  <div class="v_refer">
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li>
-                        <a href="#visit_source" class="active" aria-controls="visit_source" role="tab"
-                          data-toggle="tab">Visit Source</a>
-                      </li>
-                      <li>
-                        <a href="#referrals" aria-controls="referrals" role="tab" data-toggle="tab">Referrals</a>
+            <!--begin::Breadcrumbs-->
+            <div class="gutter-b" id="kt_breadcrumbs">
+              <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                <!--begin::Info-->
+                <div class="d-flex align-items-center flex-wrap mr-1">
+                  <!--begin::Page Heading-->
+                  <div class="d-flex align-items-baseline flex-wrap mr-5">
+                    <!--begin::Page Title-->
+                    <h4 class="text-dark font-weight-bold my-1 mr-5">Your Account: </h4>
+                    <!--end::Page Title-->
+                    <!--begin::Breadcrumb-->
+                    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                      <li class="breadcrumb-item">
+                        <a routerLink="/dashboard/" class="text-dark-50">Dashboard</a>
                       </li>
                     </ul>
-                    <div class="select-wrap">
-                      <select name="month" class="period_selector">
-                        <option value="jan">Jan</option>
-                        <option value="feb">Feb</option>
-                        <option value="mar">Mar</option>
-                      </select>
-                    </div>
+                    <!--end::Breadcrumb-->
                   </div>
-
-                  <div class="charts">
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane fade show active" id="visit_source">
-                        <canvas id="piechart"></canvas>
-
-                        <div id="pie-legend" class="legend"></div>
-                      </div>
-                      <div role="tabpanel" class="tab-pane fade show referrals_data" id="referrals">
-                        <ul>
-                          <li>
-                            <p class="site">google.com</p>
-                            <p class="visit">
-                              <span>visitors:</span>250
-                            </p>
-                          </li>
-
-                          <li>
-                            <p class="site">Website</p>
-                            <p class="visit">
-                              <span>visitors:</span>450
-                            </p>
-                          </li>
-
-                          <li>
-                            <p class="site">Others</p>
-                            <p class="visit">
-                              <span>visitors:</span>341
-                            </p>
-                          </li>
-
-                          <li>
-                            <p class="site">Google</p>
-                            <p class="visit">
-                              <span>visitors:</span>98
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                  <!--end::Page Heading-->
                 </div>
+                <!--end::Info-->
+
+                <!--begin::Toolbar-->
+                <div class="d-flex align-items-center">
+                  <!--begin::Dropdown-->
+                  <div class="dropdown dropdown-inline">
+                    <a routerLink="/dashboard/channel/add/" id="btn-special" class="btn btn-fixed-height btn-bg-white btn-text-dark-50 btn-hover-text-primary btn-icon-primary font-weight-bolder font-size-sm px-5 mr-3">
+                    <span class="svg-icon svg-icon-md">
+                      <i class="flaticon-list"></i>
+                    </span>Create Channel</a>
+                  </div>
+                  <!--end::Dropdown-->
+                  <!--begin::Dropdown-->
+                  <div class="dropdown dropdown-inline" data-toggle="tooltip" title="" data-placement="top" data-original-title="Quick actions">
+                    <a routerLink="/dashboard/add-video" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="svg-icon svg-icon-md">
+                    <i class="flaticon-upload-1"></i>
+                    </span>Upload Video</a>
+                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right p-0 m-0">
+                      <!--begin::Navigation-->
+                      <ul class="navi navi-hover">
+                        <li class="navi-header pb-1">
+                          <span class="text-primary text-uppercase font-weight-bolder font-size-sm">Add new:</span>
+                        </li>
+                        <li class="navi-item">
+                          <a href="upload-video.html" class="navi-link">
+                            <span class="navi-icon">
+                              <i class="flaticon2-photo-camera"></i>
+                            </span>
+                            <span class="navi-text">Upload Video</span>
+                          </a>
+                        </li>
+                        <li class="navi-item">
+                          <a href="#" class="navi-link">
+                            <span class="navi-icon">
+                              <i class="flaticon2-list"></i>
+                            </span>
+                            <span class="navi-text">Submit Video</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <!--end::Navigation-->
+                    </div>
+                  </div>
+                  <!--end::Dropdown-->
+                </div>
+                <!--end::Toolbar-->
               </div>
             </div>
-            <!-- end /.dashboard_module -->
-          </div>
-          <!-- end /.col-md-6 -->
+            <!--End::Breadcrumbs-->
 
-
-          <div class="col-md-12">
-            <div class="dashboard_module single_item_visitor">
-              <div class="dashboard__title">
-                <h4>Total Revenue</h4>
-                <div id="visit_legend" class="legend"></div>
+            <div class="d-flex flex-column-fluid">
+            <!--begin::Container-->
+            <div class="container">
+            <!--begin::Row-->
+            <div class="row">
+              <div class="col-xl-3">
+                <!--begin::Dashboard Card Stats 1-->
+                <div class="card card-custom card-stretch gutter-b">
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-6">
+                    <h3 class="card-title">
+                      <span class="card-label font-weight-bolder font-size-h4 text-dark-75">Account Balance</span>
+                    </h3>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body align-items-center justify-content-between pt-0">
+                  <!--begin::CS-Icon-->
+                  <span id="cs-icon" class="cs-icon-bg1">
+                    <i id="mcoloricon" class="fas fa-credit-card"></i>
+                  </span>
+                  <!--end::CS-Icon-->
+                    <!--begin::label-->
+                    <span class="font-weight-bolder display5 text-dark-75 py-4 pl-5 pr-5">
+                    <span class="font-weight-normal font-size-h6 text-muted pr-1"></span>$4,563</span>
+                    <!--end::label-->
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Dashboard Card Stats 1-->
               </div>
-              <div class="dashboard__content">
-                <canvas id="revenue"></canvas>
+              <div class="col-xl-3">
+                <!--begin::Dashboard Card Stats 2-->
+                <div class="card card-custom card-stretch gutter-b">
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-6">
+                    <h3 class="card-title">
+                      <span class="card-label font-weight-bolder font-size-h4 text-dark-75">Total Channels</span>
+                    </h3>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body align-items-center justify-content-between pt-0">
+                  <!--begin::CS-Icon-->
+                  <span id="cs-icon" class="cs-icon-bg2">
+                    <i id="mcoloricon" class="fas fa-video"></i>
+                  </span>
+                  <!--end::CS-Icon-->
+                    <!--begin::Label-->
+                    <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">102</span>
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Dashboard Card Stats 2-->
+              </div>
+
+              <div class="col-xl-3">
+                <!--begin::Dashboard Card Stats 3-->
+                <div class="card card-custom card-stretch gutter-b">
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-6">
+                    <h3 class="card-title">
+                      <span class="card-label font-weight-bolder font-size-h4 text-dark-75">Subscriptions</span>
+                    </h3>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body align-items-center justify-content-between pt-0" style="position: relative;">
+                    <!--begin::CS-Icon-->
+                    <span id="cs-icon" class="cs-icon-bg3">
+                      <i id="mcoloricon" class="fas fa-users"></i>
+                    </span>
+                    <!--end::CS-Icon-->
+                    <!--begin::label-->
+                    <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">82</span>
+                    <!--end::label-->
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Dashboard Card Stats 3-->
+              </div>
+
+              <div class="col-xl-3">
+                <!--begin::Dashboard Card Stats 4-->
+                <div class="card card-custom card-stretch gutter-b">
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-6">
+                    <h3 class="card-title">
+                      <span class="card-label font-weight-bolder font-size-h4 text-dark-75">Total Subscribers</span>
+                    </h3>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body align-items-center justify-content-between pt-0">
+                  <!--begin::CS-Icon-->
+                  <span id="cs-icon" class="cs-icon-bg4">
+                    <i id="mcoloricon" class="fas fa-bell"></i>
+                  </span>
+                  <!--end::CS-Icon-->
+                    <!--begin::Label-->
+                    <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">17.5k</span>
+                    <!--end::Label-->
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Dashboard Card Stats 4-->
               </div>
             </div>
-          </div>
-        </div>
-        <!-- end /.row -->
-      </div>
-      <!-- end /.container -->
-    </div>
-    <!-- end /.dashboard_menu_area -->
-  </section>
-  <!--================================
-            END DASHBOARD AREA
-    =================================-->
+            <!--End::Cards Row-->
+              </div>
+            <!--End::Container-->
+            </div>
+
+              <!--begin::Entry Cash Flow Starts-->
+              <div class="d-flex flex-column-fluid">
+                <!--begin::Container-->
+                <div class="container">
+                  <!--begin::Dashboard-->
+                  <!--begin::Row-->
+                  <div class="row">
+                    <div class="col-xl-6 col-xxl-4">
+                      <!--begin::Account Detail Cash Flow Stats-->
+                      <div class="card card-custom card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-6">
+                          <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">ACCOUNT DETAILS</span>
+                            <span class="text-muted mt-3 font-weight-bold font-size-lg">Cash Flow: </span>
+                          </h3>
+                          <div class="card-toolbar">
+                            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
+                              <a href="index.html#" class="btn btn-icon-primary btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="opt-icon opt-icon-lg">
+                                  <i class="flaticon-mark"></i>
+                                </span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                              <!--begin::Navigation-->
+                              <ul class="navi navi-hover">
+                                <li class="navi-header pb-1">
+                                  <span class="text-primary text-uppercase font-weight-bolder font-size-sm">Add new:</span>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="stats.html#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-calendar-8"></i>
+                                    </span>
+                                    <span class="navi-text">Event</span>
+                                    <span class="navi-link-badge">
+                                      <span class="label label-light-danger label-inline font-weight-bold">new</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="stats.html#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-graph-1"></i>
+                                    </span>
+                                    <span class="navi-text">Report</span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="stats.html#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-writing"></i>
+                                    </span>
+                                    <span class="navi-text">File</span>
+                                  </a>
+                                </li>
+                              </ul>
+                              <!--end::Navigation-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body">
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-money-bill-wave-alt"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Deposited Funds: Xxx</a>
+                            </div>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-funnel-dollar"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Earnings (Cashin)</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">$Xxx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-credit-card"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Subscriptions: Xxx</a>
+                            </div>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-coins"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Advertising: Xxx</a>
+                            </div>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-money-bill-alt"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Total Earnings:</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">$Xxx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-coins"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Total Funds:</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">$Xxx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+                          <div class="separator separator-dashed mt-2 mb-2"></div>
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-money-bill-wave"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Outflow (Cashout)</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">$Xxx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-coins"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Withdrawals: Xxx</a>
+                            </div>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-ad"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Adverts: Xxx</a>
+                            </div>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-money-bill"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Promos: Xxx</a>
+                            </div>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-coins"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Total Outflow:</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">$Xx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-credit-card"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Net Acc. Balance:</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">$Xxx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+                          <div class="separator separator-dashed mt-2 mb-2"></div>
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-45 symbol-white">
+                              <span class="symbol-label d-flex justify-content-start w-35px">
+                                <i class="fas fa-coins"></i>
+                              </span>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Text-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary mb-1 font-weight-bolder font-size-lg">Total Cash:</a>
+                            </div>
+                            <!--end::Text-->
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right"> Xxx.Xx</span>
+                            </div>
+                            <!--end::label-->
+                          </div>
+                          <!--end::Item-->
+
+                          <div class="d-flex align-items-center">
+                            <!--begin::CS-fund-btn-->
+                            <div class="cs-btn-dropleft">
+                              <a href="#" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5">
+                              <span class="svg-icon svg-icon-md">
+                                <i class="flaticon-open-box"></i>
+                              </span>Load Wallet</a>
+                            </div>
+                            <!--end::CS-fund-btn-->
+                            <!--begin::CS-fund-btn-->
+                            <div class="cs-btn-dropright">
+                              <a href="#" class="btn btn-outline-primary mr-3">
+                              <span class="svg-icon svg-icon-md">
+                              <i class="flaticon-coins"></i>
+                              </span>Withdraw Cash</a>
+                              </div>
+                            <!--end::CS-fund-btn-->
+                          </div>
+                        </div>
+                        <!--end::Body-->
+                      </div>
+                      <!--end::Account Detail Cash Flow Stats-->
+                    </div>
+                    <div class="col-xl-6 col-xxl-4">
+                      <!--begin::Top Channels Widget-->
+                      <div class="card card-custom card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-6">
+                          <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">TOP CHANNELS</span>
+                            <span class="text-muted mt-3 font-weight-bold font-size-lg">Avarage Performance +67%</span>
+                          </h3>
+                          <div class="card-toolbar">
+                            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
+                              <a href="index.html#" class="btn btn-icon-primary btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="opt-icon opt-icon-lg">
+                                  <i class="flaticon-mark"></i>
+                                </span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                              <!--begin::Navigation-->
+                              <ul class="navi navi-hover">
+                                <li class="navi-header pb-1">
+                                  <span class="text-primary text-uppercase font-weight-bolder font-size-sm">Add new:</span>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="stats.html#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-calendar-8"></i>
+                                    </span>
+                                    <span class="navi-text">Event</span>
+                                    <span class="navi-link-badge">
+                                      <span class="label label-light-danger label-inline font-weight-bold">new</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="stats.html#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-graph-1"></i>
+                                    </span>
+                                    <span class="navi-text">Report</span>
+                                  </a>
+                                </li>
+                                <li class="navi-item">
+                                  <a href="stats.html#" class="navi-link">
+                                    <span class="navi-icon">
+                                      <i class="flaticon2-writing"></i>
+                                    </span>
+                                    <span class="navi-text">File</span>
+                                  </a>
+                                </li>
+                              </ul>
+                              <!--end::Navigation-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-7">
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center pb-9">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">203 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                              <!--begin::label-->
+                              <div class="d-flex flex-column">
+                                <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                              </div>
+                              <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center pb-9">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">64 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                              <!--begin::label-->
+                              <div class="d-flex flex-column">
+                                <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                              </div>
+                              <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center pb-9">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">867 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                            </div>
+                            <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center pb-9">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">867 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                            </div>
+                            <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center pb-9">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">867 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                            </div>
+                            <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center pb-9">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">867 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                            </div>
+                            <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 symbol-2by3 flex-shrink-0 mr-6">
+                              <img src="./assets/media/stock-600x400/channel-avator.png" id="channel-avator">
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Section-->
+                            <div class="d-flex flex-column flex-grow-1">
+                              <!--begin::Title-->
+                              <a href="index.html#" class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-1">Dreams Tv</a>
+                              <!--end::Title-->
+                              <!--begin::Desc-->
+                              <span class="text-muted font-weight-bold">7380 Videos</span>
+                              <!--begin::Desc-->
+                            </div>
+                            <!--begin::label-->
+                            <div class="d-flex flex-column">
+                              <span class="text-dark-75 font-size-lg font-weight-bolder text-right">2.8k</span>
+                            </div>
+                            <!--end::label-->
+                            <!--end::Section-->
+                          </div>
+                          <!--end::Item-->
+                          <div class="separator separator-dashed mt-8 mb-5"></div>
+                        </div>
+                        <!--end::Body-->
+                      </div>
+                      <!--end::Top Channels Widget-->
+                    </div>
+                    <div class="col-xl-6 col-xxl-4">
+                      <!--begin::New Subscribers Widget-->
+                      <div class="card card-custom card-stretch card-stretch-half gutter-b">
+                        <!--begin::Body-->
+                        <div class="card-body d-flex flex-column">
+                          <!--begin::Info-->
+                          <div class="d-flex align-items-center">
+                            <span class="symbol symbol-circle symbol-light-primary symbol-60 mr-5">
+                              <span class="symbol-label d-flex flex-column">
+                                 <i id="cs-spec-icon" class="flaticon2-group"></i>
+                              </span>
+                            </span>
+                            <div class="d-flex flex-column">
+                              <a href="#" class="text-dark-75 text-hover-primary font-weight-bolder font-size-h5">NEW SUBSCRIBERS</a>
+                              <span class="text-muted font-weight-bold mt-2">Most Recent Subscribers</span>
+                            </div>
+                          </div>
+                          <!--end::Info-->
+                          <!--begin::Text-->
+                          <p class="pt-7 mb-1"></p>
+                          <!--end::Text-->
+                        </div>
+                        <!--end::Body-->
+                        <!--begin::Footer-->
+                        <div class="card-footer d-flex align-items-center justify-content-between flex-wrap py-4">
+                          <div class="symbol-group symbol-hover">
+                            <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-7.jpg"/>
+                            </div>
+                            <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-3.jpg"/>
+                            </div>
+                            <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-4.jpg"/>
+                            </div>
+                            <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-5.jpg"/>
+                            </div>
+                            <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-9.jpg"/>
+                            </div>
+                            <!-- <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-3.jpg"/>
+                            </div> -->
+                            <div class="symbol">
+                              <img alt="Pic" src="./assets/media/users/150-2.jpg"/>
+                            </div>
+                            <div class="symbol symbol-light-primary">
+                              <span class="symbol-label font-weight-bolder">12+</span>
+                            </div>
+                          </div>
+                          <!-- <a href="index.html#" class="btn btn-sm btn-primary font-weight-bolder px-6"><i class="flaticon-medical"></i> See All</a> -->
+                        </div>
+                        <!--end::Footer-->
+                      </div>
+                      <!--end::New Subscribers Widget-->
+
+                      <!--begin::Active Users Widget-->
+                      <div class="card card-custom card-stretch card-stretch-half gutter-b">
+                        <!--begin::Body-->
+                        <div class="card-body d-flex flex-column">
+                          <!--begin::Info-->
+                          <div class="d-flex align-items-center">
+                            <span class="symbol symbol-circle symbol-light-primary symbol-60 mr-5">
+                              <span class="symbol-label d-flex flex-column">
+                                <i id="cs-spec-icon" class="flaticon2-user-outline-symbol"></i>
+                              </span>
+                            </span>
+                            <div class="d-flex flex-column">
+                              <a href="index.html#" class="text-dark-75 text-hover-primary font-weight-bolder font-size-h5">USERS ONLINE</a>
+                              <span class="text-muted font-weight-bold mt-2">Active Subscribers Online</span>
+                            </div>
+                          </div>
+                          <!--end::Info-->
+                          <!--begin::Text-->
+                          <p class="pt-7 mb-1"></p>
+                          <!--end::Text-->
+                        </div>
+                        <!--end::Body-->
+                        <!--begin::Footer-->
+                        <div class="card-footer d-flex align-items-center justify-content-between flex-wrap py-4">
+                          <div class="symbol-group symbol-hover py-1 mr-2">
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-1.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-9.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/user-avator.png" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-2.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-3.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-7.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-3.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-9.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/user-avator.png" />
+                            </div>
+                            <!-- <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-1.jpg" />
+                            </div>
+                            <div class="symbol symbol-35 symbol-circle">
+                              <img alt="Pic" src="./assets/media/users/150-5.jpg" />
+                            </div> -->
+                            <div class="symbol symbol-35 symbol-circle symbol-light-primary">
+                              <span class="symbol-label font-weight-bolder">+57</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Footer-->
+                      </div>
+                      <!--end::Active Users Widget-->
+                    </div>
+                  </div>
+                  <!--end::Row-->
+
+                  <!--begin::Row-->
+                  <div class="row">
+                    <div class="col-xl-6 col-xxl-4">
+                      <!--begin::Top Videos Widget-->
+                      <div class="card card-custom card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-6">
+                          <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">TOP 5 VIDEOS</span>
+                            <span class="text-muted mt-3 font-weight-bold font-size-lg">Avarage +47%</span>
+                          </h3>
+                          <div class="card-toolbar">
+                            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
+                              <a href="index.html#" class="btn btn-icon-primary btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="opt-icon opt-icon-lg">
+                                  <i class="flaticon-mark"></i>
+                                </span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                                <!--begin::Naviigation-->
+                                <ul class="navi navi-hover navi-active navi-accent">
+                                  <li class="navi-header font-weight-bold py-5">
+                                    <span class="font-size-lg">Quick Options:</span>
+                                    <i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
+                                  </li>
+                                  <li class="navi-separator mb-3 opacity-70"></li>
+                                  <li class="navi-item">
+                                    <a href="index.html#" class="navi-link">
+                                      <span class="navi-icon">
+                                        <span class="svg-icon svg-icon-md svg-icon-warning">
+                                          <i class="flaticon-coins"></i>
+                                        </span>
+                                      </span>
+                                      <span class="navi-text">Generate Report</span>
+                                    </a>
+                                  </li>
+                                  <li class="navi-item">
+                                    <a href="settings.html" class="navi-link">
+                                      <span class="navi-icon">
+                                        <span class="svg-icon svg-icon-md svg-icon-info">
+                                          <i class="flaticon-coins"></i>
+                                        </span>
+                                      </span>
+                                      <span class="navi-text">Settings</span>
+                                      <span class="navi-label">
+                                        <span class="label label-light-success label-rounded font-weight-bold">5</span>
+                                      </span>
+                                    </a>
+                                  </li>
+                                  <li class="navi-separator mt-3 opacity-70"></li>
+                                  <li class="navi-footer pt-5 pb-4">
+                                    <a class="btn btn-light-primary font-weight-bolder btn-sm px-5" href="index.html#">View All</a>
+                                    <a class="btn btn-clean font-weight-bold btn-sm d-none" href="index.html#" data-toggle="tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
+                                  </li>
+                                </ul>
+                                <!--end::Naviigation-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-5">
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center mb-6">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                              <img alt="cs-channel-avator" src="./assets/media/stock-600x400/channel-avator.png" />
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Content-->
+                            <div class="d-flex flex-wrap flex-row-fluid">
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <a href="index.html#" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">Ana Larson in Ghana...</a>
+                                <span class="text-muted font-weight-bold">Dreams Tv</span>
+                              </div>
+                              <!--end::Text-->
+                              <!--begin::Section-->
+                              <div class="d-flex align-items-center py-2">
+                                <!--begin::Btn-->
+                                <a href="index.html#" class="btn btn-icon btn-light btn-sm">
+                                  <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <i class="flaticon-visible"></i>
+                                  </span>
+                                </a>
+                                <!--end::Btn-->
+                                <!--begin::Label-->
+                                <span class="text-success font-weight-bold ml-3 font-size-lg pr-6"> 1M Views</span>
+                                <!--end::Label-->
+                              </div>
+                              <!--end::Section-->
+                            </div>
+                            <!--end::Content-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center mb-6">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                              <img alt="cs-channel-avator" src="./assets/media/stock-600x400/channel-avator.png" />
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Content-->
+                            <div class="d-flex flex-wrap flex-row-fluid">
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <a href="index.html#" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">Ana Larson in Ghana...</a>
+                                <span class="text-muted font-weight-bold">Dreams Tv</span>
+                              </div>
+                              <!--end::Text-->
+                              <!--begin::Section-->
+                              <div class="d-flex align-items-center py-2">
+                                <!--begin::Btn-->
+                                <a href="index.html#" class="btn btn-icon btn-light btn-sm">
+                                  <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <i class="flaticon-visible"></i>
+                                  </span>
+                                </a>
+                                <!--end::Btn-->
+                                <!--begin::Label-->
+                                <span class="text-success font-weight-bold ml-3 font-size-lg pr-6"> 4k Views</span>
+                                <!--end::Label-->
+                              </div>
+                              <!--end::Section-->
+                            </div>
+                            <!--end::Content-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center mb-6">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                              <img alt="cs-channel-avator" src="./assets/media/stock-600x400/channel-avator.png" />
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Content-->
+                            <div class="d-flex flex-wrap flex-row-fluid">
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <a href="index.html#" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">Ana Larson in Ghana...</a>
+                                <span class="text-muted font-weight-bold">Dreams Tv</span>
+                              </div>
+                              <!--end::Text-->
+                              <!--begin::Section-->
+                              <div class="d-flex align-items-center py-2">
+                                <!--begin::Btn-->
+                                <a href="index.html#" class="btn btn-icon btn-light btn-sm">
+                                  <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <i class="flaticon-visible"></i>
+                                  </span>
+                                </a>
+                                <!--end::Btn-->
+                                <!--begin::Label-->
+                                <span class="text-success font-weight-bold ml-3 font-size-lg pr-6"> 9k Views</span>
+                                <!--end::Label-->
+                              </div>
+                              <!--end::Section-->
+                            </div>
+                            <!--end::Content-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center mb-6">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                              <img alt="cs-channel-avator" src="./assets/media/stock-600x400/channel-avator.png" />
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Content-->
+                            <div class="d-flex flex-wrap flex-row-fluid">
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <a href="index.html#" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">Ana Larson in Ghana...</a>
+                                <span class="text-muted font-weight-bold">Dreams Tv</span>
+                              </div>
+                              <!--end::Text-->
+                              <!--begin::Section-->
+                              <div class="d-flex align-items-center py-2">
+                                <!--begin::Btn-->
+                                <a href="index.html#" class="btn btn-icon btn-light btn-sm">
+                                  <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <i class="flaticon-visible"></i>
+                                  </span>
+                                </a>
+                                <!--end::Btn-->
+                                <!--begin::Label-->
+                                <span class="text-success font-weight-bold ml-3 font-size-lg pr-6"> 7k Views</span>
+                                <!--end::Label-->
+                              </div>
+                              <!--end::Section-->
+                            </div>
+                            <!--end::Content-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center mb-6">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                              <img alt="cs-channel-avator" src="./assets/media/stock-600x400/channel-avator.png" />
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Content-->
+                            <div class="d-flex flex-wrap flex-row-fluid">
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <a href="index.html#" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">Ana Larson in Ghana...</a>
+                                <span class="text-muted font-weight-bold">Dreams Tv</span>
+                              </div>
+                              <!--end::Text-->
+                              <!--begin::Section-->
+                              <div class="d-flex align-items-center py-2">
+                                <!--begin::Btn-->
+                                <a href="index.html#" class="btn btn-icon btn-light btn-sm">
+                                  <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <i class="flaticon-visible"></i>
+                                  </span>
+                                </a>
+                                <!--end::Btn-->
+                                <!--begin::Label-->
+                                <span class="text-success font-weight-bold ml-3 font-size-lg pr-6"> 6M Views</span>
+                                <!--end::Label-->
+                              </div>
+                              <!--end::Section-->
+                            </div>
+                            <!--end::Content-->
+                          </div>
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center mb-6">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-35 flex-shrink-0 mr-3">
+                              <img alt="cs-channel-avator" src="./assets/media/stock-600x400/channel-avator.png" />
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Content-->
+                            <div class="d-flex flex-wrap flex-row-fluid">
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column pr-5 flex-grow-1">
+                                <a href="index.html#" class="text-dark text-hover-primary mb-1 font-weight-bolder font-size-lg">Ana Larson in Ghana...</a>
+                                <span class="text-muted font-weight-bold">Dreams Tv</span>
+                              </div>
+                              <!--end::Text-->
+                              <!--begin::Section-->
+                              <div class="d-flex align-items-center py-2">
+                                <!--begin::Btn-->
+                                <a href="index.html#" class="btn btn-icon btn-light btn-sm">
+                                  <span class="svg-icon svg-icon-md svg-icon-success">
+                                    <i class="flaticon-visible"></i>
+                                  </span>
+                                </a>
+                                <!--end::Btn-->
+                                <!--begin::Label-->
+                                <span class="text-success font-weight-bold ml-3 font-size-lg pr-6"> 4k Views</span>
+                                <!--end::Label-->
+                              </div>
+                              <!--end::Section-->
+                            </div>
+                            <!--end::Content-->
+                          </div>
+                          <!--end::Item-->
+                        </div>
+                        <!--end::Body-->
+                      </div>
+                      <!--end::Top Videos Widget-->
+                    </div>
+
+                    <div class="col-xl-6 col-xxl-8">
+                      <!--begin::Billing & Transaction Widget-->
+                      <div class="card card-custom gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-7">
+                          <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">BILLING HISTORY</span>
+                            <span class="text-muted mt-3 font-weight-bold font-size-sm">Last 5 Transactions History</span>
+                          </h3>
+                          <div class="card-toolbar">
+                            <ul class="nav nav-pills nav-pills-sm nav-dark">
+                              <li class="nav-item">
+                                <a class="nav-link py-2 px-4 active font-weight-bolder font-size-sm" data-toggle="tab" href="#kt_tab_table_5_3">Today</a>
+                              </li>
+                              <li class="nav-item ml-0">
+                                <a class="nav-link py-2 px-4 font-weight-bolder font-size-sm" data-toggle="tab" href="#kt_tab_table_5_1">Last Week</a>
+                              </li>
+                              <li class="nav-item ml-0">
+                                <a class="nav-link py-2 px-4 font-weight-bolder font-size-sm" data-toggle="tab" href="#kt_tab_table_5_2">Past Month</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-0 pb-4">
+                          <div class="tab-content mt-2" id="myTabTable5">
+                            <!--begin::Tap pane-->
+                            <div class="tab-pane fade" id="kt_tab_table_5_1" role="tabpanel" aria-labelledby="kt_tab_table_5_1">
+                              <!--begin::Table-->
+                              <div class="table-responsive">
+                                <table class="table table-borderless table-vertical-center">
+                                  <thead>
+                                    <tr>
+                                      <th class="p-0 w-50px"></th>
+                                      <th class="p-0 min-w-200px"></th>
+                                      <th class="p-0 min-w-100px"></th>
+                                      <th class="p-0 min-w-125px"></th>
+                                      <th class="p-0 min-w-110px"></th>
+                                      <th class="p-0 min-w-150px"></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from wallet to MTN Mobile Money...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Master Card</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-warning label-inline">In Progress</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-2">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Visa to Account Wallet...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$560.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Visa</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-success label-inline">Success</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-2">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Payment for promoting Ad #5078</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">MTN MoMo</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-danger label-inline">Rejected</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-2">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0 ml-n3">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to MTN MoMo...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-muted font-weight-500">MTN MoMo</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-info label-inline">Approved</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm mx-2">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to MTN MoMo...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Airtel Tigo Cash</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-warning label-inline">In Progress</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-2">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!--end::Tablet-->
+                            </div>
+                            <!--end::Tap pane-->
+                            <!--begin::Tap pane-->
+                            <div class="tab-pane fade" id="kt_tab_table_5_2" role="tabpanel" aria-labelledby="kt_tab_table_5_2">
+                              <!--begin::Table-->
+                              <div class="table-responsive">
+                                <table class="table table-borderless table-vertical-center">
+                                  <thead>
+                                    <tr>
+                                      <th class="p-0 w-50px"></th>
+                                      <th class="p-0 min-w-200px"></th>
+                                      <th class="p-0 min-w-100px"></th>
+                                      <th class="p-0 min-w-125px"></th>
+                                      <th class="p-0 min-w-110px"></th>
+                                      <th class="p-0 min-w-150px"></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to AirtelTigo Cash...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Airtel Tigo Cash</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-warning label-inline">In Progress</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0 ml-n3">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to MTN MoMo...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-muted font-weight-500">MTN MoMo</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-info label-inline">Approved</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Mastercard to Account Wallet...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">PayPal</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-warning label-inline">In Progress</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to AirtelTigo Cash...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$560.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Visa</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-success label-inline">Success</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from MTN Mobile Money to Account Wallet...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Master Card</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-danger label-inline">Rejected</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!--end::Tablet-->
+                            </div>
+                            <!--end::Tap pane-->
+                            <!--begin::Tap pane-->
+                            <div class="tab-pane fade show active" id="kt_tab_table_5_3" role="tabpanel" aria-labelledby="kt_tab_table_5_3">
+                              <!--begin::Table-->
+                              <div class="table-responsive">
+                                <table class="table table-borderless table-vertical-center">
+                                  <thead>
+                                    <tr>
+                                      <th class="p-0 w-50px"></th>
+                                      <th class="p-0 min-w-200px"></th>
+                                      <th class="p-0 min-w-100px"></th>
+                                      <th class="p-0 min-w-125px"></th>
+                                      <th class="p-0 min-w-110px"></th>
+                                      <th class="p-0 min-w-150px"></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0 ml-n3">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from MTN Mobile Money to Account Wallet...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-muted font-weight-500">MTN MoMo</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-info label-inline">Approved</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to AirtelTigo Cash...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">AirtelTigo Cash</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-warning label-inline">In Progress</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Payment for promoting Ad #9421</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$560.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Master Card</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-success label-inline">Success</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Transfer from Account Wallet to AirtelTigo Cash...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">Visa</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-danger label-inline">Rejected</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="pl-0 py-5">
+                                        <div class="symbol symbol-45 symbol-light mr-2">
+                                          <span class="symbol-label">
+                                            <i class="flaticon-coins"></i>
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td class="pl-0">
+                                        <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Payment for promotion video with ID. #10240...</a>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200.00</span>
+                                        <span class="text-muted font-weight-bold">Paid</span>
+                                      </td>
+                                      <td class="text-right font-weight-bold">
+                                        <span class="text-muted font-weight-500">MTN MoMo</span>
+                                      </td>
+                                      <td class="text-right">
+                                        <span class="label label-lg label-light-warning label-inline">In Progress</span>
+                                      </td>
+                                      <td class="text-right pr-0">
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon2-edit"></i>
+                                          </span>
+                                        </a>
+                                        <a href="#" class="btn btn-icon btn-light btn-hover-danger btn-sm">
+                                          <span class="svg-icon svg-icon-md svg-icon-primary">
+                                            <i class="flaticon-delete-1"></i>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!--end::Tablet-->
+                            </div>
+                            <!--end::Tap pane-->
+                          </div>
+                        </div>
+                        <!--end::Body-->
+                      </div>
+                      <!--End::Billing & Transaction Widget-->
+                    </div>
+                  </div>
+                  <!--end::Row-->
+
+                  <!--end::Dashboard-->
+                </div>
+                <!--end::Container-->
+              </div>
+              <!--end::Entry-->
+            </div>
+            <!--end::Content-->

@@ -1,344 +1,355 @@
-<!--================================
-        START MENU AREA
-    =================================-->
-<!-- start menu-area -->
-<div class="menu-area">
-  <!-- start .top-menu-area -->
-  <div class="top-menu-area">
-    <!-- start .container -->
-    <div class="container">
-      <!-- start .row -->
-      <div class="row">
-        <!-- start .col-md-3 -->
-        <div class="col-lg-3 col-md-3 col-6 v_middle">
-          <div class="logo">
-            <a routerLink="/auth/home/">
-              <img src="assets/images/logo-2.png" height="25" alt="logo image" class="img-fluid">
-            </a>
-          </div>
-        </div>
-        <!-- end /.col-md-3 -->
 
-        <!-- start .col-md-5 -->
-        <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
-          <!-- start .author-area -->
-          <div class="author-area">
-            <a routerLink="/dashboard/channel/add/" class="author-area__seller-btn-alt"><i class="fa fa-video"
-                aria-hidden="true"></i> Create Channel</a>
-            <a routerLink="/dashboard/add-video/" class="author-area__seller-btn"><i class="fa fa-upload"></i> Upload
-              Video</a>
-            <!-- <a href="#" class="author-area__seller-btn-alt" data-target="#myModal1" data-toggle="modal"><i
-                class="fa fa-video" aria-hidden="true"></i> Create Channel</a> -->
+		<!--begin::Header Mobile-->
+		<div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
+			<!--begin::Logo-->
+			<a href="index.html">
+				<img alt="Logo" src="./assets/media/logos/logo-2.png" class="max-h-30px" />
+			</a>
+			<!--end::Logo-->
+			<!--begin::Toolbar-->
+			<div class="d-flex align-items-center">
+				<button class="btn p-0 rounded-0 ml-4" id="kt_header_mobile_toggle">
+					<span class="svg-icon svg-icon-xxl">
+						<i class="flaticon2-grids"></i>
+					</span>
+				</button>
+				<button class="btn rounded-0 p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+					<span class="svg-icon svg-icon-xl">
+						<i class="flaticon2-user"></i>
+					</span>
+				</button>
+			</div>
+			<!--end::Toolbar-->
+		</div>
+		<!--end::Header Mobile-->
 
-            <div class="author__notification_area">
-              <ul>
-                <li class="has_dropdown">
-                  <div class="icon_wrap">
-                    <span class="fa fa-bell"></span>
-                    <!-- <span class="notification_count noti">3</span> -->
-                  </div>
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="d-flex flex-row flex-column-fluid page">
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 
-                  <!-- <div class="dropdowns notification--dropdown">
-                    <div class="dropdown_module_header">
-                      <span>New Notifications<a href="#">View All</a></span>
-                    </div>
+					<!--begin::Header-->
+					<div id="kt_header" class="header header-fixed">
+						<!--begin::Container-->
+						<div class="container">
+							<!--begin::Header Menu Wrapper-->
+							<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+								<!--begin::Header Menu-->
+								<div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
+									<!--begin::Header Nav-->
+									<ul class="menu-nav">
+										<li class="menu-item menu-item-active">
+											<a href="login.html" class="menu-link">
+												<span class="menu-text">
+												<i class="flaticon2-protection"></i></span>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="#" class="menu-link">
+												<span class="menu-text">My Wallet</span>
+												<span class="menu-desc"></span>
+												<i class="menu-arrow"></i>
+											</a>
 
-                    <div class="notifications_module">
-                      <div class="notification">
-                        <div class="notification__info">
-                          <div class="info_avatar">
-                            <img src="assets/images/Channel-Avator-vplay.png" alt="">
-                          </div>
-                          <div class="info">
-                            <p>
-                              <span>Anderson</span> added to Favourite
-                              <a href="#">Mccarther Coffee Shop</a>
-                            </p>
-                            <p class="time">Just now</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="notification">
-                        <div class="notification__info">
-                          <div class="info_avatar">
-                            <img src="assets/images/Channel-Avator-vplay.png" alt="">
-                          </div>
-                          <div class="info">
-                            <p>
-                              <span>Michael</span> comments on
-                              <a href="#">CS Extension</a>
-                            </p>
-                            <p class="time">Just now</p>
-                          </div>
-                        </div>
-
-                        <div class="notification__icons ">
-                          <span class="fa fa-bubble commented noti_icon"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div> -->
-                </li>
-
-                <li class="has_dropdown">
-                  <div class="icon_wrap">
-                    <span class="fa fa-envelope"></span>
-                    <!-- <span class="notification_count msg">2</span> -->
-                  </div>
-
-                  <div class="dropdowns messaging--dropdown">
-                    <div class="dropdown_module_header">
-                      <span>New Messages<a href="#">View All</a></span>
-                    </div>
-
-                    <!-- <div class="messages">
-                      <a href="#" class="message recent">
-                        <div class="message__actions_avatar">
-                          <div class="avatar">
-                            <img src="assets/images/Channel-Avator-vplay.png">
-                          </div>
-                        </div>
-
-                        <div class="message_data">
-                          <div class="name_time">
-                            <div class="name">
-                              <span>Nuke Johnson</span>
-                            </div>
-                            <p>Hello John Smith!...</p>
-                          </div>
-                        </div>
-                      </a>
-
-                      <a href="#" class="message recent">
-                        <div class="message__actions_avatar">
-                          <div class="avatar">
-                            <img src="assets/images/Channel-Avator-vplay.png">
-                          </div>
-                        </div>
-
-                        <div class="message_data">
-                          <div class="name_time">
-                            <div class="name">
-                              <span>Crazy Coder</span>
-                            </div>
-                            <p>Hello John Smith!...</p>
-                          </div>
-                        </div>
-                      </a>
-                    </div> -->
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-            <!--start .author__notification_area -->
-
-            <!--start .author-author__info-->
-            <div class="author-author__info inline has_dropdown" *ngIf="(authService.user$ | async) as user">
-              <div class="author__avatar">
-                <!-- <img src="assets/images/Channel-Avator-vplay.png" width="45" alt="user avatar"> -->
-                <ngx-avatar [name]="user.name" size="45"></ngx-avatar>
-              </div>
-              <div class="autor__info">
-                <p class="name">
-                  {{user.name}}
-                </p>
-                <p class="ammount">GH¢0.00</p>
-              </div>
-
-              <div class="dropdowns dropdown--author">
-                <ul>
-                  <li>
-                    <a routerLink="/dashboard/settings/">
-                      <span class="fa fa-user"></span>Profile</a>
-                  </li>
-                  <li>
-                    <a routerLink="/dashboard/" data-target="#myModal3" data-toggle="modal">
-                      <span class="fa fa-credit-card"></span>Load Wallet</a>
-                  </li>
-                  <li>
-                    <a routerLink="/dashboard/channel/add" data-target="#myModal1" data-toggle="modal">
-                      <span class="fa fa-book"></span>Create Channel</a>
-                  </li>
-                  <li>
-                    <a href="#" data-target="#myModal3" data-toggle="modal">
-                      <span class="fa fa-briefcase"></span>Withdrawals</a>
-                  </li>
-                  <li>
-                    <a routerLink="/dashboard/settings/">
-                      <span class="fa fa-cog"></span> Setting</a>
-                  </li>
-                  <li>
-                    <a (click)="logout()">
-                      <span class="fa fa-sign-out-alt"></span>Logout</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!--end /.author-author__info-->
-          </div>
-          <!-- end .author-area -->
-
-          <!-- author area restructured for mobile -->
-          <div class="mobile_content ">
-            <span class="fa fa-user menu_icon"></span>
-
-            <!-- offcanvas menu -->
-            <div class="offcanvas-menu closed">
-              <span class="fa fa-cross close_menu"></span>
-              <div class="author-author__info">
-                <div class="author__avatar v_middle">
-                  <img src="assets/images/Channel-Avator-vplay.png" width="45" alt="user avatar">
-                </div>
-                <div class="autor__info v_middle">
-                  <p class="name">
-                    Bismark Asare
-                  </p>
-                  <p class="ammount">$20.45</p>
-                </div>
-              </div>
-              <!--end /.author-author__info-->
-
-              <div class="author__notification_area">
-                <ul>
-                  <li>
-                    <a href="notification.html">
-                      <div class="icon_wrap">
-                        <span class="fa fa-alarm"></span>
-                        <span class="notification_count noti">25</span>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="message.html">
-                      <div class="icon_wrap">
-                        <span class="fa fa-envelope"></span>
-                        <span class="notification_count msg">6</span>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="cart.html">
-                      <div class="icon_wrap">
-                        <span class="fa fa-cart"></span>
-                        <span class="notification_count purch">2</span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!--start .author__notification_area -->
-
-              <div class="dropdowns dropdown--author">
-                <ul>
-                  <li>
-                    <a routerLink="/dashboard/settings/">
-                      <span class="fa fa-user"></span>Profile</a>
-                  </li>
-                  <li>
-                    <a href="#" data-target="#myModal3" data-toggle="modal">
-                      <span class="fa fa-credit-card"></span>Load Wallet</a>
-                  </li>
-                  <li>
-                    <a routerLink="/dashboard/add-video/" data-target="#myModal2" data-toggle="modal">
-                      <span class="fa fa-upload"></span>Upload Video</a>
-                  </li>
-                  <li>
-                    <a href="#" data-target="#myModal1" data-toggle="modal">
-                      <span class="fa fa-book"></span>Create Channel</a>
-                  </li>
-                  <li>
-                    <a href="#" data-target="#myModal3" data-toggle="modal">
-                      <span class="fa fa-briefcase"></span>Withdrawals</a>
-                  </li>
-                  <li>
-                    <a routerLink="/dashboard/settings/">
-                      <span class="fa fa-cog"></span> Setting</a>
-                  </li>
-                  <li>
-                    <a routerLink="/auth/home/">
-                      <span class="fa fa-sign-out-alt"></span>Logout</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="text-center">
-                <a routerLink="/dashboard/add-video/" class="author-area__seller-btn">Upload Video</a>
-              </div>
-            </div>
-          </div>
-          <!-- end /.mobile_content -->
-        </div>
-        <!-- end /.col-md-5 -->
-      </div>
-      <!-- end /.row -->
-    </div>
-    <!-- end /.container -->
-  </div>
-  <!-- end  -->
-</div>
-<!-- end /.menu-area -->
-<!--================================
-        END MENU AREA
-    =================================-->
+										</li>
+										<li class="menu-item">
+											<a href="#" class="menu-link">
+												<span class="menu-text">Transactions</span>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="#" class="menu-link">
+												<span class="menu-text">Withdrawals</span>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a href="#" class="menu-link">
+												<span class="menu-text">Playlist</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-submenu">
+											<a href="settings.html" class="menu-link">
+												<span class="menu-text">Settings</span>
+											</a>
+										</li>
+									</ul>
+									<!--end::Header Nav-->
+								</div>
+								<!--end::Header Menu-->
+							</div>
+							<!--end::Header Menu Wrapper-->
 
 
-<!--================================
-            START DASHBOARD AREA
-    =================================-->
-<section class="dashboard-area">
-  <div class="dashboard_menu_area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="dashboard_menu">
-            <li class="active">
-              <a routerLink="/dashboard/">
-                <i class="fa fa-home"></i> Dashboard</a>
-            </li>
-            <li>
-              <a routerLink="/dashboard/channels/">
-                <span class="fa fa-video"></span> Channels</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fa fa-stop-circle"></span> Live Streams</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fas fa-bullhorn"></span> Adverts</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fas fa-bell"></span> Promotions</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fa fa-play-circle"></span> Videos</a>
-            </li>
-            <li>
-              <a href="#" data-target="#myModal3" data-toggle="modal">
-                <span class="fa fa-credit-card"></span> Wallet</a>
-            </li>
-            <li>
-              <a href="#" data-target="#myModal3" data-toggle="modal">
-                <span class="fa fa-briefcase"></span> Withdrawals</a>
-            </li>
-            <li>
-              <a routerLink="/dashboard/settings/">
-                <span class="fa fa-cog"></span> Settings</a>
-            </li>
-          </ul>
-          <!-- end /.dashboard_menu -->
-        </div>
-        <!-- end /.col-md-12 -->
-      </div>
-      <!-- end /.row -->
-    </div>
-    <!-- end /.container -->
-  </div>
-</section>
-<!-- end /.dashboard_menu_area -->
+							<!--begin::Topbar-->
+							<div class="topbar">
+								<!--begin::Promote-Video-->
+								<div class="dropdown">
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+										<a href="#" class="btn btn-dropdown btn-fixed-height btn-primary font-weight-bolder font-size-sm px-6 mr-5">
+										<i class="flaticon-alert-2"></i>Promote Video</a>
+									</div>
+								</div>
+								<!--end::Promote-Video-->
+
+								<!--begin::Quick Options-->
+								<div class="dropdown">
+									<!--begin::Toggle-->
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+										<div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
+											<span class="svg-icon svg-icon-xl">
+												<i class="flaticon-app"></i>
+											</span>
+										</div>
+									</div>
+									<!--end::Toggle-->
+									<!--begin::Dropdown-->
+									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+										<!--begin:Header-->
+										<div class="d-flex flex-column flex-center py-5 rounded-to border-bottom">
+											<h4 class="text-dark font-weight-bold">Quick Links:</h4>
+										</div>
+										<!--end:Header-->
+										<!--begin:Nav-->
+										<div class="row row-paddingless">
+											<!--begin:Item-->
+											<div class="col-6">
+												<a href="create-channel.html" class="d-block py-5 px-5 text-center bg-hover-light border-right border-bottom">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+															<i class="flaticon-open-box"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Create Channel</span>
+													<span class="d-block text-dark-50 font-size-lg">Account</span>
+												</a>
+											</div>
+											<!--end:Item-->
+											<!--begin:Item-->
+											<div class="col-6">
+												<a href="upload-video.html" class="d-block py-5 px-5 text-center bg-hover-light border-bottom">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+														<i class="flaticon-upload-1"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Upload Video</span>
+													<span class="d-block text-dark-50 font-size-lg">Channel</span>
+												</a>
+											</div>
+											<!--end:Item-->
+											<!--begin:Item-->
+											<div class="col-6">
+												<a href="#" class="d-block py-5 px-5 text-center bg-hover-light border-right">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+														<i class="flaticon-bell-1"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Promote Video</span>
+													<span class="d-block text-dark-50 font-size-lg">Advert</span>
+												</a>
+											</div>
+											<!--end:Item-->
+											<!--begin:Item-->
+											<div class="col-6">
+												<a href="#" class="d-block py-5 px-5 text-center bg-hover-light">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+														<i class="flaticon2-bell-5"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Place Ad</span>
+													<span class="d-block text-dark-50 font-size-lg">Promote</span>
+												</a>
+											</div>
+											<!--end:Item-->
+										</div>
+										<!--end:Nav-->
+									</div>
+									<!--end::Dropdown-->
+								</div>
+								<!--end::Quick Options-->
+
+								<!--begin::Chat-->
+								<div class="topbar-item mr-1">
+									<div class="btn btn-icon btn-hover-transparent-white btn-clean btn-lg" data-toggle="modal" data-target="#kt_chat_modal">
+										<span class="svg-icon svg-icon-xl">
+											<i class="flaticon2-chat-1"></i>
+										</span>
+									</div>
+								</div>
+								<!--end::Chat-->
+
+								<!--begin::User Profile Dropdown-->
+								<div class="dropdown">
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+									<div class="topbar-item mr-3">
+										<div class="btn btn-icon btn-hover-transparent-white w-auto d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+											<span class="svg-icon svg-icon-xl">
+												<i class="flaticon2-user-1"></i>
+											</span>
+										 </div>
+										 <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
+											<!--begin::Navigation-->
+											<ul class="navi navi-hover py-5">
+											<!--begin::Content-->
+											<div class="offcanvas-content px-7 mr-n5">
+												<!--begin::Header-->
+												<div class="d-flex align-items-center mt-5">
+													<div class="symbol symbol-50 mr-5">
+														<div class="symbol-label" style="background-image:url('./assets/media/users/150-7.jpg')"></div>
+														<i class="symbol-badge bg-success"></i>
+													</div>
+													<div class="d-flex flex-column">
+														<a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Bismark Asare</a>
+														<div class="navi mt-1">
+															<a href="#" class="navi-item">
+																<span class="navi-link p-0 pb-2">
+																	<span class="navi-icon">
+																		<span class="opt-icon opt-icon-lg svg-icon-primary">
+																			<i class="flaticon2-envelope"></i>
+																		</span>
+																	</span>
+																	<span class="navi-text text-muted text-hover-primary">asare@gmail.com</span>
+																</span>
+															</a>
+														</div>
+													</div>
+												</div>
+												<!--end::Header-->
+												<!--begin::Separator-->
+												<div class="separator separator-dashed mt-5 mb-2"></div>
+												<!--end::Separator-->
+
+												<!--begin::Nav-->
+												<div class="navi navi-spacer-x-0 p-0">
+													<!--begin::Item-->
+													<a href="custom/apps/user/profile-1/personal-information.html" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-danger">
+																		<i class="flaticon2-user"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">Profile info
+																<span class="label label-light-success label-inline font-weight-bold">Update</span></div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
+													<!--begin::Item-->
+													<a href="custom/apps/user/profile-2.html" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-primary">
+																		<i class="flaticon-bell"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">My Notifications</div>
+																<div class="text-muted">Logs and notifications</div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
+													<!--begin::Item-->
+													<a href="custom/apps/userprofile-1/overview.html" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-info">
+																		<i class="flaticon-envelope"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">My Statements</div>
+																<div class="text-muted">latest tasks and projects</div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
+													<!--begin::Item-->
+													<span class="navi-item mt-2">
+														<span class="navi-link">
+															<a href="login.html" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"><i class="flaticon-logout"></i>Sign Out</a>
+														</span>
+													</span>
+													<!--end:Item-->
+												</div>
+												<!--end::Nav-->
+											</div>
+											<!--end::Content-->
+											</ul>
+											<!--end::Navigation-->
+										</div>
+									   </div>
+									  </div>
+								</div>
+								<!--end::User Profile Dropdown-->
+							</div>
+							<!--end::Topbar-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Header-->
+
+					<!--begin::Subheader-->
+					<div class="subheader bg-white h-100px" id="kt_subheader">
+						<div class="container flex-wrap flex-sm-nowrap">
+							<!--begin::Logo-->
+							<div class="d-none d-lg-flex align-items-center flex-wrap w-250px">
+								<!--begin::Logo-->
+								<a href="index.html">
+									<img id="logo" alt="Logo" src="./assets/media/logos/logo-2.png" class="max-h-50px" />
+								</a>
+								<!--end::Logo-->
+							</div>
+							<!--end::Logo-->
+							<!--begin::Nav-->
+							<div class="subheader-nav nav flex-grow-1">
+								<!--begin::Item-->
+								<a href="index.html#" class="nav-item active">
+									<span class="nav-label px-10">
+										<span class="nav-title text-dark-75 font-weight-bold font-size-h4"><i class="flaticon2-settings"></i> Dashboard</span>
+									</span>
+								</a>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<a href="create-channel.html" class="nav-item">
+									<span class="nav-label px-10">
+										<span class="nav-title text-dark-75 font-weight-bold font-size-h4"><i class="fa fa-video"></i> Channels</span>
+									</span>
+								</a>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<a href="index.html#" class="nav-item">
+									<span class="nav-label px-10">
+										<span class="nav-title text-dark-75 font-weight-bold font-size-h4"><i class="fa fa-stop-circle"></i> Live Streams</span>
+									</span>
+								</a>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<a href="index.html#" class="nav-item">
+									<span class="nav-label px-10">
+										<span class="nav-title text-dark-75 font-weight-bold font-size-h4"><i class="fas fa-bullhorn"></i> Adverts</span>
+									</span>
+								</a>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<a href="index.html#" class="nav-item">
+									<span class="nav-label px-10">
+										<span class="nav-title text-dark-75 font-weight-bold font-size-h4"><i class="fas fa-bell"></i> Promotions</span>
+									</span>
+								</a>
+								<!--end::Item-->
+								<!--begin::Item-->
+								<a href="index.html#" class="nav-item">
+									<span class="nav-label px-10">
+										<span class="nav-title text-dark-75 font-weight-bold font-size-h4"><i class="fas fa-play-circle"></i> Videos</span>
+									</span>
+								</a>
+								<!--end::Item-->
+							</div>
+							<!--end::Nav-->
+						</div>
+					</div>
+					<!--end::Subheader-->
