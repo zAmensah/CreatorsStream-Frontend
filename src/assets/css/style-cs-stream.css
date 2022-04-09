@@ -8361,7 +8361,7 @@ span.counter {
   background: -webkit-linear-gradient(right, #7347c1, #20ba83);
   background: -o-linear-gradient(right, #7347c1, #20ba83);
   background: linear-gradient(to left, #7347c1, #20ba83);
-  opacity: .9;
+  opacity: .8;
 }
 
 .call-to-wrap {

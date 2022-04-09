@@ -50,7 +50,7 @@
                 <!--end::Logo-->
 									<ul class="menu-nav">
 										<li class="menu-item menu-item-active">
-											<a routerLink="/auth/login/" class="menu-link">
+											<a routerLink="/" class="menu-link">
 												<span class="menu-text">
 												<i class="flaticon2-protection"></i></span>
 											</a>
@@ -104,7 +104,7 @@
 								</div>
 								<!--end::Promote-Video-->
 
-								<!--begin::Quick Options-->
+								<!--begin::Quick Links-->
 								<div class="dropdown">
 									<!--begin::Toggle-->
 									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
@@ -173,7 +173,7 @@
 									</div>
 									<!--end::Dropdown-->
 								</div>
-								<!--end::Quick Options-->
+								<!--end::Quick Links-->
 
 								<!--begin::Chat-->
 								<div class="topbar-item mr-1">
@@ -206,7 +206,8 @@
 														<i class="symbol-badge bg-success"></i>
 													</div>
 													<div class="d-flex flex-column">
-														<a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Bismark Asare</a>
+                            <span class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary" routerLink="/dashboard">&nbsp; {{(authService.user$ |
+                              async)?.name}}</span>
 														<div class="navi mt-1">
 															<a href="#" class="navi-item">
 																<span class="navi-link p-0 pb-2">
@@ -215,7 +216,8 @@
 																			<i class="flaticon2-envelope"></i>
 																		</span>
 																	</span>
-																	<span class="navi-text text-muted text-hover-primary">asare@gmail.com</span>
+                                  <span class="navi-text text-muted text-hover-primary" routerLink="/dashboard">&nbsp; {{(authService.user$ |
+                                    async)?.email}}</span>
 																</span>
 															</a>
 														</div>
@@ -228,8 +230,9 @@
 
 												<!--begin::Nav-->
 												<div class="navi navi-spacer-x-0 p-0">
+
 													<!--begin::Item-->
-													<a href="custom/apps/user/profile-1/personal-information.html" class="navi-item">
+													<a routerLink="/dashboard/settings/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
 																<div class="symbol-label">
@@ -245,8 +248,25 @@
 														</div>
 													</a>
 													<!--end:Item-->
+                          <!--begin::Item-->
+													<a routerLink="/dashboard/" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-primary">
+																		<i class="flaticon2-settings"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">Dashboard</div>
+                                <div class="text-muted">Your Dashboard</div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
 													<!--begin::Item-->
-													<a href="custom/apps/user/profile-2.html" class="navi-item">
+													<a routerLink="/dashboard/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
 																<div class="symbol-label">
@@ -256,14 +276,14 @@
 																</div>
 															</div>
 															<div class="navi-text">
-																<div class="font-weight-bold">My Notifications</div>
+																<div class="font-weight-bold">Notifications</div>
 																<div class="text-muted">Logs and notifications</div>
 															</div>
 														</div>
 													</a>
 													<!--end:Item-->
 													<!--begin::Item-->
-													<a href="custom/apps/userprofile-1/overview.html" class="navi-item">
+													<a routerLink="/dashboard/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
 																<div class="symbol-label">
@@ -273,8 +293,8 @@
 																</div>
 															</div>
 															<div class="navi-text">
-																<div class="font-weight-bold">My Statements</div>
-																<div class="text-muted">latest tasks and projects</div>
+																<div class="font-weight-bold">Transactions</div>
+																<div class="text-muted">Billing and transactions</div>
 															</div>
 														</div>
 													</a>
@@ -282,7 +302,7 @@
 													<!--begin::Item-->
 													<span class="navi-item mt-2">
 														<span class="navi-link">
-															<a href="login.html" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"><i class="flaticon-logout"></i>Sign Out</a>
+															<a (click)="logout()" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"><i class="flaticon-logout"></i>Sign Out</a>
 														</span>
 													</span>
 													<!--end:Item-->
@@ -304,105 +324,3 @@
 					</div>
 					<!--end::Header-->
 <!--========== Header ==============-->
-
-
-<!-- <header id="gen-header" class="gen-header-style-1 gen-has-sticky video-playbck">
-  <div class="gen-bottom-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-
-            <a class="navbar-brand" routerLink="/">
-              <img class="img-fluid logo" src="assets/images/logo-1.png" alt="CreatorsStream-image">
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div id="gen-menu-contain" class="gen-menu-contain">
-                <ul id="gen-main-menu" class="navbar-nav ml-auto">
-                  <li class="menu-item active"><a routerLink="/" class="menu-item active" aria-current="page">Home</a>
-                  </li>
-                  <li class="menu-item"><a href="#">Videos</a></li>
-                  <li class="menu-item"><a href="#">Tv Shows</a></li>
-                  <li class="menu-item"><a href="#">Movies</a>
-
-                    <i class="fa fa-chevron-down gen-submenu-icon"></i>
-
-                    <ul class="sub-menu">
-                      <li class="menu-item menu-item-has-children"><a href="#">Adventure</a>
-                        <i class="fa fa-chevron-down gen-submenu-icon"></i>
-                        <ul class="sub-menu">
-                          <li class="menu-item"><a href="#">Adventure List1</a></li>
-                          <li class="menu-item"><a href="#">Adventure List2</a></li>
-                          <li class="menu-item"><a href="#">Adventure List3</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                  <li class="menu-item menu-item-has-children"><a href="#">Romantic</a>
-                    <i class="fa fa-chevron-down gen-submenu-icon">
-                    </i>
-
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="#">Romantic List1</a></li>
-                      <li class="menu-item"><a href="#">Romantic List2</a></li>
-                      <li class="menu-item"> <a href="#">Romantic List3</a></li>
-                    </ul>
-
-                  <li class="menu-item"><a href="#">Adverts</a></li>
-                  <li class="menu-item"><a href="#">Promotions</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="gen-header-info-box">
-              <div class="gen-menu-search-block">
-                <a href="#" id="gen-menu-notification"><i class="far fa-question-circle" aria-hidden="true"></i></a>
-                <a href="#" id="gen-menu-notification"><i class="fas fa-bell"></i></a>
-                <a href="javascript:void(0)" id="gen-seacrh-btn"><i class="fa fa-search"></i></a>
-                <div class="gen-search-form">
-                  <form role="search" method="get" class="search-form" action="#">
-                    <label>
-                      <span class="screen-reader-text"></span>
-                      <input type="search" class="search-field" placeholder="Search Videos" value="" name="s">
-                    </label>
-                    <button type="submit" class="search-submit"><span class="screen-reader-text"></span></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div class="gen-account-holder">
-              <a href="javascript:void(0)" id="gen-user-btn"><i class="fa fa-user"></i></a>
-              <div class="gen-account-menu">
-                <ul class="gen-account-menu">
-                  <li><a routerLink="/dashboard/settings/"><i class="fa fa-user"></i>Profile </a></li>
-                  <li><a routerLink="/dashboard/"><i class="fa fa-indent"></i>dashboard</a></li>
-                  <li><a href="#"><i class="fa fa-list"></i>Video Playlist</a></li>
-                  <li><a routerLink="/dashboard/add-video/"> <i class="fa fa-upload"></i>Upload Video</a></li>
-                  <li><a routerLink="/auth/home/"><i class="fa fa-sign-out-alt"></i>Logout</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="gen-btn-container">
-              <a routerLink="/auth/register/" class="gen-button">
-                <div class="gen-button-block">
-                  <span class="gen-button-line-left"></span>
-                  <span class="gen-button-text">Join</span>
-                </div>
-              </a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
-            </button>
-
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
- -->

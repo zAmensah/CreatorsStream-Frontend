@@ -40,7 +40,7 @@
 									<!--begin::Header Nav-->
 									<ul class="menu-nav">
 										<li class="menu-item menu-item-active">
-											<a routerLink="/auth/login/" class="menu-link">
+											<a routerLink="/" class="menu-link">
 												<span class="menu-text">
 												<i class="flaticon2-protection"></i></span>
 											</a>
@@ -217,7 +217,7 @@
 												<!--begin::Nav-->
 												<div class="navi navi-spacer-x-0 p-0">
 													<!--begin::Item-->
-													<a href="custom/apps/user/profile-1/personal-information.html" class="navi-item">
+													<a routerLink="/dashboard/settings/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
 																<div class="symbol-label">
@@ -234,7 +234,7 @@
 													</a>
 													<!--end:Item-->
 													<!--begin::Item-->
-													<a href="custom/apps/user/profile-2.html" class="navi-item">
+													<a routerLink="/dashboard/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
 																<div class="symbol-label">
@@ -251,7 +251,7 @@
 													</a>
 													<!--end:Item-->
 													<!--begin::Item-->
-													<a href="custom/apps/userprofile-1/overview.html" class="navi-item">
+													<a routerLink="/dashboard/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
 																<div class="symbol-label">
@@ -270,7 +270,7 @@
 													<!--begin::Item-->
 													<span class="navi-item mt-2">
 														<span class="navi-link">
-															<a href="login.html" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"><i class="flaticon-logout"></i>Sign Out</a>
+															<a (click)="logout()" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"><i class="flaticon-logout"></i>Sign Out</a>
 														</span>
 													</span>
 													<!--end:Item-->
