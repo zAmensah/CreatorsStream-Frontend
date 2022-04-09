@@ -91,9 +91,12 @@
                               <div class="form-group Ad">
                                 <label for="email_ad">Check status of your Ad…</label>
                                 <div class="field-wrapper News-L">
-                                  <input id="ad-input--newsL" class="text_field" type="text"
-                                    placeholder="Enter Ad ID / Code">
-                                  <button id="btn-alt" class="btn btn--md btn--round" type="submit">GET</button>
+                                  <div class="input-group">
+                                    <input id="ad-input--newsL" class="form-control form-control-solid h-auto p-6 rounded-lg" type="email" formControlName="email" placeholder="Enter Ad ID / Code" autocomplete="off" />
+                                    <div class="input-group-append">
+                                      <button id="btn-alt" class="btn font-weight-bold btn-large btn--md btn--round" type="submit">GET</button>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
