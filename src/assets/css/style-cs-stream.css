@@ -7297,7 +7297,7 @@ ul.nav-tabs.nav--tabs2 li a::before {
 
 .searc-wrap .search-wrap__btn {
   position: absolute;
-  line-height: 25px;
+  line-height: 20px;
   right: 0;
   top: 0px;
   border: 0;
@@ -8514,9 +8514,9 @@ button.btn.btn--round.join {
 }
 button#btn-alt {
   position: absolute;
-  right: 0px;
   border-top-left-radius: 0px;
   background: #182031;
+  min-height: 45px !important;
 }
 .mini-footer {
   background: #f9f9f9;
@@ -14038,7 +14038,9 @@ button#btn-alt {
     font-size: 14px;
   }
   .mainmenu__search .searc-wrap input {
-    width: 130px;
+    width: 170px;
+    line-height: 40px;
+    height: 40px;
   }
   .dropdowns.notification--dropdown {
     right: -15px;

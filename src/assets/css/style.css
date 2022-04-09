@@ -531,6 +531,9 @@ Section
 section.gen-section-padding-3.main-vid {
   padding-bottom: 50px !important;
 }
+a#gen-user-btn i {
+  color: #fff !important;
+}
 section,
 .gen-section-padding {
   padding: 50px 0px 130px 0px;
@@ -542,11 +545,11 @@ h4.gen-heading-title {
   font-size: 19px;
 }
 .gen-section-padding-2 {
-  padding: 90px 0px 60px 0px;
+  padding: 90px 0px 60px 0px !important;
 }
 
 .gen-section-padding-3 {
-  padding: 90px 0px 90px 0px;
+  padding: 90px 0px 90px 0px !important;
 }
 
 @media (max-width: 768px) {
@@ -557,7 +560,7 @@ h4.gen-heading-title {
 @media (max-width: 767px) {
   section,
   .gen-section-padding {
-    padding: 60px 0px 60px 0px;
+    padding: 60px 0px 60px 0px !important;
   }
   .row.col-lg-12 {
     margin-top: 0px !important;
@@ -566,7 +569,7 @@ h4.gen-heading-title {
 
 @media (max-width: 767px) {
   .gen-section-padding-3 {
-    padding: 60px 0px 60px 0px;
+    padding: 60px 0px 60px 0px !important;
   }
 }
 
@@ -3235,16 +3238,12 @@ header#gen-header.gen-header-style-1
 @media (max-width: 1023px) {
   /*===== Button Toggler =====*/
   header#gen-header .gen-bottom-header .navbar-toggler {
-    font-size: 20px;
     padding: 12px 18px;
     line-height: normal;
     float: right;
     outline: none;
-    margin: 0 0 0 15px;
-    background: var(--primary-color);
-    border: var(--primary-color);
+    margin: 0 15px 0 15px;
     color: var(--white-color);
-    border-radius: 0;
   }
 
   header#gen-header .gen-bottom-header .navbar .navbar-collapse {
@@ -3562,7 +3561,7 @@ header#gen-header.gen-header-style-1
 
 @media (max-width: 479px) {
   header#gen-header .gen-bottom-header .navbar .navbar-brand img {
-    height: 45px;
+    height: 50px;
   }
 }
 

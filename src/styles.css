@@ -65,7 +65,9 @@ i#channel-avator {
 #footer-info {
   margin-bottom: 7px !important;
 }
-
+button.btn.btn--md.btn--round.register_btn {
+  min-height: 45px !important;
+}
 #chan-eye {
   color: #fff;
   font-size: 30px;
