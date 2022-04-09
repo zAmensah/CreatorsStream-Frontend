@@ -83250,6 +83250,9 @@ canvas {
     display: none !important;
   }
 }
+body {
+  background: #eff1f5;
+}
 
 @media (min-width: 992px) {
   .header-fixed .wrapper {
