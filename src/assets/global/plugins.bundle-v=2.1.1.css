@@ -5470,7 +5470,6 @@ Build date: 2019-12-19 16:51:02
 }
 
 .dropzone {
-  min-height: 150px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   background: white;
   padding: 20px 20px;
@@ -7584,16 +7583,16 @@ Build date: 2019-12-19 16:51:02
 }
 
 /*!
- * 
+ *
  * Super simple wysiwyg editor v0.8.18
  * https://summernote.org
- * 
- * 
+ *
+ *
  * Copyright 2013- Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license.
- * 
+ *
  * Date: 2020-05-20T16:47Z
- * 
+ *
  */
 @font-face {
   font-family: "summernote";

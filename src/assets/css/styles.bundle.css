@@ -352,7 +352,9 @@ progress {
   font: inherit;
   -webkit-appearance: button;
 }
-
+.fas.fa-pen.icon-sm.text-muted {
+  margin-left: 32px !important;
+}
 output {
   display: inline-block;
 }
@@ -64593,10 +64595,10 @@ code {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
 }
 .input-group.input-group-solid.input-group-sm {
-  border-radius: 0.35rem;
+  border-radius: 0rem;
 }
 .input-group.input-group-solid.input-group-lg {
-  border-radius: 0.75rem;
+  border-radius: 0rem;
 }
 .input-group.input-group-solid .input-group-prepend,
 .input-group.input-group-solid .input-group-append,

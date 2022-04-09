@@ -1878,12 +1878,7 @@ h6 {
 
 .btn--default {
   line-height: 50px;
-  min-width: 170px;
-}
-
-.btn-default {
-  line-height: 50px;
-  min-width: 170px;
+  max-width: 170px;
 }
 
 .btn--lg, .btn-lg {
