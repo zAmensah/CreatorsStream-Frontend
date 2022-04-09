@@ -50,8 +50,8 @@ img.mt-3.mb-3.cover-image {
 i#channel-avator {
   background: #dde0e5;
   border-radius: 50%;
-  padding: 10px;
-  padding-top: 12px;
+  padding: 18px;
+  padding-top: 20px;
   padding-bottom: 11px;
 }
 #reg-btn-cta {
@@ -65,12 +65,7 @@ i#channel-avator {
 #footer-info {
   margin-bottom: 7px !important;
 }
-/* .gen-single-tv-show-info {
-  margin-top: -100px;
-} */
-/* .fa.fa-search {
-  color: #20ba83;
-} */
+
 #chan-eye {
   color: #fff;
   font-size: 30px;

@@ -766,6 +766,7 @@ input[type="button"],
 
 .gen-button i {
   margin-right: 10px;
+  color: #fff !important;
 }
 
 .gen-button:hover,
