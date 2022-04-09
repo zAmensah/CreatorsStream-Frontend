@@ -733,7 +733,7 @@ input[type="button"],
 }
 
 .gen-button {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   position: relative;
   width: auto;
   font-weight: 400;
