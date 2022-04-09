@@ -430,7 +430,9 @@ button#channel-like:hover {
 .gen-library form label {
   display: block;
 }
-
+#reg-btn-cta {
+  margin-top: 90px !important;
+}
 .gen-library form .form-button {
   margin-bottom: 30px;
 }
@@ -7101,8 +7103,8 @@ Play Button
   .gen-movie-contain-style-2 .gen-movie-info h3 {
     font-size: 26px !important;
 }
-  #reg-btn-cta {
-    margin-top: 0px !important;
+#reg-btn-cta {
+  margin-top: 87px !important;
 }
 .h-100-alt {
   padding: 10px !important;
