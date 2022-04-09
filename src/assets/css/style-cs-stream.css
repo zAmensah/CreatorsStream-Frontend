@@ -7273,8 +7273,7 @@ ul.nav-tabs.nav--tabs2 li a::before {
 }
 
 .mainmenu__search {
-  float: right;
-  padding: 12px 0;
+  padding: 17px 0;
 }
 
 .searc-wrap {
@@ -14035,7 +14034,7 @@ button#btn-alt {
     font-size: 14px;
   }
   .mainmenu__search .searc-wrap input {
-    width: 170px;
+    margin-left: 12px;
     line-height: 40px;
     height: 40px;
   }

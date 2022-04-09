@@ -1,83 +1,308 @@
 <!--========== Header ==============-->
-<header id="gen-header" class="gen-header-default gen-has-sticky">
-  <div class="gen-bottom-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" routerLink="/">
-              <img class="img-fluid logo" src="assets/images/logo-2.png" alt="CreatorsStream-image">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div id="gen-menu-contain" class="gen-menu-contain">
-                <ul id="gen-main-menu" class="navbar-nav ml-auto">
-                  <li class="menu-item active"><a routerLink="/" class="menu-item active" aria-current="page">Home</a>
-                  </li>
-                  <li class="menu-item"><a routerLink="/channel/1">Channel</a></li>
-                  <li class="menu-item"><a routerLink="/subscriptions/">Subscriptions</a></li>
-                  <!-- <li class="menu-item"><a href="#">Adverts</a></li> -->
-                  <li class="menu-item"><a href="#">Promotions</a></li>
-                  <li class="menu-item"><a href="#">Contacts</a></li>
-                </ul>
-              </div>
-            </div>
+		<!--begin::Header Mobile-->
+		<div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
+			<!--begin::Logo-->
+			<a routerLink="/dashboard/">
+				<img alt="Logo" src="./assets/media/logos/logo-2.png" class="max-h-30px" />
+			</a>
+			<!--end::Logo-->
+			<!--begin::Toolbar-->
+			<div class="d-flex align-items-center">
+				<button class="btn p-0 rounded-0 ml-4" id="kt_header_mobile_toggle">
+					<span class="svg-icon svg-icon-xxl">
+						<i class="flaticon2-grids"></i>
+					</span>
+				</button>
+				<button class="btn rounded-0 p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+					<span class="svg-icon svg-icon-xl">
+						<i class="flaticon2-user"></i>
+					</span>
+				</button>
+			</div>
+			<!--end::Toolbar-->
+		</div>
+		<!--end::Header Mobile-->
 
-            <div class="mainmenu__search">
-              <form action="#">
-                  <div class="searc-wrap">
-                      <input type="text" placeholder="Search...">
-                      <button type="submit" class="search-wrap__btn">
-                          <span class="fa fa-search"></span>
-                      </button>
-                  </div>
-              </form>
-          </div>
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="d-flex flex-row flex-column-fluid page">
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 
-            <div class="gen-header-info-box">
-              <div class="gen-menu-search-block">
-                <a href="#" id="gen-menu-notification"><i class="far fa-question-circle" aria-hidden="true"></i></a>
-                <a href="#" id="gen-menu-notification"><i class="fas fa-bell"></i></a>
-              </div>
-            </div>
+					<!--begin::Header-->
+					<div id="kt_header" class="header header-fixed">
+						<!--begin::Container-->
+						<div class="container">
+							<!--begin::Header Menu Wrapper-->
+							<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+								<!--begin::Header Menu-->
+								<div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
+               <!--begin::Header Nav-->
 
-            <ng-container *ngIf="authService.isLoggedIn$ | async; else notLogged">
-              <div class="gen-account-holder">
-                <a href="javascript:void(0)" id="gen-user-btn"><i class="fa fa-user"></i></a>
-                <span class="text-light username" routerLink="/dashboard">&nbsp; {{(authService.user$ |
-                  async)?.name}}</span>
-                <div class="gen-account-menu">
-                  <ul class="gen-account-menu">
-                    <li><a routerLink="/dashboard/settings"><i class="fa fa-user"></i>Profile
-                      </a></li>
-                    <li><a routerLink="/dashboard"><i class="fa fa-indent"></i>dashboard</a></li>
-                    <!-- <li><a routerLink="/auth/register/"><i class="fa fa-list"></i>Video Playlist</a></li> -->
-                    <li><a routerLink="/dashboard/add-video"> <i class="fa fa-upload"></i>Upload Video</a></li>
-                    <li><a (click)="logout()"><i class="fa fa-sign-out-alt"></i>Logout</a></li>
-                  </ul>
+                <!--begin::Logo-->
+                <div class="d-none d-lg-flex align-items-center mr-5 flex-wrap w-200px">
+                  <!--begin::Logo-->
+                  <a href="index.html">
+                    <img id="logo" alt="Logo" src="./assets/media/logos/logo-2.png" class="max-h-50px" />
+                  </a>
+                  <!--end::Logo-->
                 </div>
+                <!--end::Logo-->
+									<ul class="menu-nav">
+										<li class="menu-item menu-item-active">
+											<a routerLink="/auth/login/" class="menu-link">
+												<span class="menu-text">
+												<i class="flaticon2-protection"></i></span>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a routerLink="/" class="menu-link">
+												<span class="menu-text">Channel</span>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a routerLink="/" class="menu-link">
+												<span class="menu-text">Subscriptions</span>
+											</a>
+										</li>
+										<li class="menu-item">
+											<a routerLink="/" class="menu-link">
+												<span class="menu-text">Promotions</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-submenu">
+											<a routerLink="/dashboard/settings" class="menu-link">
+												<span class="menu-text">Support</span>
+											</a>
+										</li>
+									</ul>
+									<!--end::Header Nav-->
+								<!--end::Header Menu-->
+                <div class="mainmenu__search">
+                  <form action="#">
+                      <div class="searc-wrap">
+                          <input type="text" placeholder="Search...">
+                          <button type="submit" class="search-wrap__btn">
+                              <span class="fa fa-search"></span>
+                          </button>
+                      </div>
+                  </form>
               </div>
-            </ng-container>
-            <ng-template #notLogged>
-              <div class="gen-btn-container">
-                <a routerLink="/auth/register" class="btn btn-dropdown btn-fixed-height btn-primary font-weight-bolder font-size-sm px-6">
-                  <div class="gen-button-block">
-                    <i class="flaticon2-list"></i>
-                    <span class="gen-button-text">Signup</span>
-                  </div>
-                </a>
-              </div>
-            </ng-template>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
-            </button>
+							</div>
+            </div>
+							<!--end::Header Menu Wrapper-->
 
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+
+							<!--begin::Topbar-->
+							<div class="topbar">
+								<!--begin::Promote-Video-->
+								<div class="dropdown">
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+										<a href="#" class="btn btn-dropdown btn-fixed-height btn-primary font-weight-bolder font-size-sm px-6 mr-5">
+										<i class="flaticon-alert-2"></i>Advert</a>
+									</div>
+								</div>
+								<!--end::Promote-Video-->
+
+								<!--begin::Quick Options-->
+								<div class="dropdown">
+									<!--begin::Toggle-->
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+										<div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
+											<span class="svg-icon svg-icon-xl">
+												<i class="flaticon-app"></i>
+											</span>
+										</div>
+									</div>
+									<!--end::Toggle-->
+									<!--begin::Dropdown-->
+									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+										<!--begin:Header-->
+										<div class="d-flex flex-column flex-center py-5 rounded-to border-bottom">
+											<h4 class="text-dark font-weight-bold">Quick Links:</h4>
+										</div>
+										<!--end:Header-->
+										<!--begin:Nav-->
+										<div class="row row-paddingless">
+											<!--begin:Item-->
+											<div class="col-6">
+												<a routerLink="/dashboard/channel/add/" class="d-block py-5 px-5 text-center bg-hover-light border-right border-bottom">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+															<i class="flaticon-open-box"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Create Channel</span>
+													<span class="d-block text-dark-50 font-size-lg">Account</span>
+												</a>
+											</div>
+											<!--end:Item-->
+											<!--begin:Item-->
+											<div class="col-6">
+												<a routerLink="/dashboard/add-video/" class="d-block py-5 px-5 text-center bg-hover-light border-bottom">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+														<i class="flaticon-upload-1"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Upload Video</span>
+													<span class="d-block text-dark-50 font-size-lg">Channel</span>
+												</a>
+											</div>
+											<!--end:Item-->
+											<!--begin:Item-->
+											<div class="col-6">
+												<a routerLink="/dashboard/promote/" class="d-block py-5 px-5 text-center bg-hover-light border-right">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+														<i class="flaticon-bell-1"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Promote Video</span>
+													<span class="d-block text-dark-50 font-size-lg">Advert</span>
+												</a>
+											</div>
+											<!--end:Item-->
+											<!--begin:Item-->
+											<div class="col-6">
+												<a routerLink="/dashboard/place-ad/" class="d-block py-5 px-5 text-center bg-hover-light">
+													<span class="svg-icon svg-icon-3x svg-icon-primary">
+														<i class="flaticon2-bell-5"></i>
+													</span>
+													<span class="d-block text-dark-75 font-weight-bold font-size-h6 mt-2 mb-1">Place Ad</span>
+													<span class="d-block text-dark-50 font-size-lg">Promote</span>
+												</a>
+											</div>
+											<!--end:Item-->
+										</div>
+										<!--end:Nav-->
+									</div>
+									<!--end::Dropdown-->
+								</div>
+								<!--end::Quick Options-->
+
+								<!--begin::Chat-->
+								<div class="topbar-item mr-1">
+									<div class="btn btn-icon btn-hover-transparent-white btn-clean btn-lg" data-toggle="modal" data-target="#kt_chat_modal">
+										<span class="svg-icon svg-icon-xl">
+											<i class="flaticon2-chat-1"></i>
+										</span>
+									</div>
+								</div>
+								<!--end::Chat-->
+
+								<!--begin::User Profile Dropdown-->
+								<div class="dropdown">
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+									<div class="topbar-item mr-3">
+										<div class="btn btn-icon btn-hover-transparent-white w-auto d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+											<span class="svg-icon svg-icon-xl">
+												<i class="flaticon2-user-1"></i>
+											</span>
+										 </div>
+										 <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
+											<!--begin::Navigation-->
+											<ul class="navi navi-hover py-5">
+											<!--begin::Content-->
+											<div class="offcanvas-content px-7 mr-n5">
+												<!--begin::Header-->
+												<div class="d-flex align-items-center mt-5">
+													<div class="symbol symbol-50 mr-5">
+														<div class="symbol-label" style="background-image:url('./assets/media/users/150-7.jpg')"></div>
+														<i class="symbol-badge bg-success"></i>
+													</div>
+													<div class="d-flex flex-column">
+														<a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Bismark Asare</a>
+														<div class="navi mt-1">
+															<a href="#" class="navi-item">
+																<span class="navi-link p-0 pb-2">
+																	<span class="navi-icon">
+																		<span class="opt-icon opt-icon-lg svg-icon-primary">
+																			<i class="flaticon2-envelope"></i>
+																		</span>
+																	</span>
+																	<span class="navi-text text-muted text-hover-primary">asare@gmail.com</span>
+																</span>
+															</a>
+														</div>
+													</div>
+												</div>
+												<!--end::Header-->
+												<!--begin::Separator-->
+												<div class="separator separator-dashed mt-5 mb-2"></div>
+												<!--end::Separator-->
+
+												<!--begin::Nav-->
+												<div class="navi navi-spacer-x-0 p-0">
+													<!--begin::Item-->
+													<a href="custom/apps/user/profile-1/personal-information.html" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-danger">
+																		<i class="flaticon2-user"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">Profile info
+																<span class="label label-light-success label-inline font-weight-bold">Update</span></div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
+													<!--begin::Item-->
+													<a href="custom/apps/user/profile-2.html" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-primary">
+																		<i class="flaticon-bell"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">My Notifications</div>
+																<div class="text-muted">Logs and notifications</div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
+													<!--begin::Item-->
+													<a href="custom/apps/userprofile-1/overview.html" class="navi-item">
+														<div class="navi-link">
+															<div class="symbol symbol-40 bg-light mr-3">
+																<div class="symbol-label">
+																	<span class="svg-icon svg-icon-md svg-icon-info">
+																		<i class="flaticon-envelope"></i>
+																	</span>
+																</div>
+															</div>
+															<div class="navi-text">
+																<div class="font-weight-bold">My Statements</div>
+																<div class="text-muted">latest tasks and projects</div>
+															</div>
+														</div>
+													</a>
+													<!--end:Item-->
+													<!--begin::Item-->
+													<span class="navi-item mt-2">
+														<span class="navi-link">
+															<a href="login.html" class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"><i class="flaticon-logout"></i>Sign Out</a>
+														</span>
+													</span>
+													<!--end:Item-->
+												</div>
+												<!--end::Nav-->
+											</div>
+											<!--end::Content-->
+											</ul>
+											<!--end::Navigation-->
+										</div>
+									   </div>
+									  </div>
+								</div>
+								<!--end::User Profile Dropdown-->
+							</div>
+							<!--end::Topbar-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Header-->
 <!--========== Header ==============-->
 
 
