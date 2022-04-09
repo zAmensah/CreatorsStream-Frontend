@@ -6918,6 +6918,9 @@ Banner 3
 .item-banner-login  {
   padding-top: 90px !important;
   padding-bottom: 100px !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-image: url("./../../assets/images/background/video-thumbnail-29.jpeg");
 }
 /*================================================
 Play Button
