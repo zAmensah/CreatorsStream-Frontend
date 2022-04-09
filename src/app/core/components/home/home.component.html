@@ -33,22 +33,23 @@
 
                               <div class="login--form main">
                                 <div class="form-group">
-                                  <label id="spec_lbl" for="email_ad">Email</label>
-                                  <input id="email_ad" type="text" class="text_field" placeholder="Enter Email"
-                                    formControlName="email">
+                                  <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
+                                  <input class="form-control form-control-solid h-auto p-6 rounded-lg" type="email" formControlName="email" placeholder="Enter Email" autocomplete="off" />
                                 </div>
 
                                 <div class="form-group">
-                                  <label id="spec_lbl" for="password">Password</label>
-                                  <input id="password" type="password" class="text_field"
-                                    placeholder="Enter Password..." formControlName="password">
+                                  <div class="d-flex justify-content-between mt-n5">
+                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
+                                    <a routerLink="/auth/forgot-password/" class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5" id="kt_login_forgot">Lost your password?</a>
+                                  </div>
+                                  <input class="form-control form-control-solid h-auto p-6 rounded-lg" type="password" formControlName="password" placeholder="Your Password" autocomplete="off" />
                                 </div>
 
                                 <div class="pms-remember-me">
                                   <p><input type="checkbox" name="accept-remember">Remember me</p>
                                 </div>
-                                <button id="register_btn" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5" type="submit"
-                                  [disabled]="loading">
+                                <button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3"
+                                   [disabled]="loading"><i class="fas fa-user-lock"></i>
                                   <ng-container *ngIf="loading; else waiting">
                                     Signin In....
                                   </ng-container>
@@ -59,7 +60,6 @@
                                 </button>
                                 <div class="login_assist bnr">
                                   <p>Don’t have account yet?<a routerLink="/auth/register/"> Signup</a></p>
-                                  <span><a routerLink="/auth/forgot-password/"> Lost your password?</a></span>
                                 </div>
                               </div>
                             </div>
