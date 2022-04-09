@@ -493,7 +493,7 @@ a.like-thumb:hover {
   background: #20ba83;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 7%;
   color: #fff;
   font-size: 45px;
   padding: 15px;
