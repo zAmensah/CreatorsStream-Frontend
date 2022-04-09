@@ -11821,10 +11821,12 @@ button#btn-alt {
 ****************************************/
 .login_area, .signup_area, .pass_recover_area {
   background: #eff1f5;
+  max-height: 100%;
 }
 
 .login, .signup_form, .recover_pass {
-  padding: 20px;
+  padding: 35px;
+  max-height: 100%;
 }
 
 .login .login--header, .signup_form .login--header, .recover_pass .login--header {

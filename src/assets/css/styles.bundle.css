@@ -64,7 +64,7 @@ body {
   line-height: 1.5;
   color: #3F4254;
   text-align: left;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -83249,9 +83249,6 @@ canvas {
 .print-content-only .offcanvas {
     display: none !important;
   }
-}
-body {
-  background: #eff1f5;
 }
 
 @media (min-width: 992px) {

@@ -278,15 +278,11 @@ table th {
 /*===== Input Textarea =====*/
 input,
 input.form-control {
-  /* background: var(--black-color); */
   border: 1px solid var(--black-color);
   color: var(--white-color);
   width: 100%;
-  float: left;
   font-size: 16px;
   padding: 0 15px;
-  height: 54px;
-  line-height: 54px;
   outline: none;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
