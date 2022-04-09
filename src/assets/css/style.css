@@ -3238,8 +3238,8 @@ header#gen-header.gen-header-style-1
     line-height: normal;
     float: right;
     outline: none;
-    margin: 0 15px 0 15px;
-    color: var(--white-color);
+    margin: 0 15px 15px 15px;
+    color: var(--black-color);
   }
 
   header#gen-header .gen-bottom-header .navbar .navbar-collapse {

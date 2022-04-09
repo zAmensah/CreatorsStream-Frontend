@@ -116,6 +116,7 @@ span.text-light.username {
 }
 header#gen-header .gen-bottom-header .navbar .navbar-nav li a {
   font-size: 13px !important;
+  color: #333 !important;
 }
 .channel--list-small .prod_btn a {
   margin-left: 20px !important;
