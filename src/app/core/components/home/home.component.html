@@ -182,9 +182,9 @@
                   </div>
                   <div class="gen-movie-meta-holder">
                     <ul>
-                      <li><a routerLink="/channel/{{videos.channel._id}}"><span><i id="channel-avator"
-                              class="fa fa-solid fa-tv"></i>
-                            {{videos.channel.name}}</span></a>
+                      <li><a routerLink="/channel/{{videos.channel._id}}"><span>
+                        <img id="channel-avator" [src]="videos.channel?.cover">
+                       {{videos.channel.name}}</span></a>
                       </li>
                       <li><i class="fa fa-eye"></i><span> {{videos.views}} Views</span></li>
                     </ul>
