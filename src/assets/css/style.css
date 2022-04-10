@@ -408,9 +408,6 @@ img.circular--square {
 button#channel-like {
   color: #afafaf;
 }
-button#channel-like:hover {
-  color: #20ba83;
-}
 #register_btn {
   /* margin-top: 20px; */
   margin-bottom: 20px;
@@ -456,11 +453,11 @@ h3.ad-heading.text-center {
 a.ft-social i {
   font-size: 27px;
 }
-li.channel-name-vplay {
+.channel-name-vplay {
   background: #6c63fa;
-  padding: 12px !important;
+  padding: 13px !important;
   margin-bottom: -2px !important;
-  /* padding-left: 30px !important; */
+  padding-left: 35px !important;
 }
 .channel-subscribe-btn {
   /* background: #fd4b49;
@@ -470,7 +467,7 @@ li.channel-name-vplay {
   margin-bottom: -2px !important; */
 }
 .channel-name-vplay a,
-li.channel-subscribe-btn a {
+.channel-subscribe-btn a {
   color: #fff !important;
   font-size: 15px;
 }
@@ -481,12 +478,6 @@ img.channel-avator {
   margin-right: -25px;
   margin-top: 11px !important;
   z-index: 999;
-}
-a.like-thumb {
-  background: #6c63fb !important;
-}
-a.like-thumb:hover {
-  background: #20ba83 !important;
 }
 .gen-episode-info a {
   color: #d9d7d7;
@@ -831,8 +822,7 @@ input[type="button"],
 Single Tv Show
 ===============================================*/
 .gen-tv-show-top {
-  margin: 25px 0;
-  margin-top: 40px;
+  margin: 0px 0;
 }
 .gen-footer-top.main {
   padding-top: 25px !important;
@@ -2832,9 +2822,9 @@ input#ad-input--id {
   background: #fff !important;
 }
 input#ad-input--newsL {
-  border-top-right-radius: 45px;
-  border-bottom-right-radius: 45px;
-  /* max-width: 395px; */
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  max-width: 275px;
 }
 .login--form.Ad {
   padding-top: 0px !important;
@@ -5783,11 +5773,9 @@ h4.align-self-center.on-dark {
 .gen-socail-share .social-inner li a {
   display: inline-block;
   font-size: 18px;
-  width: 35px;
   height: 35px;
   line-height: 35px;
   text-align: center;
-  background: var(--black-color);
   color: var(--white-color);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -7107,7 +7095,10 @@ Play Button
     font-size: 26px !important;
 }
 #reg-btn-cta {
-  margin-top: 87px !important;
+  margin-top: 0px !important;
+}
+.field-wrapper {
+   margin-bottom: 0px !important;
 }
 .h-100-alt {
   padding: 10px !important;
