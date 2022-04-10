@@ -754,9 +754,11 @@ input[type="button"],
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-
-.gen-button-dark {
-  background: #20ba83;
+#gen-button-play i {
+  font-size: 25px;
+}
+#gen-button-play {
+  background: transparent;
 }
 
 .gen-button-flat {
