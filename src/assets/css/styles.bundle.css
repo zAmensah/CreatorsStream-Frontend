@@ -68221,8 +68221,8 @@ code {
 .loader {
   display: inline-block;
   margin: 0 auto;
-  border-radius: 100%;
-  background-color: #F3F6F9;
+  border-radius: 25px;
+  background: #0BB783;
   opacity: 0;
   -webkit-animation: animation-loader 0.9s infinite ease-in-out;
   animation: animation-loader 0.9s infinite ease-in-out;

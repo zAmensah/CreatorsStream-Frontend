@@ -458,7 +458,7 @@ h3.ad-heading.text-center {
 }
 .channel-name-vplay {
   background: #6c63fa;
-  padding: 10px !important;
+  padding: 11px !important;
   margin-top: 12px !important;
   padding-left: 45px !important;
   border-top-left-radius: 25px !important;
@@ -478,7 +478,7 @@ h3.ad-heading.text-center {
 .channel-name-vplay a,
 .channel-subscribe-btn a {
   color: #fff !important;
-  font-size: 15px;
+  font-size: 14px;
 }
 img.channel-avator {
   width: 40px;
