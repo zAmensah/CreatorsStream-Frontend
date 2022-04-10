@@ -119,7 +119,7 @@
 
 
 <!-- Videos Section-1 Start -->
-<section class="gen-section-padding-2">
+<section class="gen-section-padding-2" id="gen-section-custom">
   <div class="container">
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6">
@@ -139,7 +139,7 @@
 </section>
 
 <!-- Section-1 Start -->
-<section class="gen-section-padding-3 main-vid">
+<section class="gen-section-padding-3 main-vid" id="gen-section-custom">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -147,10 +147,9 @@
           <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let videos of (videos$ | async)">
             <div class="gen-carousel-movies-style-3 movie-grid style-3">
               <div class="gen-movie-contain">
+                <a routerLink="/watch/u/{{videos._id}}">
                 <div class="gen-movie-img">
-                  <a routerLink="/watch/u/{{videos._id}}">
-                    <img [src]="videos.cover" alt="CreatorsStream-image">
-                  </a>
+                  <img [src]="videos.cover" alt="CreatorsStream-image">
                   <div class="gen-movie-add">
                     <div class="wpulike wpulike-heart">
                       <div class="wp_ulike_general_class wp_ulike_is_not_liked">
@@ -176,6 +175,7 @@
                     </a>
                   </div>
                 </div>
+                </a>
                 <div class="gen-info-contain">
                   <div class="gen-movie-info">
                     <h3><a routerLink="/watch/u/{{videos._id}}">{{videos.title}}</a></h3>
@@ -891,7 +891,7 @@
 <!-- Section-1 End -->
 
 <!-- owl-carousel Videos Section-2 Start -->
-<section class="pt-0 gen-section-padding-2">
+<section class="pt-0 gen-section-padding-2" id="gen-section-custom">
   <div class="container">
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6">
@@ -1297,7 +1297,7 @@
 <!-- owl-carousel Videos Section-2 End -->
 
 <!-- owl-carousel images Start -->
-<section class="pt-0 gen-section-padding-2">
+<section class="pt-0 gen-section-padding-2" id="gen-section-custom">
   <div class="container">
      <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6">
