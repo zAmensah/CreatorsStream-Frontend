@@ -13,13 +13,13 @@ const routes: Routes = [
   { path: 'watch/u/:id', component: ViewPageComponent },
   { path: 'subscriptions', component: SubscriptionsComponent },
   { path: 'channel/:id', component: ChannelComponent },
-  {path: 'about', component:AboutComponent},
-  {path:'contact', component:ContactComponent},
-  {path:'works', componet:WorksComponent}
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'works', component: WorksComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CoreRoutingModule {}
+export class CoreRoutingModule { }
