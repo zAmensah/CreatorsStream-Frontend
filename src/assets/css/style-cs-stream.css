@@ -1835,7 +1835,9 @@ h6 {
   -webkit-border-radius: 4px;
           border-radius: 4px;
 }
-
+i.fa.fa-heart {
+  color: #20ba83;
+}
 .btn:focus, .btn:active {
   color: #fff;
   outline: 0;

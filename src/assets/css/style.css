@@ -4832,7 +4832,7 @@ Carousel Movies
   right: 10px;
   top: 10px;
   display: flex;
-  z-index: 99;
+  z-index: 1;
 }
 
 .movie-grid .gen-movie-add .wpulike.wpulike-heart {
