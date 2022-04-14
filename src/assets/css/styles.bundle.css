@@ -76672,6 +76672,7 @@ code {
 }
 .navi .navi-item .navi-link .navi-text {
   font-size: 1rem;
+  margin-left: 5px;
 }
 .navi.navi-font-lg .navi-item .navi-link {
   font-size: 1.1rem;
