@@ -83,6 +83,12 @@ button.btn.btn--md.btn--round.register_btn {
   div#banner-home-login {
     background: #fff !important;
 }
+.gen-section-padding-2 {
+  padding-top: 10px !important;
+}
+button#btn-alt {
+  min-height: 55px !important;
+}
 .channel--list-small {
   padding: 0px;
 }
