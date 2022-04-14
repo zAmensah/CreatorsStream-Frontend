@@ -88,6 +88,7 @@ button.btn.btn--md.btn--round.register_btn {
 }
 button#btn-alt {
   min-height: 55px !important;
+  z-index: 1;
 }
 .channel--list-small {
   padding: 0px;

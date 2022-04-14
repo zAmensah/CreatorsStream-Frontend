@@ -653,9 +653,12 @@ Loading
 
 @media (max-width: 479px) {
   video#video-player {
-    min-width: auto !important;
-    max-width: 380px !important;
+    min-width: 360px !important;
+    max-width: 360px !important;
     margin-top: 15px !important;
+}
+#gen-section-custom {
+  padding-bottom: 50px !important;
 }
   .tab4 .tab-content {
     width: 100% !important;
