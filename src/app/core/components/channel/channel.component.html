@@ -33,7 +33,7 @@
 <!--================================
             START DASHBOARD AREA
     =================================-->
-<ng-container class="dashboard-area" *ngIf="channelVideos;else spinner">
+<ng-container class="dashboard-area" *ngIf="channelVideos; else spinner">
   <div class="dashboard_menu_area">
     <div class="container">
       <div class="row">
@@ -87,7 +87,7 @@
 
             <div class="channel-desc">
               <a routerLink="/dashboard/channels/single/{{channelID}}" class="channel_title">
-                <h4><i class="fas fa-check-circle text-success"></i> {{channelVideos.name}}</h4>
+                <h4>{{channelVideos.name}} <i class="fas fa-check-circle text-success"></i></h4>
               </a>
               <ul class="titlebtm">
                   <li class="video-view"><i class="fas fa-eye"></i> {{videos.views}} Views &nbsp;<i
