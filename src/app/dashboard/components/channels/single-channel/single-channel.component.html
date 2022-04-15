@@ -1,8 +1,5 @@
 <div class="preload dashboard-page has_chart">
-
-
   <!-- end /.dashboard_menu_area -->
-
   <ng-container *ngIf="channelVideos; else spinner">
     <!-- breadcrumb -->
     <div class="gen-breadcrumb" [ngStyle]="{'background-image': 'url(' + channelVideos.cover +')'}">
@@ -39,6 +36,7 @@
               <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let video of channelVideos.videos">
                 <div class="gen-carousel-movies-style-3 movie-grid style-3">
                   <div class="gen-movie-contain">
+                    <a routerLink="/watch/u/{{video._id}}">
                     <div class="gen-movie-img">
                       <img [src]="video.cover" alt="single-video-image">
                       <div class="gen-movie-add">
@@ -47,34 +45,20 @@
                             <a href="#" class="sl-button text-white"><i class="far fa-heart"></i></a>
                           </div>
                         </div>
-                        <ul class="menu bottomRight">
-                          <li class="share top">
-                            <i class="fa fa-share-alt"></i>
-                            <ul class="submenu">
-                              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                              </li>
-                              <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                              </li>
-                              <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                            </ul>
-                          </li>
-                        </ul>
                       </div>
                       <div class="gen-movie-action">
-                        <a routerLink="/watch/u/{{video._id}}" class="gen-button">
+                        <a routerLink="/watch/u/{{video._id}}" class="gen-button" id="gen-button-play">
                           <i class="fa fa-play"></i>
                         </a>
                       </div>
                     </div>
+                    </a>
                     <div class="gen-info-contain">
                       <div class="gen-movie-info">
                         <h3><a routerLink="/watch/u/{{video._id}}">{{video.title}}</a></h3>
                       </div>
                       <div class="gen-movie-meta-holder">
                         <ul>
-                          <li><a routerLink="/dashboard/channels">
-                              <span><i class="fa fa-tv channel-icon"></i>{{video.channel.name}}</span></a>
-                          </li>
                           <li><i class="fa fa-eye"></i><span> {{video.views}} Views</span></li>
                         </ul>
                       </div>

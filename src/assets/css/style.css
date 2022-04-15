@@ -2345,10 +2345,11 @@ Breadcrum
 }
 
 .gen-breadcrumb .gen-breadcrumb-title h1 {
-  font-size: 56px;
+  font-size: 45px;
   line-height: 64px;
   margin-bottom: 15px;
   color: #2a3043;
+  text-transform: lowercase;
   letter-spacing: -2px !important;
 }
 
@@ -5801,8 +5802,8 @@ h4.align-self-center.on-dark {
   border-radius: 0;
 }
 
-.gen-socail-share .social-inner li a:hover {
-  background: var(--primary-color);
+.gen-socail-share .social-inner li i:hover {
+  color: var(--primary-color);
 }
 
 .pm-inner .gen-more-like .gen-more-title {
