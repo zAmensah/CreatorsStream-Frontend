@@ -76,8 +76,8 @@ button.btn.btn--md.btn--round.register_btn {
 }
 #chan-eye {
   color: #fff;
-  font-size: 30px;
-  margin-right: 25px;
+  font-size: 15px;
+  padding-right: 100px !important;
 }
 @media (max-width: 768px) {
   div#banner-home-login {
