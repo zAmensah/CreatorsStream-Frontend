@@ -5067,7 +5067,10 @@ Carousel Movies
   display: inline-block;
   width: 100%;
 }
-
+#chan-like {
+  margin-bottom: 20px;
+  margin-right: 12px;
+}
 .gen-carousel-movies-style-2 .gen-movie-contain {
   position: relative;
 }
@@ -5075,7 +5078,6 @@ Carousel Movies
   position: relative;
   background: #f9f9f9;
   border-radius: 30px;
-  padding: 12px;
 }
 .gen-carousel-movies-style-2 .gen-movie-contain .gen-movie-img {
   position: relative;
