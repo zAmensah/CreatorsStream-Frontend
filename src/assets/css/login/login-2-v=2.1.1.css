@@ -9,6 +9,7 @@
   .login.login-2 .form {
     -webkit-box-shadow: 0px 0px 80px 0px rgba(77, 84, 124, 0.09);
     box-shadow: 0px 0px 80px 0px rgba(77, 84, 124, 0.09);
+    padding: 40px !important;
   }
 }
 .login.login-2 .login-signin,
