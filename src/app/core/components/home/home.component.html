@@ -90,7 +90,7 @@
                                 <label for="email_ad">Check status of your Ad…</label>
                                 <div class="field-wrapper News-L">
                                   <div class="input-group">
-                                    <input id="ad-input--newsL" class="form-control form-control-solid h-auto p-6 rounded-lg" type="email" formControlName="email" placeholder="Enter Ad ID / Code" autocomplete="off" />
+                                    <input id="ad-input--newsL" class="form-control form-control-solid h-auto p-6" type="email" formControlName="email" placeholder="Enter Ad ID / Code" autocomplete="off" />
                                     <div class="input-group-append">
                                       <button id="btn-alt" class="btn btn--md rounded-left-0" type="submit">GET</button>
                                     </div>
@@ -150,22 +150,8 @@
                   <img [src]="videos.cover" alt="CreatorsStream-image">
                   <div class="gen-movie-add">
                     <div class="wpulike wpulike-heart">
-                      <div class="wp_ulike_general_class wp_ulike_is_not_liked">
-                        <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
-                      </div>
+                        <button type="button" class="wp_ulike_btn wp_ulike_put_image"> Like</button>
                     </div>
-                    <!-- <ul class="menu bottomRight">
-                      <li class="share top">
-                        <i class="fa fa-share-alt"></i>
-                        <ul class="submenu">
-                          <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                          </li>
-                          <li><a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                          </li>
-                          <li><a href="#" class="facebook"><i class="fab fa-twitter"></i></a></li>
-                        </ul>
-                      </li>
-                    </ul> -->
                   </div>
                   <div class="gen-movie-action">
                     <a routerLink="/watch/u/{{videos._id}}" class="gen-button" id="gen-button-play">
