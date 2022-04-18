@@ -2,12 +2,14 @@
 .login.login-2 .form {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+  padding: 0px !important;
 }
 }
-.login.login-2 .form {
-  -webkit-box-shadow: 0px 0px 80px 0px rgba(77, 84, 124, 0.09);
-  box-shadow: 0px 0px 80px 0px rgba(77, 84, 124, 0.09);
-  padding: 25px !important;
+@media (min-width: 1400px){
+  .login.login-2 .form {
+    -webkit-box-shadow: 0px 0px 80px 0px rgba(77, 84, 124, 0.09);
+    box-shadow: 0px 0px 80px 0px rgba(77, 84, 124, 0.09);
+  }
 }
 .login.login-2 .login-signin,
 .login.login-2 .login-signup,
