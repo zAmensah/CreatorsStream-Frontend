@@ -81855,6 +81855,7 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown):not(.sweetalert
 .swal2-container .swal2-html-container {
   max-height: 200px;
   overflow: auto;
+  font-family: 'Montserrat';
 }
 
 body.swal2-height-auto {
