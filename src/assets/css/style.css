@@ -607,7 +607,7 @@ Container
 
 @media (max-width: 1023px) {
   video#video-player {
-    min-width: 850px !important;
+    min-width: 330px !important;
     height: auto !important;
   }
   .container {
@@ -653,8 +653,9 @@ Loading
 
 @media (max-width: 479px) {
   video#video-player {
-    min-width: 360px !important;
-    max-width: 360px !important;
+    width: 100%;
+    /* min-width: 320px !important;
+    max-width: 360px !important; */
     margin-top: 15px !important;
 }
 #gen-section-custom {
