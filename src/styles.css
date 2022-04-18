@@ -132,9 +132,7 @@ header#gen-header .gen-bottom-header .navbar .navbar-nav li a {
   font-size: 13px !important;
   color: #333 !important;
 }
-.channels {
-  padding-top: 0px !important;
-}
+
 .channel--list .channel__thumbnail img {
   /* width: 100%;
   -webkit-border-radius: inherit !important;
