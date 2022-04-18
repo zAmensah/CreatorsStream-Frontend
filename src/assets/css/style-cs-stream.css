@@ -2339,7 +2339,6 @@ i.fa.fa-heart {
 .channel--list .channel__thumbnail, .channel--list .channel-desc, .channel--list .channel-meta, .channel--list .channel-purchase {
   display: inline-block;
   vertical-align: middle;
-  border-right: 1px solid #ececec;
 }
 
 .channel--list .channel__thumbnail {
@@ -2407,6 +2406,7 @@ i.fa.fa-heart {
 
 .channel--list-small .channel__thumbnail {
   width: 90px;
+  border-right: 1px solid #f0f0f0;
 }
 
 .channel--list-small .prod_btn a {
@@ -2420,7 +2420,7 @@ i.fa.fa-heart {
 
 .channel--list-small .channel__details .channel-desc,
 .channel--list-small .channel__details .channel-meta {
-  padding: 0 20px;
+  padding: 0 20px 5px;
 }
 
 /* .channel--list-small .channel__details .channel-desc {
