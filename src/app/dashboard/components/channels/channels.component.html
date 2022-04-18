@@ -8,14 +8,7 @@
         <div class="col-lg-12">
           <nav aria-label="breadcrumb-alt">
             <div class="gen-breadcrumb-title">
-              <!-- <h1>YOUR CHANNELS </h1> -->
-            </div>
-            <div class="gen-breadcrumb-container">
-              <ol class="breadcrumb-alt">
-                <li class="breadcrumb-item"><a routerLink="/dashboard/">
-                    <i class="fas fa-cog mr-2"></i>Dashboard</a></li>
-                <li class="breadcrumb-item active">Your Channels</li>
-              </ol>
+              <h2>CHANNELS</h2>
             </div>
           </nav>
         </div>
@@ -24,68 +17,174 @@
   </div>
   <!-- breadcrumb -->
 
-  <!-- Start Channel Content -->
-  <section class="gen-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 col-lg-12 col-md-6">
-          <div class="single_channel" *ngFor="let channel of (dashboardService.channels$ | async)">
-            <div class="channel__thumbnail">
-              <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
-                  alt="Channel-avator"></a>
-            </div>
 
-            <div class="channel__detail">
-              <h4><a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a></h4>
-              <p>{{channel.about}}</p>
-            <div class="gen-likes-col">
-               <span><a class="ocuup"> <i class="fa fa-thumbs-up"></i> {{channel.totalLikes}} Likes</a>
-                <a class="ocuup"> <i class="fa fa-bell"></i> {{channel.totalLikes}} Subscribed</a></span>
+   <!--================================
+        START CHANNEL AREA
+    =================================-->
+    <section class="channels section--padding">
+      <!-- start container -->
+      <div class="container">
+          <!-- start .row -->
+          <div class="row">
+              <!-- start col-md-9 -->
+              <div class="col-md-3">
+                  <!-- start .single-channel -->
+                  <div class="channel channel--list channel--list-small" *ngFor="let channel of (dashboardService.channels$ | async)">
+                      <div class="channel__thumbnail">
+                        <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo" alt="Channel-avator"></a>
+                          <div class="prod_btn">
+                            <a class="ocuup"><i id="chan-eye" class="fa fa-eye"></i></a>
+                          </div>     
+                          <!-- end /.prod_btn -->
+                      </div>
+                      <!-- end /.channel__thumbnail -->
+                      <div class="channel__details">
+                        <div class="channel-desc">
+                          <a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a>
+                        </div>
+                        <a routerLink="/" id="btn-subsc"><i class="flaticon-alert"></i> Subscribed</a> <i id="icon-subsc" class="flaticon-bell"></i>  {{channel.totalLikes}}k
+                        <!-- end /.channel -->
+                      </div>
+                  </div>
+                  <!-- end /.single-channel -->
               </div>
-            </div>
-            <!-- <button (click)="getChannel(channel)">Hello</button> -->
-          </div>
-          <!-- end single_channel-->
-        </div>
-        <!-- End Channel Content -->
+              <!-- end /.col-md-9 -->
 
-        <!-- RIGHT SIDEBAR -->
-        <div class="col-xl-3 col-md-12 mt-4 mt-xl-0">
-          <div class="widget widget_most-views">
-            <h2 class="widget-title"><i class="fa fa-video"></i> Top Most Viewed</h2>
-            <ul id="top-viewd-channels">
-              <li><i class="fa fa-arrow-right"></i><a href="#">Love In 21st...</a>
-                <span class="pull-right active-likes">129k</span>
-              </li>
-              <li><i class="fa fa-arrow-right"></i><a href="#">My Generation...</a>
-                <span class="pull-right active-likes">5M</span>
-              </li>
-              <li><i class="fa fa-arrow-right"></i><a href="#">the giant ship...</a>
-                <span class="pull-right active-likes">92k</span>
-              </li>
-              <li><i class="fa fa-arrow-right"></i><a href="#">Gnome Alone...</a>
-                <span class="pull-right active-likes">84k</span>
-              </li>
-              <li><i class="fa fa-arrow-right"></i><a href="#">Kimozy Dragon...</a>
-                <span class="pull-right active-likes">17M</span>
-              </li>
-            </ul>
+              <!-- start col-md-9 -->
+              <div class="col-md-3">
+                <!-- start .single-channel -->
+                  <div class="channel channel--list channel--list-small" *ngFor="let channel of (dashboardService.channels$ | async)">
+                    <div class="channel__thumbnail">
+                      <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
+                        alt="Channel-avator"></a>
+                        <div class="prod_btn">
+                          <a class="ocuup"><i id="chan-eye" class="fa fa-eye"></i></a>
+                        </div>  
+                        <!-- end /.prod_btn -->
+                    </div>
+                    <!-- end /.channel__thumbnail -->
+                    <div class="channel__details">
+                        <div class="channel-desc">
+                          <a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a>
+                        </div>
+                        <a routerLink="/" id="btn-subsc"><i class="flaticon-alert"></i> Subscribed</a> <i id="icon-subsc" class="flaticon-bell"></i>  {{channel.totalLikes}}k
+                        <!-- end /.channel -->
+                    </div>
+                </div>
+                <!-- end /.single-channel -->
+              </div>
+              <!-- end /.col-md-9 -->
+
+              <!-- start col-md-9 -->
+              <div class="col-md-3">
+              <!-- start .single-channel -->
+              <div class="channel channel--list channel--list-small" *ngFor="let channel of (dashboardService.channels$ | async)">
+                  <div class="channel__thumbnail">
+                    <a routerLink="/dashboard/channels/single/{{channel._id}}"><img [src]="channel.logo"
+                      alt="Channel-avator"></a>
+                      <div class="prod_btn">
+                        <a class="ocuup"><i id="chan-eye" class="fa fa-eye"></i></a>
+                      </div>          
+                      <!-- end /.prod_btn -->
+                  </div>
+                  <!-- end /.channel__thumbnail -->
+                  <div class="channel__details">
+                      <div class="channel-desc">
+                        <a routerLink="/dashboard/channels/single/{{channel._id}}">{{channel.name}}</a>
+                      </div>
+                      <a routerLink="/" id="btn-subsc"><i class="flaticon-alert"></i> Subscribed</a> <i id="icon-subsc" class="flaticon-bell"></i>  {{channel.totalLikes}}k
+                      <!-- end /.channel-purchase -->
+                  </div>
+              </div>
+              <!-- end /.single-channel -->
+              </div>
+              <!-- end /.col-md-9 -->
+
+             <!-- start .col-md-3 -->
+              <div class="col-md-3">
+                  <!-- start aside -->
+                  <aside class="sidebar channel--sidebar">
+                      <div class="sidebar-card card--filter">
+                          <a class="card-title" href="#collapse1" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapse1">
+                            <h3 class="widget-title"><i class="fa fa-video"></i> Top Most Viewed
+                                  <span class="fa fa-chevron-down"></span>
+                              </h3>
+                          </a>
+                          <div class="collapse show collapsible-content" id="collapse1">
+                            <ul id="card-content">
+                              <li><i class="fa fa-arrow-right"></i><a href="#">Love In 21st...</a>
+                                <span class="pull-right active-likes">129k</span>
+                              </li>
+                              <li><i class="fa fa-arrow-right"></i><a href="#">My Generation...</a>
+                                <span class="pull-right active-likes">5M</span>
+                              </li>
+                              <li><i class="fa fa-arrow-right"></i><a href="#">the giant ship...</a>
+                                <span class="pull-right active-likes">92k</span>
+                              </li>
+                              <li><i class="fa fa-arrow-right"></i><a href="#">Gnome Alone...</a>
+                                <span class="pull-right active-likes">84k</span>
+                              </li>
+                              <li><i class="fa fa-arrow-right"></i><a href="#">Kimozy Dragon...</a>
+                                <span class="pull-right active-likes">17M</span>
+                              </li>
+                            </ul>
+                          </div>
+                      </div>
+                      <!-- end /.sidebar-card -->
+                  </aside>
+                  <!-- end aside -->                  
+                  
+                  <!-- start aside -->
+                  <aside class="sidebar channel--sidebar">
+                      <div class="sidebar-card card--filter">
+                          <a class="card-title" href="#collapse2" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapse2">
+                              <h3 class="widget-title"><i class="fa fa-play-circle"></i> Top 5 Channel
+                                  <span class="fa fa-chevron-down"></span>
+                              </h3>
+                          </a>
+                          <div class="collapse show collapsible-content" id="collapse2">
+                            <ul id="card-content">
+                              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">WildLife TV</a>
+                              </li>
+                              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">PowerLine TV</a>
+                              </li>
+                              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">Dreams TV</a></li>
+                              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">YouNEye TV</a></li>
+                              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">TutorialZine TV</a>
+                              </li>
+                            </ul>
+                          </div>
+                      </div>
+                      <!-- end /.sidebar-card -->
+                  </aside>
+                  <!-- end aside -->
+              </div>
+              <!-- end /.col-md-3 -->
           </div>
-          <div class="widget widget_top-channels">
-            <h2 class="widget-title"><i class="fa fa-play-circle"></i> Top 5 Channels</h2>
-            <ul id="top-five-channels">
-              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">WildLife TV</a>
-              </li>
-              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">PowerLine TV</a>
-              </li>
-              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">Dreams TV</a></li>
-              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">YouNEye TV</a></li>
-              <li><img src="assets/images/comavatar2.jpg" width="45" alt="user avatar"><a href="#">TutorialZine TV</a>
-              </li>
-            </ul>
+          <!-- end /.row -->
+          <div class="row">
+              <div class="col-md-3">
+                  <div class="pagination-area pull-left">
+                      <nav class="navigation pagination" role="navigation">
+                          <div class="nav-links">
+                              <a class="prev page-numbers" href="#">
+                                  <span class="fa fa-arrow-left"></span>
+                              </a>
+                              <a class="page-numbers current" href="#">1</a>
+                              <a class="page-numbers" href="#">2</a>
+                              <a class="page-numbers" href="#">3</a>
+                              <a class="next page-numbers" href="#">
+                              <span class="fa fa-arrow-right"></span>
+                              </a>
+                          </div>
+                      </nav>
+                  </div>
+              </div>
           </div>
-        </div>
+          <!-- end /.row -->
       </div>
-    </div>
+      <!-- end /.container -->
   </section>
-  <!-- left-Sidebar -->
+  <!--================================
+      END CHANNEL AREA
+  =================================-->

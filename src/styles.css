@@ -12,6 +12,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   min-height: 545px !important;
   max-height: 100% !important;
 }
+#card-content li {
+  margin: 0 0 15px 0;
+}
 .loader::before {
   background: #fff !important;
 }

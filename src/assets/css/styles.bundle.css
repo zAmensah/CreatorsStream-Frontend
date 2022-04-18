@@ -5588,7 +5588,7 @@ input[type=button].btn-block {
   padding: 2rem 2.25rem;
   margin-bottom: 0;
   background-color: #ffffff;
-  border-bottom: 1px solid #EBEDF3;
+  border-bottom: none;
 }
 .card-header:first-child {
   border-radius: calc(0.75rem - 1px) calc(0.75rem - 1px) 0 0;
