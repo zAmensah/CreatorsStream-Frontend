@@ -32,11 +32,13 @@
                               <app-messages></app-messages>
 
                               <div class="login--form main">
+                                <!--begin::Form group-->
                                 <div class="form-group">
                                   <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
                                   <input class="form-control form-control-solid h-auto p-6" type="email" formControlName="email" placeholder="Enter Email" autocomplete="off" />
                                 </div>
-
+                                 <!--end::Form group-->
+                                <!--begin::Form group-->
                                 <div class="form-group">
                                   <div class="d-flex justify-content-between mt-n5">
                                     <label class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
@@ -44,10 +46,16 @@
                                   </div>
                                   <input class="form-control form-control-solid h-auto p-6" type="password" formControlName="password" placeholder="Your Password" autocomplete="off" />
                                 </div>
+                                <!--end::Form group-->
 
-                                <div class="pms-remember-me">
-                                  <p><input type="checkbox" name="accept-remember">Remember me</p>
+
+                                <!--begin::Form group-->
+                                <div class="form-group">
+                                  <div class="pms-remember-me">
+                                    <label><input type="checkbox" name="accept-remember">Remember me</label>
+                                  </div>
                                 </div>
+                                <!--end::Form group-->
                                 <button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3"
                                    [disabled]="loading"><i class="fas fa-user-lock"></i>
                                   <ng-container *ngIf="loading; else waiting">

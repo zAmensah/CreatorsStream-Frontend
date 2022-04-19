@@ -20,15 +20,15 @@ var KTLogin = function() {
     var _handleSignInForm = function() {
         var validation;
 
-        // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
-        validation = FormValidation.formValidation(
+     // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+     validation = FormValidation.formValidation(
 			KTUtil.getById('kt_login_signin_form'),
 			{
 				fields: {
 					username: {
 						validators: {
 							notEmpty: {
-								message: 'Username or Email is required'
+								message: 'User Email is required'
 							}
 						}
 					},
@@ -43,7 +43,7 @@ var KTLogin = function() {
 				plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
                     submitButton: new FormValidation.plugins.SubmitButton(),
-                    //defaultSubmit: new FormValidation.plugins.DefaultSubmit(), // Uncomment this line to enable normal button submit after form validation
+                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(), // Uncomment this line to enable normal button submit after form validation
 					bootstrap: new FormValidation.plugins.Bootstrap()
 				}
 			}
@@ -103,7 +103,7 @@ var KTLogin = function() {
 			form,
 			{
 				fields: {
-					fullname: {
+					username: {
 						validators: {
 							notEmpty: {
 								message: 'Username is required'
@@ -111,29 +111,39 @@ var KTLogin = function() {
 						}
 					},
 					email: {
-                        validators: {
+              validators: {
 							notEmpty: {
 								message: 'Email address is required'
 							},
-                            emailAddress: {
+                emailAddress: {
 								message: 'The value is not a valid email address'
 							}
 						}
 					},
-                    password: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The password is required'
+          phone: {
+              validators: {
+							notEmpty: {
+								message: 'Phone No. is required'
+							},
+                phone: {
+								message: 'The value is not a valid phone number'
+							}
+						}
+					},
+          password: {
+                validators: {
+                notEmpty: {
+                   message: 'Password is required'
                             }
                         }
                     },
-                    cpassword: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The password confirmation is required'
+          cpassword: {
+                 validators: {
+                 notEmpty: {
+                    message: 'Password confirmation is required'
                             },
-                            identical: {
-                                compare: function() {
+                        identical: {
+                              compare: function() {
                                     return form.querySelector('[name="password"]').value;
                                 },
                                 message: 'The password and its confirm are not the same'
@@ -208,7 +218,7 @@ var KTLogin = function() {
 							notEmpty: {
 								message: 'Email address is required'
 							},
-                            emailAddress: {
+                emailAddress: {
 								message: 'The value is not a valid email address'
 							}
 						}

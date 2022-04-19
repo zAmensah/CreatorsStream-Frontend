@@ -38,8 +38,6 @@
 								<!--begin::Header Menu-->
 								<div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
                <!--begin::Header Nav-->
-
-                <!--begin::Logo-->
                 <div class="d-none d-lg-flex align-items-center mr-5 flex-wrap w-200px">
                   <!--begin::Logo-->
                   <a routerLink="/">
@@ -83,11 +81,11 @@
                       <div class="searc-wrap">
                           <input type="text" placeholder="Search...">
                           <button type="submit" class="search-wrap__btn">
-                              <span class="fa fa-search"></span>
-                          </button>
+                          <span class="fa fa-search"></span>
+                        </button>
                       </div>
                   </form>
-              </div>
+                </div>
 							</div>
             </div>
 							<!--end::Header Menu Wrapper-->
@@ -175,7 +173,7 @@
 								</div>
 								<!--end::Quick Links-->
 
-								<!--begin::Chat-->
+								<!--begin::Chat-Box-->
 								<div class="topbar-item mr-1">
 									<div class="btn btn-icon btn-hover-transparent-white btn-clean btn-lg" data-toggle="modal" data-target="#kt_chat_modal">
 										<span class="svg-icon svg-icon-xl">
@@ -183,7 +181,7 @@
 										</span>
 									</div>
 								</div>
-								<!--end::Chat-->
+								<!--end::Chat-Box-->
 
 								<!--begin::User Profile Dropdown-->
 								<div class="dropdown">
@@ -206,18 +204,17 @@
 														<i class="symbol-badge bg-success"></i>
 													</div>
 													<div class="d-flex flex-column">
-                            <span class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary" routerLink="/dashboard">&nbsp; {{(authService.user$ |
-                              async)?.name}}</span>
-														<div class="navi mt-1">
-															<a href="#" class="navi-item">
+													<span class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary"
+													routerLink="/dashboard">&nbsp; {{(authService.user$ | async)?.name}}</span>
+														<div class="navi mt-1"><a href="#" class="navi-item">
 																<span class="navi-link p-0 pb-2">
 																	<span class="navi-icon">
 																		<span class="opt-icon opt-icon-lg svg-icon-primary">
 																			<i class="flaticon2-envelope"></i>
 																		</span>
 																	</span>
-                                  <span class="navi-text text-muted text-hover-primary" routerLink="/dashboard">&nbsp; {{(authService.user$ |
-                                    async)?.email}}</span>
+																<span class="navi-text text-muted text-hover-primary" routerLink="/dashboard">&nbsp;
+																	{{(authService.user$ | async)?.email}}</span>
 																</span>
 															</a>
 														</div>
@@ -230,8 +227,7 @@
 
 												<!--begin::Nav-->
 												<div class="navi navi-spacer-x-0 p-0">
-
-													<!--begin::Item-->
+												<!--begin::Item-->
 													<a routerLink="/dashboard/settings/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
@@ -248,7 +244,7 @@
 														</div>
 													</a>
 													<!--end:Item-->
-                          <!--begin::Item-->
+                         							<!--begin::Item-->
 													<a routerLink="/dashboard/" class="navi-item">
 														<div class="navi-link">
 															<div class="symbol symbol-40 bg-light mr-3">
@@ -260,7 +256,7 @@
 															</div>
 															<div class="navi-text">
 																<div class="font-weight-bold">Dashboard</div>
-                                <div class="text-muted">Your Dashboard</div>
+                                								<div class="text-muted">Your Dashboard</div>
 															</div>
 														</div>
 													</a>
