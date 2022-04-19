@@ -123,7 +123,7 @@ var KTLogin = function() {
           phone: {
               validators: {
 							notEmpty: {
-								message: 'Phone No. is required'
+								message: 'Phone Number is required'
 							},
                 phone: {
 								message: 'The value is not a valid phone number'
