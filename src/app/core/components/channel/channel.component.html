@@ -8,9 +8,8 @@
       <div class="col-md-12">
         <div class="breadcrumb">
           <div class="channel-profile">
-            <img class="channel-profile-img" alt="" src="assets/images/Channel-Avator-vplay.png">
+            <img class="channel-profile-img img-circle" alt="" [src]="channelVideos.cover">
             <div class="social hidden-xs">&nbsp;
-              <!-- <h1 class="page-title">Manage Item</h1> -->
               <a class="page-title">{{channelVideos.name}} <span>
                 <i class="fas fa-check-circle text-success"></i></span></a>
             </div>
@@ -30,9 +29,6 @@
   <!-- end /.container -->
 </section>
 
-<!--================================
-            START DASHBOARD AREA
-    =================================-->
 <ng-container class="dashboard-area" *ngIf="channelVideos; else spinner">
   <div class="dashboard_menu_area">
     <div class="container">
@@ -47,7 +43,7 @@
               <li><a href="#"><span class="flaticon2-user"></span>&nbsp; About</a></li>
               <li><a href="#"><span class="flaticon2-list"></span>&nbsp; Report</a></li>
           </ul>
-          <!-- end /.dashboard_menu -->
+          <!-- end /.breadcrumb_menu -->
         </div>
         <!-- end /.col-md-12 -->
       </div>
@@ -55,7 +51,7 @@
     </div>
     <!-- end /.container -->
   </div>
-  <!-- end /.dashboard_menu_area -->
+  <!-- end /.breadcrumb_menu_area -->
 
   <div class="dashboard_contents">
     <div class="container">
@@ -65,7 +61,7 @@
           <div class="channel channel--card">
 
             <div class="channel__thumbnail">
-              <img [src]="channelVideos.cover" alt="Channel Image">
+              <img [src]="channelVideos.cover" alt="Channel Cover">
             </div>
 
             <div class="channel-desc">

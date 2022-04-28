@@ -28,10 +28,12 @@ img.mt-3.mb-3.cover-image {
   width: 50%;
 }
 .channel-profile-img {
-  width: 50px !important;
-  margin-bottom: 15px;
-  margin-right: -16px;
+  width: 40px !important;
+  height: 40px !important;
+  margin-bottom: 9px;
+  margin-right: -17px;
   position: relative;
+  border-radius: 50%;
 }
 .social-ff {
   font-weight: 500;

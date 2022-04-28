@@ -62081,7 +62081,14 @@ button {
 }
 .btn.btn-bg-white {
   background-color: #ffffff;
-  border-color: #ffffff;
+  border: none;
+}
+.btn.btn-bg-custom {
+  background-color: #ff6a6d;
+  border-color: #ff6a6d;
+}
+#btn-special i {
+    color: #fff;
 }
 .btn.btn-bg-white.disabled, .btn.btn-bg-white:disabled {
   background-color: #ffffff;

@@ -1,1 +1,85 @@
-<p>contact works!</p>
+<!--========== Header ==============-->
+<app-navbar></app-navbar>
+<!--========== Header ==============-->
+
+ <!--begin::Content-->
+  <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Breadcrumbs-->
+    <div class="gutter-b" id="kt_breadcrumbs">
+      <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+        <!--begin::Info-->
+        <div class="d-flex align-items-center flex-wrap mr-1">
+        <!--begin::Page Heading-->
+        <div class="d-flex align-items-baseline flex-wrap mr-5">
+          <!--begin::Page Title-->
+          <h4 class="text-dark font-weight-bold my-1 mr-5">Your Streaming Platform: </h4>
+          <!--end::Page Title-->
+        </div>
+        <!--end::Page Heading-->
+        </div>
+        <!--end::Info-->
+        <!--begin::Toolbar-->
+        <div class="d-flex align-items-center">
+          <!--begin::Dropdown-->
+          <div class="dropdown dropdown-inline">
+            <a routerLink="/works/" id="btn-special" class="btn btn-fixed-height btn-bg-custom btn-text-white btn-hover-text-primary btn-icon-primary font-weight-bolder font-size-sm px-5 mr-3">
+            <span class="svg-icon svg-icon-md">
+              <i class="flaticon-user"></i>
+            </span>How It Works</a>
+          </div>
+          <!--end::Dropdown-->
+          <!--begin::Dropdown-->
+          <div class="dropdown dropdown-inline">
+            <a routerLink="/dashboard/add-video" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5">
+            <span class="svg-icon svg-icon-md">
+            <i class="flaticon-upload-1"></i>
+            </span>Video Playlist</a>
+          </div>
+          <!--end::Dropdown-->
+        </div>
+        <!--end::Toolbar-->
+      </div>
+    </div>
+    <!--end::Breadcrumbs-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+      <!--begin::Container-->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-xl-12">
+            <div class="card card-custom gutter-b example example-compact mt-10">
+              <div class="card-header">
+                <div class="card-title">
+                  <h3 class="card-label"><i class="flaticon-user"></i> Support</h3>
+                </div>
+              </div>
+              <div class="card-body">
+                <!--begin::About-Content-->
+                <p class="mt-5">You can contact us by completing the contact us form or through the following
+                email addresses base on your needs and our specialised team will respond to your needs timely.
+                  •	General enquiries and information, email us on enquires@creatorsstream.com
+
+                  •	Content take down request and copyright issues, email us on contents@creatorsstream.com
+
+                  •	Accounts and finance matters, email us on accounts@creatorsstream.com
+
+                  •	Advertising and promotional matters, email us on advertspromos@creatorsstream.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+  </div>
+	<!--end::Content-->
+
+  <ng-template #spinner>
+    <app-spinner></app-spinner>
+  </ng-template>
+
+  <!-- Footer Top Starts -->
+  <app-footer></app-footer>
+  <!-- Main Footer End -->
