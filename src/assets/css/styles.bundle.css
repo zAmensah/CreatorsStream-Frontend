@@ -83275,6 +83275,9 @@ body {
 .container-xxl {
     padding: 0 25px;
   }
+  #container-custom{
+    padding:0 0 25px 0;
+  }
 }
 @media (max-width: 991.98px) {
   .header-mobile-fixed .wrapper {

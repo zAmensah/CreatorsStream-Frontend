@@ -1,5 +1,5 @@
-"use strict";
 
+"use strict";
 // Class Definition
 var KTLogin = function() {
     var _login;
@@ -59,7 +59,7 @@ var KTLogin = function() {
 		                icon: "success",
 		                buttonsStyling: false,
 		                confirmButtonText: "Ok, Got it!",
-                        customClass: {
+                    customClass: {
     						confirmButton: "btn font-weight-bold btn-light-primary"
     					}
 		            }).then(function() {
@@ -97,7 +97,6 @@ var KTLogin = function() {
     var _handleSignUpForm = function(e) {
         var validation;
         var form = KTUtil.getById('kt_login_signup_form');
-
         // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
         validation = FormValidation.formValidation(
 			form,
@@ -187,7 +186,7 @@ var KTLogin = function() {
 		                icon: "error",
 		                buttonsStyling: false,
 		                confirmButtonText: "Ok, Got it!",
-                        customClass: {
+                    customClass: {
     						confirmButton: "btn font-weight-bold btn-light-primary"
     					}
 		            }).then(function() {
