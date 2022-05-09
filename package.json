@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "angular4-paystack": "^3.0.2",
     "firebase": "^8.2.6",
     "firebase-tools": "^6.11.0",
     "moment": "^2.29.1",

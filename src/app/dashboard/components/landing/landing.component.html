@@ -506,18 +506,33 @@
                           <div class="d-flex align-items-center">
                             <!--begin::CS-fund-btn-->
                             <div class="cs-btn-dropleft">
-                              <a href="#" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5">
+                              <button class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5">
                               <span class="svg-icon svg-icon-md">
                                 <i class="flaticon-open-box"></i>
-                              </span>Load Wallet</a>
+                              </span>
+                              Load Wallet
+                            </button>
                             </div>
                             <!--end::CS-fund-btn-->
                             <!--begin::CS-fund-btn-->
                             <div class="cs-btn-dropright">
-                              <a href="#" class="btn btn-outline-primary mr-3">
+                              <button
+                              angular4-paystack
+                              [email]="'mailexample@mail.com'"
+                              [amount]="20"
+                              [ref]="reference"
+                              [class]="'btn btn-primary'"
+                              [currency]="'GHS'"
+                              (paymentInit)="paymentInit()"
+                              (onClose)="paymentCancel()"
+                              (callback)="paymentDone($event)"
+                            >
+                              Pay with Paystack
+                            </button>
+                              <!-- <a href="#" class="btn btn-outline-primary mr-3">
                               <span class="svg-icon svg-icon-md">
                               <i class="flaticon-coins"></i>
-                              </span>Withdraw Cash</a>
+                              </span>Withdraw Cash</a> -->
                               </div>
                             <!--end::CS-fund-btn-->
                           </div>

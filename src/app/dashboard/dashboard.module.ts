@@ -14,6 +14,8 @@ import { SharedModule } from '../shared/modules/shared/shared.module';
 import { DsNavbarComponent } from './layouts/ds-navbar/ds-navbar.component';
 import { DsFooterComponent } from './layouts/ds-footer/ds-footer.component';
 import { DashboardComponent } from './dashboard.component';
+import { Angular4PaystackModule } from 'angular4-paystack';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { DashboardComponent } from './dashboard.component';
     DashboardRoutingModule,
     SharedModule,
     MatProgressBarModule,
+    Angular4PaystackModule.forRoot(environment.paystackConfig)
   ],
 })
-export class DashboardModule {}
+export class DashboardModule { }

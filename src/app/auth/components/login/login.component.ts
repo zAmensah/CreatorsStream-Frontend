@@ -29,15 +29,17 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     const val = this.loginForm.value;
 
-    this.authService.login(val).subscribe(
-      () => {
-        this.router.navigateByUrl('/dashboard');
-      },
-      (err) => {
-        this.messageService.error(err.error.message);
-        this.loading = false;
-      }
-    );
+    console.log(val)
+
+    // this.authService.login(val).subscribe(
+    //   () => {
+    //     this.router.navigateByUrl('/dashboard');
+    //   },
+    //   (err) => {
+    //     this.messageService.error(err.error.message);
+    //     this.loading = false;
+    //   }
+    // );
   }
 
   ngOnInit(): void {}

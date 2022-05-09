@@ -7,6 +7,8 @@ import { MaterialModule } from '../material/material.module';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { AvatarModule } from 'ngx-avatar';
 
+
+
 @NgModule({
   declarations: [MessagesComponent, LoadingComponent, SpinnerComponent],
   imports: [CommonModule],
@@ -19,4 +21,4 @@ import { AvatarModule } from 'ngx-avatar';
     AvatarModule,
   ],
 })
-export class SharedModule {}
+export class SharedModule { }

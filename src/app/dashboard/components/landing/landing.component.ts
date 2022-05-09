@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
+  title!: String;
+  reference = 'rtef';
+  currency = 'GHS';
 
   constructor() { }
 
-  ngOnInit(): void {
+  paymentInit() {
+    console.log('Payment initialized');
+  }
+
+  paymentDone(ref: any) {
+    this.title = 'Payment successfull';
+    console.log(this.title, ref);
+    // verify payment type
+  }
+
+  paymentCancel() {
+    console.log('payment failed');
+  }
+
+  ngOnInit() {
+    this.reference = `ref-${Math.ceil(Math.random() * 10e13)}`;
   }
 
 }
