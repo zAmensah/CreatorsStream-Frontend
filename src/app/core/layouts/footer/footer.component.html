@@ -132,3 +132,63 @@
   </div>
 </footer>
 <!-- Main Footer End -->
+
+<!--begin::Ad-Modal-->
+<div class="modal fade" id="exampleModalSizeLg" tabindex="-1" role="dialog" aria-hidden="true" style="padding-right: 15px;">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Place Your Advert</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <i aria-hidden="true" class="fa fa-close"></i>
+        </button>
+        </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+          <div class="col-xl-6">
+          <div class="form-group">
+            <label class="form-control-label">Ad Title:</label>
+            <input class="form-control form-control-solid h-auto p-6" type="text" name="ad-title" placeholder="Title" autocomplete="off" />
+          </div>
+          </div>
+          <div class="col-xl-6">
+          <div class="form-group">
+            <!--begin::Select-->
+            <div class="form-group fv-plugins-icon-container">
+              <label class="form-control-label">Select Type</label>
+              <select name="option" class="form-control form-control-solid form-control-lg">
+                <option>-- Select --</option>
+                <option>Video Ad</option>
+                <option>Text Ad</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <!--end::Input-->
+          </div>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <label for="thumbnail"> Upload File
+              <sup>*</sup>
+            </label>
+            <div class="custom_upload">
+              <label for="thumbnail">
+                <input type="file" id="thumbnail" class="files">
+                <span class="dropzone-select btn btn-light-primary font-weight-bold btn-sm">Choose File</span>
+              </label>
+            </div>
+            <span class="form-text text-muted">Max file size is 25MB</span>
+            </div>
+          <div class="form-group">
+            <textarea class="form-control form-control-solid h-auto p-6" placeholder="Ad Description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="kt_blockui_modal_default_btn">Post Advert</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Ad-Modal-->

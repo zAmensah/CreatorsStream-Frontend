@@ -21,7 +21,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .gen-likes-col {
   margin-top: 5px !important;
 }
-button, input, optgroup, select, textarea {
+button, input, optgroup, select, textarea, option {
   font-family: 'Montserrat' !important;
 }
 img.mt-3.mb-3.cover-image {
