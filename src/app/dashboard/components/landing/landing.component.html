@@ -516,7 +516,7 @@
                             <!--end::CS-fund-btn-->
                             <!--begin::CS-fund-btn-->
                             <div class="cs-btn-dropright">
-                              <button
+                              <button class="btn btn-light-primary mr-2 btn-fixed-height font-weight-bolder font-size-sm px-5"
                               angular4-paystack
                               [email]="'mailexample@mail.com'"
                               [amount]="20"
@@ -525,8 +525,7 @@
                               [currency]="'GHS'"
                               (paymentInit)="paymentInit()"
                               (onClose)="paymentCancel()"
-                              (callback)="paymentDone($event)"
-                            >
+                              (callback)="paymentDone($event)">
                               Pay with Paystack
                             </button>
                               <!-- <a href="#" class="btn btn-outline-primary mr-3">
