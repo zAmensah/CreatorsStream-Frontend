@@ -14,7 +14,7 @@ import { MessagesService } from 'src/app/shared/services/messages.service';
   styleUrls: ['./create-channel.component.css'],
 })
 export class CreateChannelComponent implements OnInit {
-  channelForm!: FormGroup;
+  // channelForm!: FormGroup;
   loading: boolean = false;
 
   percentageCover$!: Observable<number | null | undefined>;
@@ -33,12 +33,12 @@ export class CreateChannelComponent implements OnInit {
     private errorService: ErrorHandlerService,
     private router: Router
   ) {
-    this.channelForm = this.fb.group({
-      name: ['', Validators.required],
-      logo: [''],
-      cover: [''],
-      about: [''],
-    });
+    // this.channelForm = this.fb.group({
+    //   name: ['', Validators.required],
+    //   logo: [''],
+    //   cover: [''],
+    //   about: [''],
+    // });
   }
 
   uploadCover(event: any) {
@@ -83,29 +83,29 @@ export class CreateChannelComponent implements OnInit {
       .subscribe();
   }
 
-  onSumbit() {
-    this.loading = true;
-    const val = this.channelForm.value;
+  // onSumbit() {
+  //   this.loading = true;
+  //   const val = this.channelForm.value;
 
-    this.dashboardService
-      .addChannel({
-        name: val.name,
-        about: val.about,
-        logo: this.logo,
-        cover: this.cover,
-      })
-      .subscribe(
-        () => {
-          this.dashboardService.getChannels();
-          this.router.navigateByUrl('/dashboard/add-video');
-        },
-        (err) => {
-          this.errorService.errorHandler(err);
-          // this.messageService.error(err.error.message);
-          this.loading = false;
-        }
-      );
-  }
+  //   this.dashboardService
+  //     .addChannel({
+  //       name: val.name,
+  //       about: val.about,
+  //       logo: this.logo,
+  //       cover: this.cover,
+  //     })
+  //     .subscribe(
+  //       () => {
+  //         this.dashboardService.getChannels();
+  //         this.router.navigateByUrl('/dashboard/add-video');
+  //       },
+  //       (err) => {
+  //         this.errorService.errorHandler(err);
+  //         // this.messageService.error(err.error.message);
+  //         this.loading = false;
+  //       }
+  //     );
+  // }
 
   ngOnInit(): void {}
 }

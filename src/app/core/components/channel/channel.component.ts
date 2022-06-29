@@ -26,7 +26,7 @@ export class ChannelComponent implements OnInit {
   getChannelVideos() {
     this.coreService.channelVideos(this.channelID).subscribe((res: any) => {
       this.channelVideos = res.channel;
-      // console.log(this.channelVideos);
+      console.log(this.channelVideos);
     });
   }
 
@@ -34,7 +34,7 @@ export class ChannelComponent implements OnInit {
     return moment(new Date(time)).fromNow(true);
   }
 
- // getChannelVideos() {
+  // getChannelVideos() {
   //  this.coreService.singleChannel(this.channelID).subscribe((res: any) => {
   //   this.channelVideos = res.channel;
   //    console.log(this.channelVideos);

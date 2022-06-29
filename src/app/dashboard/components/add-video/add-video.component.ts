@@ -22,7 +22,7 @@ export class AddVideoComponent implements OnInit {
   coverLoading: boolean = false;
   videoLoading: boolean = false;
 
-  videoForm!: FormGroup;
+  // videoForm!: FormGroup;
   user: any;
 
   loading: boolean = false;
@@ -35,13 +35,13 @@ export class AddVideoComponent implements OnInit {
     private storage: AngularFireStorage,
     private router: Router
   ) {
-    this.videoForm = this.fb.group({
-      title: ['', Validators.required],
-      description: ['', Validators.required],
-      channel: ['', Validators.required],
-      cover: [''],
-      link: [''],
-    });
+    // this.videoForm = this.fb.group({
+    //   title: ['', Validators.required],
+    //   description: ['', Validators.required],
+    //   channel: ['', Validators.required],
+    //   cover: [''],
+    //   link: [''],
+    // });
   }
 
   uploadCover(event: any) {
@@ -88,28 +88,28 @@ export class AddVideoComponent implements OnInit {
       .subscribe();
   }
 
-  onSubmit() {
-    const val = this.videoForm.value;
-    this.loading = true;
+  // onSubmit() {
+  //   const val = this.videoForm.value;
+  //   this.loading = true;
 
-    this.dashboardService
-      .addVideo({
-        title: val.title,
-        channel: val.channel,
-        description: val.description,
-        link: this.link,
-        cover: this.cover,
-      })
-      .subscribe(
-        (res: any) => {
-          this.router.navigateByUrl(`/channels/${res.channel._id}`);
-        },
-        (err) => {
-          this.messageService.error(err.error.message);
-          this.loading = false;
-        }
-      );
-  }
+  //   this.dashboardService
+  //     .addVideo({
+  //       title: val.title,
+  //       channel: val.channel,
+  //       description: val.description,
+  //       link: this.link,
+  //       cover: this.cover,
+  //     })
+  //     .subscribe(
+  //       (res: any) => {
+  //         this.router.navigateByUrl(`/channels/${res.channel._id}`);
+  //       },
+  //       (err) => {
+  //         this.messageService.error(err.error.message);
+  //         this.loading = false;
+  //       }
+  //     );
+  // }
 
   // getChannels() {
   //   this.dashboardService.getChannels().subscribe((res: any) => {

@@ -31,11 +31,10 @@ import { SharedModule } from './shared/modules/shared/shared.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     BrowserAnimationsModule,
-
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

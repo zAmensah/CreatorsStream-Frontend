@@ -6,11 +6,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { AvatarModule } from 'ngx-avatar';
-
-
+import { ShimmerComponent } from '../../components/shimmer/shimmer.component';
 
 @NgModule({
-  declarations: [MessagesComponent, LoadingComponent, SpinnerComponent],
+  declarations: [
+    MessagesComponent,
+    LoadingComponent,
+    SpinnerComponent,
+    ShimmerComponent,
+  ],
   imports: [CommonModule],
   exports: [
     MessagesComponent,
@@ -19,6 +23,7 @@ import { AvatarModule } from 'ngx-avatar';
     MaterialModule,
     SpinnerComponent,
     AvatarModule,
+    ShimmerComponent,
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

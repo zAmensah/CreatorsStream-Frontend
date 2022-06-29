@@ -40,10 +40,19 @@ export class CoreService {
       .pipe(shareReplay());
   }
 
-  channelSub(id: string): Observable<IUser> {
+  // channelSub(id: string): Observable<IUser> {
+  //   return this.http
+  //     .get<IUser>(
+  //       `${environment.basedUrl}` + '/channel/subscription/' + `${id}`
+  //     )
+  //     .pipe(shareReplay());
+  // }
+
+  channelSubscription(id: string, body: any): Observable<any> {
     return this.http
-      .get<IUser>(
-        `${environment.basedUrl}` + '/channel/subscription/' + `${id}`
+      .post<any>(
+        `${environment.basedUrl}` + '/channel/subscription/' + `${id}`,
+        body
       )
       .pipe(shareReplay());
   }

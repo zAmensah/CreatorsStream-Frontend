@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  registerForm!: FormGroup;
+  // registerForm!: FormGroup;
   loading: boolean = false;
 
   constructor(
@@ -19,28 +19,28 @@ export class RegisterComponent implements OnInit {
     private messageService: MessagesService,
     private router: Router
   ) {
-    this.registerForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.email, Validators.required]],
-      password: ['', Validators.required],
-      phone: ['', Validators.required],
-    });
+    // this.registerForm = this.fb.group({
+    //   name: ['', Validators.required],
+    //   email: ['', [Validators.email, Validators.required]],
+    //   password: ['', Validators.required],
+    //   phone: ['', Validators.required],
+    // });
   }
 
-  register() {
-    const val = this.registerForm.value;
-    this.loading = true;
+  // register() {
+  //   const val = this.registerForm.value;
+  //   this.loading = true;
 
-    this.authService.register(val).subscribe(
-      () => {
-        this.router.navigateByUrl('/dashboard');
-      },
-      (err) => {
-        this.messageService.error(err.error.message);
-        this.loading = false;
-      }
-    );
-  }
+  //   this.authService.register(val).subscribe(
+  //     () => {
+  //       this.router.navigateByUrl('/dashboard');
+  //     },
+  //     (err) => {
+  //       this.messageService.error(err.error.message);
+  //       this.loading = false;
+  //     }
+  //   );
+  // }
 
   ngOnInit(): void {}
 }

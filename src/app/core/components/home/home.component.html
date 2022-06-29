@@ -25,8 +25,9 @@
                       <ng-template #noUser>
                         <div class="gen-movie-meta-holder">
                           <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+
                             <div class="signup_form">
-                              <h3 class="ad-heading text-center">SIGNIN</h3>
+                              <h3 class="ad-heading text-center">SIGN IN</h3>
                               <p class="text-center">Login to your Account</p>
 
                               <app-messages></app-messages>
@@ -35,16 +36,20 @@
                                 <!--begin::Form group-->
                                 <div class="form-group">
                                   <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
-                                  <input class="form-control form-control-solid h-auto p-6" type="email" formControlName="email" placeholder="Enter Email" autocomplete="off" />
+                                  <input class="form-control form-control-solid h-auto p-6" type="email"
+                                    formControlName="email" placeholder="Enter Email" autocomplete="off" />
                                 </div>
-                                 <!--end::Form group-->
+                                <!--end::Form group-->
                                 <!--begin::Form group-->
                                 <div class="form-group">
                                   <div class="d-flex justify-content-between mt-n5">
                                     <label class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
-                                    <a routerLink="/auth/forgot-password/" class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5" id="kt_login_forgot">Lost password?</a>
+                                    <a routerLink="/auth/forgot-password/"
+                                      class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5"
+                                      id="kt_login_forgot">Lost password?</a>
                                   </div>
-                                  <input class="form-control form-control-solid h-auto p-6" type="password" formControlName="password" placeholder="Your Password" autocomplete="off" />
+                                  <input class="form-control form-control-solid h-auto p-6" type="password"
+                                    formControlName="password" placeholder="Your Password" autocomplete="off" />
                                 </div>
                                 <!--end::Form group-->
 
@@ -56,10 +61,11 @@
                                   </div>
                                 </div>
                                 <!--end::Form group-->
-                                <button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3"
-                                   [disabled]="loading"><i class="fas fa-user-lock"></i>
+                                <button type="submit" id="kt_login_signin_submit"
+                                  class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3"
+                                  [disabled]="loading"><i class="fas fa-user-lock"></i>
                                   <ng-container *ngIf="loading; else waiting">
-                                    Signin In...
+                                    Signing In...
                                   </ng-container>
                                   <ng-template #waiting>
                                     LOGIN
@@ -67,7 +73,8 @@
 
                                 </button>
                                 <div class="login_assist bnr">
-                                  <p>Don’t have account yet? <a routerLink="/auth/register/"> Signup</a> and start earning...</p>
+                                  <p>Don’t have account yet? <a routerLink="/auth/register/"> Signup</a> and start
+                                    earning...</p>
                                 </div>
                               </div>
                             </div>
@@ -81,7 +88,8 @@
                         <form action="#">
                           <div class="signup_form">
                             <div class="login--header">
-                              <p class="Ad-heading"><i class="flaticon2-settings" style="color:#20ba83;"></i> Place an Ad</p>
+                              <p class="Ad-heading"><i class="flaticon2-settings" style="color:#20ba83;"></i> Place an
+                                Ad</p>
                             </div>
                             <div class="ad-icon-holder" style="text-align: center;margin-top:15px;">
                               <i id="head-title-icon" class="flaticon-alarm-1"></i>
@@ -90,17 +98,23 @@
                             <div class="login--form Ad">
                               <div class="row col-lg-12 text-center">
                                 <div class="col-lg-12">
-                                  <a href="#" class="btn btn-primary font-weight-bolder font-size-h6 px-5 py-4 my-3 mr-7"><i class="flaticon-notes"></i>TEXT AD</a>
-                                  <a href="#" class="btn btn-light-primary font-weight-bolder font-size-h6 px-5 py-4 my-3 ml-5"><i class="flaticon-open-box"></i>VIDEO AD</a>
+                                  <a href="#"
+                                    class="btn btn-primary font-weight-bolder font-size-h6 px-5 py-4 my-3 mr-7"><i
+                                      class="flaticon-notes"></i>TEXT AD</a>
+                                  <a href="#"
+                                    class="btn btn-light-primary font-weight-bolder font-size-h6 px-5 py-4 my-3 ml-5"><i
+                                      class="flaticon-open-box"></i>VIDEO AD</a>
                                 </div>
                               </div>
                               <div class="form-group Ad">
                                 <p for="email_ad">Check status of your Ad…</p>
                                 <div class="field-wrapper News-L">
                                   <div class="input-group">
-                                    <input id="ad-input--newsL" class="form-control form-control-solid h-auto p-6" type="email" formControlName="email" placeholder="Enter Ad ID / Code" autocomplete="off" />
+                                    <input id="ad-input--newsL" class="form-control form-control-solid h-auto p-6"
+                                      type="email" placeholder="Enter Ad ID / Code" autocomplete="off" />
                                     <div class="input-group-append">
-                                      <button id="btn-alt" class="btn btn--md rounded-left-0" type="submit">CHECK</button>
+                                      <button id="btn-alt" class="btn btn--md rounded-left-0"
+                                        type="submit">CHECK</button>
                                     </div>
                                   </div>
                                 </div>
@@ -150,23 +164,24 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
+
           <div class="col-xl-3 col-lg-4 col-md-6" *ngFor="let videos of (videos$ | async)">
             <div class="gen-carousel-movies-style-3 movie-grid style-3">
               <div class="gen-movie-contain">
                 <a routerLink="/watch/u/{{videos._id}}">
-                <div class="gen-movie-img">
-                  <img [src]="videos.cover" alt="CreatorsStream-image">
-                  <div class="gen-movie-add">
-                    <div class="wpulike wpulike-heart">
+                  <div class="gen-movie-img">
+                    <img [src]="videos.cover" alt="CreatorsStream-image">
+                    <div class="gen-movie-add">
+                      <div class="wpulike wpulike-heart">
                         <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
+                      </div>
+                    </div>
+                    <div class="gen-movie-action">
+                      <a routerLink="/watch/u/{{videos._id}}" class="gen-button" id="gen-button-play">
+                        <i class="fa fa-play"></i>
+                      </a>
                     </div>
                   </div>
-                  <div class="gen-movie-action">
-                    <a routerLink="/watch/u/{{videos._id}}" class="gen-button" id="gen-button-play">
-                      <i class="fa fa-play"></i>
-                    </a>
-                  </div>
-                </div>
                 </a>
                 <div class="gen-info-contain">
                   <div class="gen-movie-info">
@@ -175,8 +190,8 @@
                   <div class="gen-movie-meta-holder">
                     <ul>
                       <li><a routerLink="/channel/{{videos.channel._id}}"><span>
-                        <img id="channel-avator" [src]="videos.channel?.cover">
-                       {{videos.channel.name}}</span></a>
+                            <img id="channel-avator" [src]="videos.channel?.cover">
+                            {{videos.channel.name}}</span></a>
                       </li>
                       <li><i class="fa fa-eye"></i><span> {{videos.views}} Views</span></li>
                     </ul>
@@ -185,6 +200,8 @@
               </div>
             </div>
           </div>
+
+
           <!-- <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gen-carousel-movies-style-3 movie-grid style-3">
               <div class="gen-movie-contain">
@@ -912,19 +929,19 @@
               <div class="gen-carousel-movies-style-3 movie-grid style-3">
                 <div class="gen-movie-contain">
                   <a routerLink="/watch/u/1">
-                  <div class="gen-movie-img">
-                    <img src="./assets/images/video-thumbnail-21.jpeg" alt="CreatorsStream-image">
-                    <div class="gen-movie-add">
-                      <div class="wpulike wpulike-heart">
+                    <div class="gen-movie-img">
+                      <img src="./assets/images/video-thumbnail-21.jpeg" alt="CreatorsStream-image">
+                      <div class="gen-movie-add">
+                        <div class="wpulike wpulike-heart">
                           <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
+                        </div>
+                      </div>
+                      <div class="gen-movie-action">
+                        <a routerLink="/watch/u/1" class="gen-button" id="gen-button-play">
+                          <i class="fa fa-play"></i>
+                        </a>
                       </div>
                     </div>
-                    <div class="gen-movie-action">
-                      <a routerLink="/watch/u/1" class="gen-button" id="gen-button-play">
-                        <i class="fa fa-play"></i>
-                      </a>
-                    </div>
-                  </div>
                   </a>
                   <div class="gen-info-contain">
                     <div class="gen-movie-info">
@@ -951,7 +968,7 @@
                       <img src="./assets/images/video-thumbnail-17.jpeg" alt="CreatorsStream-image">
                       <div class="gen-movie-add">
                         <div class="wpulike wpulike-heart">
-                            <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
+                          <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
                         </div>
                       </div>
                       <div class="gen-movie-action">
@@ -960,7 +977,7 @@
                         </a>
                       </div>
                     </div>
-                    </a>
+                  </a>
                   <div class="gen-info-contain">
                     <div class="gen-movie-info">
                       <h3><a routerLink="/watch/u/1">Love In 21st</a></h3>
@@ -986,7 +1003,7 @@
                       <img src="./assets/images/video-thumbnail-20.jpeg" alt="CreatorsStream-image">
                       <div class="gen-movie-add">
                         <div class="wpulike wpulike-heart">
-                            <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
+                          <button type="button" class="wp_ulike_btn wp_ulike_put_image"></button>
                         </div>
                       </div>
                       <div class="gen-movie-action">
@@ -995,7 +1012,7 @@
                         </a>
                       </div>
                     </div>
-                    </a>
+                  </a>
                   <div class="gen-info-contain">
                     <div class="gen-movie-info">
                       <h3><a routerLink="/watch/u/1">Family Love for WildLife</a></h3>
@@ -1255,329 +1272,370 @@
 <!-- owl-carousel images Start -->
 <section class="pt-0 gen-section-padding-2" id="gen-section-custom">
   <div class="container">
-     <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6">
-           <h4 class="gen-heading-title">POPULAR CHANNELS</h4>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6">
+        <h4 class="gen-heading-title">POPULAR CHANNELS</h4>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 d-none d-md-inline-block">
+        <div class="gen-movie-action">
+          <div class="gen-btn-container text-right">
+            <a routerLink="/channel/1" class="gen-button gen-button-flat">
+              <span class="text">View More</span>
+            </a>
+          </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 d-none d-md-inline-block">
-           <div class="gen-movie-action">
-              <div class="gen-btn-container text-right">
-                 <a routerLink="/channel/1" class="gen-button gen-button-flat">
-                    <span class="text">View More</span>
-                 </a>
-              </div>
-           </div>
-        </div>
-     </div>
-     <div class="row mt-3">
-        <div class="col-12">
-           <div class="gen-style-2">
-              <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="false" data-desk_num="4" data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true" data-loop="true" data-margin="30">
-              <div class="owl-stage-outer">
-                <div class="owl-stage" style="transform: translate3d(-3045px, 0px, 0px); transition: all 0.25s ease 0s; width: 6431px;">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="gen-style-2">
+          <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="false" data-desk_num="4"
+            data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true" data-loop="true"
+            data-margin="30">
+            <div class="owl-stage-outer">
+              <div class="owl-stage"
+                style="transform: translate3d(-3045px, 0px, 0px); transition: all 0.25s ease 0s; width: 6431px;">
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item active" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item active" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item active" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item active" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/square-photo.jpeg" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/square-photo.jpeg"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
                 <div class="owl-item cloned" style="width: 308.438px; margin-right: 30px;">
                   <div class="item">
-                    <div class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
-                       <div class="gen-carousel-movies-style-2 movie-grid style-2">
-                          <div class="gen-movie-contain alt-contain">
-                             <!-- <div class="gen-movie-img"> -->
-                                <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png" alt="owl-carousel-video-image">
-                                <div class="gen-movie-add">
-                                  <i id="chan-like" class="flaticon-alert"></i>
-                             </div>
+                    <div
+                      class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
+                      <div class="gen-carousel-movies-style-2 movie-grid style-2">
+                        <div class="gen-movie-contain alt-contain">
+                          <!-- <div class="gen-movie-img"> -->
+                          <img class="circular--square" src="./assets/images/Channel-Avator-vplay.png"
+                            alt="owl-carousel-video-image">
+                          <div class="gen-movie-add">
+                            <i id="chan-like" class="flaticon-alert"></i>
                           </div>
-                       </div>
+                        </div>
+                      </div>
                     </div>
                     <!-- #post-## -->
-                 </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1586,12 +1644,12 @@
                 <i class="ion-ios-arrow-back"></i></button>
               <button type="button" role="presentation" class="owl-next">
                 <i class="ion-ios-arrow-forward"></i></button>
-              </div>
-              <div class="owl-dots disabled"></div>
             </div>
-           </div>
+            <div class="owl-dots disabled"></div>
+          </div>
         </div>
-     </div>
+      </div>
+    </div>
   </div>
 </section>
 <!-- owl-carousel images End -->
@@ -1599,62 +1657,63 @@
 <!-- CTA-Banner-Starts -->
 <section class="pt-0 pb-0">
   <div class="container-fluid px-0">
-     <div class="row no-gutters">
-        <div class="col-lg-12">
-           <div class="gen-banner-movies banner-style-2">
-                 <div class="item call-to-action" style="background: url('./assets/images/background/asset-1.jpeg')">
-                    <div class="gen-movie-contain-style-2 h-100">
-                       <div class="container h-100">
-                          <div class="row h-100">
-                             <div class="col-lg-9">
-                                <div class="gen-movie-info">
-                                   <h3>Join CreatorStream</h3>
-                                </div>
-                                <div class="gen-movie-meta-holder">
-                                   <div class="gen-meta-info">
-                                      <ul class="gen-meta-after-excerpt">
-                                         <li><strong>Create Channel :</strong>Anna Roman TV, Robert Johnson</li>
-                                         <li>
-                                            <strong>Upload Videos :</strong>
-                                            <span><a href="#">Action,</a></span>
-                                            <span> <a href="#">Annimation,</a></span>
-                                            <span><a href="#">Family, </a></span>
-                                            <span><a href="#">Tutorials</a></span>
-                                         </li>
-                                         <li>
-                                            <strong>Create Live Stream :</strong>
-                                            <span><a href="#">4K Ultra, </a></span>
-                                            <span><a href="#">live Matches, </a></span>
-                                            <span> <a href="#">EPL Matches, </a></span>
-                                            <span><a href="#">Premieres </a></span>
-                                         </li>
-                                         <li>
-                                            <strong>Start Earning :</strong>
-                                            <span><a href="#">Deposite, </a></span>
-                                            <span><a href="#">Withdraw Cash, </a></span>
-                                            <span><a href="#">Transfer Funds, </a></span>
-                                            <span><a href="#">Momo / Credit Cards </a></span>
-                                         </li>
-                                      </ul>
-                                   </div>
-                                </div>
-                             </div>
-                             <div class="col-lg-3">
-                                <div class="gen-movie-action">
-                                   <div class="gen-btn-container">
-                                    <button routerLink="/auth/register/" id="reg-btn-cta" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">
-                                      <i aria-hidden="true" class="fas fa-lock"></i><span class="text">Signup Now</span>
-                                    </button>
-                                   </div>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
+    <div class="row no-gutters">
+      <div class="col-lg-12">
+        <div class="gen-banner-movies banner-style-2">
+          <div class="item call-to-action" style="background: url('./assets/images/background/asset-1.jpeg')">
+            <div class="gen-movie-contain-style-2 h-100">
+              <div class="container h-100">
+                <div class="row h-100">
+                  <div class="col-lg-9">
+                    <div class="gen-movie-info">
+                      <h3>Join CreatorStream</h3>
                     </div>
+                    <div class="gen-movie-meta-holder">
+                      <div class="gen-meta-info">
+                        <ul class="gen-meta-after-excerpt">
+                          <li><strong>Create Channel :</strong>Anna Roman TV, Robert Johnson</li>
+                          <li>
+                            <strong>Upload Videos :</strong>
+                            <span><a href="#">Action,</a></span>
+                            <span> <a href="#">Animation,</a></span>
+                            <span><a href="#">Family, </a></span>
+                            <span><a href="#">Tutorials</a></span>
+                          </li>
+                          <li>
+                            <strong>Create Live Stream :</strong>
+                            <span><a href="#">4K Ultra, </a></span>
+                            <span><a href="#">live Matches, </a></span>
+                            <span> <a href="#">EPL Matches, </a></span>
+                            <span><a href="#">Premieres </a></span>
+                          </li>
+                          <li>
+                            <strong>Start Earning :</strong>
+                            <span><a href="#">Deposit, </a></span>
+                            <span><a href="#">Withdraw Cash, </a></span>
+                            <span><a href="#">Transfer Funds, </a></span>
+                            <span><a href="#">Momo / Credit Cards </a></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="gen-movie-action">
+                      <div class="gen-btn-container">
+                        <button routerLink="/auth/register/" id="reg-btn-cta"
+                          class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">
+                          <i aria-hidden="true" class="fas fa-lock"></i><span class="text">Signup Now</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-           </div>
+            </div>
+          </div>
         </div>
-     </div>
+      </div>
+    </div>
   </div>
 </section>
 <!-- CTA-Banner-Ends -->
