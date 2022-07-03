@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { IVideos } from 'src/app/models/videos';
 import { CoreService } from '../../services/core.service';
@@ -16,14 +16,20 @@ export class ViewPageComponent implements OnInit {
 
   sub: boolean = false;
   isLogged!: string | null;
+  subloading: boolean = false;
 
   user: any;
+
+  title!: String;
+  reference = 'rtef';
+  currency = 'GHS';
 
   constructor(
     private route: ActivatedRoute,
     private coreService: CoreService,
     private authService: AuthService,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private router: Router
   ) {
     this.vidId = this.route.snapshot.params['id'];
     this.isLogged = localStorage.getItem('_rft');
@@ -36,25 +42,66 @@ export class ViewPageComponent implements OnInit {
 
     this.coreService.singleVideo(this.vidId).subscribe((res: any) => {
       this.details$ = res.watchVideo;
-      this.sub = res.channelSub;
-      console.log(this.details$);
+      this.sub = res.subscribed;
+      // console.log(this.details$);
     });
   }
-  // channelSubscribe(id: string, amount: string) {
-  //   this.coreService.channelSubscription()
-  // }
 
-  channelSub(id: string) {
-    // this.sub = true;
-    // if (this.isLogged) {
-    //   this.coreService.channelSub(id).subscribe((res) => {});
-    // } else {
-    //   this.snackbar.open('Please login to subscribe to channel', 'OK', {
-    //     duration: 3000,
-    //     verticalPosition: 'top',
-    //     horizontalPosition: 'center',
-    //   });
-    //   this.sub = false;
-    // }
+  channelSub() {
+    this.subloading = true;
+    if (this.isLogged) {
+      this.coreService
+        .channelSubscription({
+          amount: this.details$.channel.charge,
+          userId: this.details$.user,
+          channelId: this.details$.channel._id,
+        })
+        .subscribe(
+          (res) => {
+            console.log('Subscribed to channel');
+            this.subloading = false;
+            window.location.reload();
+            this.snackbar.open('Successfully Subscribed to channel', 'OK', {
+              duration: 3000,
+              verticalPosition: 'top',
+              horizontalPosition: 'right',
+            });
+          },
+          (err) => {
+            // console.log('Error subscribing to channel');
+            // console.log(err);
+
+            this.snackbar.open('Error subscribing to channel', 'OK', {
+              duration: 3000,
+              verticalPosition: 'top',
+              horizontalPosition: 'right',
+            });
+            this.subloading = false;
+          }
+        );
+    } else {
+      // console.log('Not logged in');
+
+      this.snackbar.open('Please login to subscribe', 'OK', {
+        duration: 3000,
+        verticalPosition: 'top',
+        horizontalPosition: 'center',
+      });
+      this.subloading = false;
+    }
+  }
+
+  paymentInit() {
+    console.log('Payment initialized');
+  }
+
+  paymentDone(ref: any) {
+    this.title = 'Payment successfull';
+    console.log(this.title, ref);
+    // verify payment type
+  }
+
+  paymentCancel() {
+    console.log('payment failed');
   }
 }

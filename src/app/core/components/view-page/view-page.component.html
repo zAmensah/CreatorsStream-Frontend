@@ -33,9 +33,10 @@
                             <button mat-raised-button disabled>Subscribed</button>
                           </ng-container>
                           <ng-template #notSub>
-                            <button data-toggle="modal" data-target="#SubscriptionModal" mat-raised-button color="warn"
-                              (click)="channelSub(details$._id)"><i class="fas fa-bell" style="color:#fff;"></i>
-                              Subscribe</button>
+                            <button data-toggle="modal" data-target="#SubscriptionModal" mat-raised-button color="warn">
+                              <i class="fas fa-bell" style="color:#fff;"></i>
+                              Subscribe
+                            </button>
                           </ng-template>
 
                           <!-- <a data-toggle="modal" data-target="#SubscriptionModal"><i class="fas fa-bell"></i><span>Subscribe</span></a> -->
@@ -474,3 +475,64 @@
 <!-- Footer Top Starts -->
 <app-footer></app-footer>
 <!-- Main Footer End -->
+
+
+<div class="modal fade" id="SubscriptionModal" tabindex="-1" role="dialog" aria-hidden="true"
+  style="padding-right:15px;">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Subscribe to Channel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i aria-hidden="true" class="fa fa-close"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Account Balance: ${{user.balance}}</label>
+                <sup>*</sup>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label class="form-control-label">Subscription Amount: ${{details$.channel.charge}}</label>
+                <sup>*</sup>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="d-flex align-items-center">
+          <!--begin::CS-fund-btn-->
+          <div class="cs-btn-dropleft">
+            <button class="btn btn-success mr-2 btn-fixed-height font-weight-bolder font-size-sm px-5" angular4-paystack
+              [email]="'mailexample@mail.com'" [amount]="2000" [ref]="reference" [class]="'btn btn-primary'"
+              [currency]="'GHS'" (paymentInit)="paymentInit()" (onClose)="paymentCancel()"
+              (callback)="paymentDone($event)">
+              <span class="svg-icon svg-icon-md"><i class="flaticon-piggy-bank"></i></span>
+              Load Wallet
+            </button>
+          </div>
+          <!--end::CS-fund-btn-->
+          <!--begin::CS-fund-btn-->
+          <div class="cs-btn-dropright">
+            <button class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5"
+              [disabled]="subloading" (click)="channelSub()">
+              <span class="svg-icon svg-icon-md"><i class="flaticon-open-box"
+                  *ngIf="!subloading;else spinner"></i></span>
+              <ng-template #spinner>
+                <span class="fa fas-spin fas-spinner"></span>
+              </ng-template>
+              Pay Now
+            </button>
+          </div>
+          <!--end::CS-fund-btn-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

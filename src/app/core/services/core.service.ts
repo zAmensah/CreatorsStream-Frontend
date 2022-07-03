@@ -9,12 +9,17 @@ import { LoadingService } from 'src/app/shared/services/loading.service';
 import { MessagesService } from 'src/app/shared/services/messages.service';
 import { environment } from 'src/environments/environment';
 
+const AUTH_DATA = 'auth_data';
+
 @Injectable({
   providedIn: 'root',
 })
 export class CoreService {
   private subject = new BehaviorSubject<IVideos[]>([]);
+  private userSubject = new BehaviorSubject<IUser>(null!);
+
   videos$: Observable<IVideos[]> = this.subject.asObservable();
+  user$: Observable<IUser> = this.userSubject.asObservable();
 
   constructor(
     private http: HttpClient,
@@ -48,13 +53,16 @@ export class CoreService {
   //     .pipe(shareReplay());
   // }
 
-  channelSubscription(id: string, body: any): Observable<any> {
+  channelSubscription(body: any): Observable<any> {
     return this.http
-      .post<any>(
-        `${environment.basedUrl}` + '/channel/subscription/' + `${id}`,
-        body
-      )
-      .pipe(shareReplay());
+      .post<any>(`${environment.basedUrl}` + '/channel/subscription', body)
+      .pipe(
+        tap((user: any) => {
+          this.userSubject.next(user.user);
+          localStorage.setItem(AUTH_DATA, JSON.stringify(user.user));
+        }),
+        shareReplay()
+      );
   }
 
   singleChannel(id: string): Observable<IChannels> {

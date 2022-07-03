@@ -1,3 +1,5 @@
+import { IChannels } from './channels';
+
 export interface IUser {
   _id: string;
   name: string;
@@ -11,4 +13,7 @@ export interface IUser {
   __v: number;
   expireToken: string;
   resetToken: string;
+  balance: number;
+  channels: [IChannels];
+  subscriptions: [IChannels];
 }

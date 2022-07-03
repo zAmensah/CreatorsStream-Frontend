@@ -12,4 +12,5 @@ export interface IChannels {
   videos: [IVideos];
   totalLikes: number;
   totalViews: number;
+  charge: number;
 }

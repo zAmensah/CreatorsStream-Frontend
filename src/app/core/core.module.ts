@@ -12,9 +12,26 @@ import { ChannelComponent } from './components/channel/channel.component';
 import { AboutComponent } from './components/about/about.component';
 import { WorksComponent } from './components/works/works.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { Angular4PaystackModule } from 'angular4-paystack';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [HomeComponent, ViewPageComponent, NavbarComponent, FooterComponent, SubscriptionsComponent, ChannelComponent, AboutComponent, WorksComponent, ContactComponent],
-  imports: [CommonModule, CoreRoutingModule, SharedModule],
+  declarations: [
+    HomeComponent,
+    ViewPageComponent,
+    NavbarComponent,
+    FooterComponent,
+    SubscriptionsComponent,
+    ChannelComponent,
+    AboutComponent,
+    WorksComponent,
+    ContactComponent,
+  ],
+  imports: [
+    CommonModule,
+    CoreRoutingModule,
+    SharedModule,
+    Angular4PaystackModule.forRoot(environment.paystackConfig),
+  ],
 })
 export class CoreModule {}
