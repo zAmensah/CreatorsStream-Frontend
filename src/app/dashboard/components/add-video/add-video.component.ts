@@ -22,7 +22,7 @@ export class AddVideoComponent implements OnInit {
   coverLoading: boolean = false;
   videoLoading: boolean = false;
 
-  // videoForm!: FormGroup;
+  videoForm!: FormGroup;
   user: any;
 
   loading: boolean = false;
@@ -35,13 +35,13 @@ export class AddVideoComponent implements OnInit {
     private storage: AngularFireStorage,
     private router: Router
   ) {
-    // this.videoForm = this.fb.group({
-    //   title: ['', Validators.required],
-    //   description: ['', Validators.required],
-    //   channel: ['', Validators.required],
-    //   cover: [''],
-    //   link: [''],
-    // });
+    this.videoForm = this.fb.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      channel: ['', Validators.required],
+      cover: [''],
+      link: [''],
+    });
   }
 
   uploadCover(event: any) {
